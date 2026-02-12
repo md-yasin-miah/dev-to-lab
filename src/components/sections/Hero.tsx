@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight, PlayCircle, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -13,7 +13,6 @@ export function Hero() {
 
       {/* Grid Pattern */}
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]" />
-
       <div className="container mx-auto relative z-10 flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

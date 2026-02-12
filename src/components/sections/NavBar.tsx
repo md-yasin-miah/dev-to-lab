@@ -26,7 +26,9 @@ export function NavBar() {
       <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-6">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2 font-bold">
-            <Terminal className="h-6 w-6 text-primary" />
+            <div className="bg-linear-to-r from-blue-500 to-violet-600 dark:from-blue-400 dark:to-violet-500 px-1 rounded">
+              <Terminal className="h-6 w-6 text-white" />
+            </div>
             <span>{SITE_CONFIG.name}</span>
           </Link>
         </div>
