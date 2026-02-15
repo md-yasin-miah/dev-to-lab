@@ -1,0 +1,187 @@
+<html class="dark"><head>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-background-light dark:bg-background-dark font-display text-slate-white min-h-screen grid-bg">表达
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#0A0A0A",
+            "emerald-mint": "#10b981",
+            "electric-violet": "#8b5cf6",
+            "slate-white": "#f8fafc",
+            "glass": "#171717",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .grid-bg {
+      background-image: linear-gradient(to right, rgba(19, 127, 236, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(19, 127, 236, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .glass-card {
+      background: rgba(23, 23, 23, 0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 40px rgba(16, 185, 129, 0.2);
+    }
+    .stepper-line {
+      width: 2px;
+      background: linear-gradient(to bottom, #10b981 0%, #137fec 25%, #1f2937 50%);
+    }
+  </style>
+<!-- Main Container -->
+<main class="max-w-4xl mx-auto px-6 py-12 lg:py-20 flex flex-col items-center">
+<!-- Success Header -->
+<div class="text-center mb-16 relative">
+<div class="mb-8 relative inline-block">
+<div class="absolute inset-0 bg-emerald-mint/20 rounded-full blur-2xl"></div>
+<div class="relative w-24 h-24 bg-emerald-mint/10 border border-emerald-mint/30 rounded-full flex items-center justify-center glow-emerald">
+<span class="material-icons-round text-emerald-mint text-6xl">check_circle</span>
+</div>
+</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-white mb-4">
+        Application Successfully Logged
+      </h1>
+<p class="text-primary/80 font-medium tracking-widest uppercase text-sm">
+        Reference ID: DTL-2024-8842-X
+      </p>
+</div>
+<!-- Roadmap Stepper Section -->
+<div class="w-full max-w-2xl relative mb-16">
+<div class="absolute left-6 md:left-1/2 md:-ml-[1px] top-0 bottom-0 stepper-line opacity-30"></div>
+<div class="space-y-8 relative">
+<!-- Step 1: Completed -->
+<div class="relative flex items-center md:justify-between group">
+<div class="flex items-center w-full">
+<div class="z-10 w-12 h-12 rounded-full bg-emerald-mint flex items-center justify-center text-background-dark shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+<span class="material-icons-round text-2xl">done</span>
+</div>
+<div class="ml-6 md:ml-10 glass-card p-6 rounded-xl flex-grow">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-emerald-mint font-semibold text-lg">Application Received</h3>
+<span class="text-[10px] uppercase tracking-tighter bg-emerald-mint/10 text-emerald-mint px-2 py-0.5 rounded border border-emerald-mint/20">Completed</span>
+</div>
+<p class="text-primary/60 text-sm">Your technical profile has been successfully ingested into our recruitment pipeline.</p>
+</div>
+</div>
+</div>
+<!-- Step 2: Active/Pending -->
+<div class="relative flex items-center md:justify-between group">
+<div class="flex items-center w-full">
+<div class="z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-[0_0_15px_rgba(19,127,236,0.5)]">
+<span class="material-icons-round text-2xl animate-pulse">hourglass_empty</span>
+</div>
+<div class="ml-6 md:ml-10 glass-card p-6 rounded-xl flex-grow border-primary/30 bg-primary/5">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-white font-semibold text-lg">Initial Screening</h3>
+<span class="text-[10px] uppercase tracking-tighter bg-primary/20 text-primary px-2 py-0.5 rounded border border-primary/30">In Progress</span>
+</div>
+<p class="text-slate-white/60 text-sm">Our senior engineering leads are reviewing your stack and experience relevance.</p>
+</div>
+</div>
+</div>
+<!-- Step 3: Future -->
+<div class="relative flex items-center md:justify-between group">
+<div class="flex items-center w-full">
+<div class="z-10 w-12 h-12 rounded-full bg-glass border border-white/10 flex items-center justify-center text-white/30">
+<span class="material-icons-round text-2xl">code</span>
+</div>
+<div class="ml-6 md:ml-10 glass-card p-6 rounded-xl flex-grow opacity-60">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-white/80 font-semibold text-lg">Technical Assessment</h3>
+<span class="text-[10px] uppercase tracking-tighter bg-white/5 text-white/40 px-2 py-0.5 rounded border border-white/10">Future Step</span>
+</div>
+<p class="text-slate-white/40 text-sm">Live-coding session focusing on architecture, patterns, and problem-solving.</p>
+</div>
+</div>
+</div>
+<!-- Step 4: Future -->
+<div class="relative flex items-center md:justify-between group">
+<div class="flex items-center w-full">
+<div class="z-10 w-12 h-12 rounded-full bg-glass border border-white/10 flex items-center justify-center text-white/30">
+<span class="material-icons-round text-2xl">science</span>
+</div>
+<div class="ml-6 md:ml-10 glass-card p-6 rounded-xl flex-grow opacity-60">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-white/80 font-semibold text-lg">Lab Interview</h3>
+<span class="text-[10px] uppercase tracking-tighter bg-white/5 text-white/40 px-2 py-0.5 rounded border border-white/10">Future Step</span>
+</div>
+<p class="text-slate-white/40 text-sm">Meet the DevToLab core team and discuss culture, vision, and team dynamics.</p>
+</div>
+</div>
+</div>
+<!-- Step 5: Final -->
+<div class="relative flex items-center md:justify-between group">
+<div class="flex items-center w-full">
+<div class="z-10 w-12 h-12 rounded-full bg-glass border border-white/10 flex items-center justify-center text-white/30">
+<span class="material-icons-round text-2xl">assignment_turned_in</span>
+</div>
+<div class="ml-6 md:ml-10 glass-card p-6 rounded-xl flex-grow opacity-60">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-white/80 font-semibold text-lg">Final Decision</h3>
+<span class="text-[10px] uppercase tracking-tighter bg-white/5 text-white/40 px-2 py-0.5 rounded border border-white/10">Final Step</span>
+</div>
+<p class="text-slate-white/40 text-sm">Final review of the performance metrics and official offer presentation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- What's Next Information -->
+<div class="w-full max-w-xl glass-card rounded-xl p-8 mb-12 text-center">
+<h2 class="text-xl font-bold mb-4 text-primary">What's Next?</h2>
+<p class="text-slate-white/80 leading-relaxed">
+        Our engineering team is currently high-tuning our review process. You can expect a status update within <span class="text-primary font-bold">48 hours</span>. We value your time and will ensure transparent communication throughout the journey.
+      </p>
+</div>
+<!-- Actions -->
+<div class="flex flex-col md:flex-row gap-4 w-full justify-center">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-electric-violet hover:opacity-90 text-white font-bold rounded-lg transition-all shadow-lg shadow-primary/20" href="#">
+<span class="material-icons-round mr-2">auto_stories</span>
+        Explore the Lab Blog
+      </a>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-glass border border-white/10 hover:bg-white/5 text-slate-white font-medium rounded-lg transition-all" href="#">
+        Back to Home
+      </a>
+</div>
+<!-- Footer Decorative -->
+<footer class="mt-24 text-slate-white/30 text-xs flex flex-col items-center gap-2">
+<div class="flex items-center gap-4 mb-4">
+<div class="h-px w-8 bg-white/10"></div>
+<div class="flex gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+</div>
+<div class="h-px w-8 bg-white/10"></div>
+</div>
+<p>© 2024 DevToLab Engineering. All systems operational.</p>
+</footer>
+</main>
+<!-- Background Decorative Image -->
+<div class="fixed top-0 right-0 -z-10 opacity-20 pointer-events-none">
+<img alt="" class="w-[800px] h-auto" data-alt="Abstract blue and purple energy waves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjT-msWQi2c1YnqKtHOa_j0u9N6ntNwAChMBAOuuiinSQzvtoUdPd1qwDcDnwe1B9eVj5O4cvjPMUv176pdHwAhpZFo-SLtywGupTV-coeuaxZgMjeGQFytYDH8GSiKzgfX_ZWcm3zPj1cMMB56aSWv6DGDUeTD4iiHlP7FoMTheLd1o6tKOdw5P8SfNkfv36jqnefmRZ3soZhkitABgKc8P8Kvp5Sc3_Dmzwyf9FOs2VhmHykDNrte5W9rKWR3tVHSJ24JV6I3SMo"/>
+</div>
+<div class="fixed bottom-0 left-0 -z-10 opacity-10 pointer-events-none">
+<img alt="" class="w-[600px] h-auto rotate-180" data-alt="Deep dark blue gradient pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoNTwv-sr4DwLyqQI-VOZLBD4WWpjEOIrUo_AgStFgVncHho-SJDoIgalHMdSu0wKs9xnXLPES5Fm23S1Dg3OkblmT--LGTzZ1gMlkU0eDg06oxDmMUZkuiAkz8cOYxlWB9Z2YcCKv7U0E2D4kp3Yt07xtYLH9EvGu2NQPw29YQ6a3NTvvMvdsG09Q5npAtkG7TcceYsFrHMyixjlOj915eOWKlNzxFmKIBtP4ks6Y4Tmuf8SBIb671uTy4bnbOzAqSB5p3YcM07Xx"/>
+</div>
+</body></html>

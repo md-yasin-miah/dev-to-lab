@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevToLab | Account Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3d84f5",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0A0A0A",
+                        "slate-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                background-color: #0A0A0A;
+            }
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-blue {
+            box-shadow: 0 0 15px rgba(61, 132, 245, 0.3);
+        }
+        .sidebar-item-active {
+            border-right: 3px solid #3d84f5;
+            background: linear-gradient(90deg, rgba(61, 132, 245, 0.1) 0%, rgba(61, 132, 245, 0) 100%);
+        }
+        .cyber-toggle:checked {
+            background-color: #3d84f5;
+            box-shadow: 0 0 10px rgba(61, 132, 245, 0.5);
+        }
+        .glass-input {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.2s;
+        }
+        .glass-input:focus {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: #3d84f5;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(61, 132, 245, 0.2);
+        }
+    </style>
+</head>
+<body class="font-display text-slate-200 bg-background-dark min-h-screen">
+<div class="flex min-h-screen">
+<aside class="w-64 border-r border-slate-800/50 flex flex-col fixed h-full bg-background-dark z-20">
+<div class="p-8 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg glow-blue">
+<span class="material-icons text-white">biotech</span>
+</div>
+<div>
+<h1 class="font-bold text-white text-lg tracking-tight leading-none">DevToLab</h1>
+<span class="text-[10px] text-primary font-bold uppercase tracking-widest">Engineering Lab</span>
+</div>
+</div>
+<nav class="mt-4 flex-grow">
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-icons text-[20px]">dashboard</span>
+<span class="text-sm font-medium tracking-wide">Project Overview</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-icons text-[20px]">analytics</span>
+<span class="text-sm font-medium tracking-wide">Milestones</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-icons text-[20px]">description</span>
+<span class="text-sm font-medium tracking-wide">Documents</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-icons text-[20px]">payments</span>
+<span class="text-sm font-medium tracking-wide">Billing</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-white sidebar-item-active transition-all" href="#">
+<span class="material-icons text-[20px] text-primary">settings</span>
+<span class="text-sm font-medium tracking-wide">Settings</span>
+</a>
+</nav>
+<div class="p-8 border-t border-slate-800/50">
+<div class="flex items-center gap-3">
+<img alt="User" class="w-10 h-10 rounded-full border border-slate-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC588EyweFD7XTstDrcZYqgtkpoCWNZKslkmuw2ZcgEtO5zGdPlnD2R-WlSV5akfwD87fcUmYbB5jU3J872JOHZcmmrh1PLgT_WQXTfT5n_Mo9JfjZ2q-Dg4eg8nthhtNaRZ7d2njOAMMdEQWeLIOjGXyVEce0NV-FOrotzTLs5RS3gxysjAwuY4Q63AmQB1tb6AuY3S5HX0Zv6XbtEmshnFedGHrUHskUwkmp41l-wTJRxLu1L534TK28Q_FIjB1Ek0H0w0njrGEYY"/>
+<div>
+<p class="text-sm font-semibold text-white">Alex Sterling</p>
+<p class="text-[10px] text-slate-500 font-medium">Project Lead</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="ml-64 flex-grow p-10 max-w-[1400px]">
+<header class="flex justify-between items-end mb-10">
+<div>
+<div class="flex items-center gap-2 text-xs text-slate-500 mb-2 uppercase tracking-widest font-bold">
+<span>Portal</span>
+<span class="material-icons text-[12px]">chevron_right</span>
+<span class="text-primary/80">Account Settings</span>
+</div>
+<h2 class="text-3xl font-bold text-white tracking-tight">System Configuration</h2>
+</div>
+<div class="flex gap-4">
+<button class="px-5 py-2.5 rounded-lg border border-slate-700 text-slate-300 text-sm font-medium hover:bg-slate-800 transition-colors">
+                    Discard Changes
+                </button>
+<button class="px-5 py-2.5 rounded-lg bg-primary text-white text-sm font-bold shadow-lg glow-blue hover:bg-primary/90 transition-colors">
+                    Save Changes
+                </button>
+</div>
+</header>
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<div class="glass-card rounded-xl p-8">
+<h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+                        Profile Settings
+                    </h3>
+<div class="flex gap-8">
+<div class="flex flex-col items-center gap-4">
+<div class="relative group cursor-pointer">
+<img alt="Company Logo" class="w-24 h-24 rounded-xl border border-slate-700 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPxHEJ6SsT2Pv8Hk1-bco_X9tTK6NzLatBGWK6so5Ng0mXaczw2vLJPxr9Sp595izTGnz9sO7hDJrDhpGItE5lEvL9H9LnrVxeNlw2pisPTa0I5rdiWrpxjkVj2bQGhVtZVGQC4iFmjwVEa0si7BjUi-1NcyD-_k0zhr13jpfFacFm1qxTgBWiObR-K5iYbkLlBP7WyWIeYrAazGFLOMwiyJDRV5qbQdcsfjJg4OoTrkXDdMM6rxHXAVSLubdcdPK7xUuk97WV4sRM"/>
+<div class="absolute inset-0 bg-black/60 rounded-xl opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+<span class="material-icons text-white text-sm">photo_camera</span>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Company Logo</span>
+</div>
+<div class="flex-grow grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-slate-400 uppercase tracking-widest">Full Name</label>
+<input class="w-full glass-input px-4 py-2.5 rounded-lg text-sm" type="text" value="Alex Sterling"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-slate-400 uppercase tracking-widest">Role</label>
+<input class="w-full glass-input px-4 py-2.5 rounded-lg text-sm" type="text" value="Project Lead"/>
+</div>
+<div class="col-span-2 space-y-2">
+<label class="text-xs font-bold text-slate-400 uppercase tracking-widest">Email Address</label>
+<input class="w-full glass-input px-4 py-2.5 rounded-lg text-sm" type="email" value="alex.sterling@nexusai.com"/>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-8">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">group</span>
+                            Team Management
+                        </h3>
+<button class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-bold text-white rounded-lg transition-colors flex items-center gap-2">
+<span class="material-icons text-sm">person_add</span> Invite Member
+                        </button>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-4 rounded-lg bg-slate-900/40 border border-slate-800">
+<div class="flex items-center gap-3">
+<img alt="Team member" class="w-10 h-10 rounded-full border border-slate-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN3d-oUGnT0tc4Qzlg0zKgnXKvONNqPmi-T3iwSNS7IrQ-gL3uIomS6XNnRcKcqcPOLwngBO_9lUyuIE88WPgSjLbv9TW8qZ4unUZjiIUoqnhua04szxy0WhZwRj2nyzJ8czWSQeLW_0FuVjV8fTlClqCfJlog4Dx6CorILnCXHebI7xQWwPtCrXKjO-ZQpAeX-D0DG9urz0HlyYoLfO3OSg6BNkEb5EAink1SN64uIJ2_BwIqX1y8XlrOdK5xkUU2C_eenVLN7G2D"/>
+<div>
+<p class="text-sm font-bold text-white">Sarah Jenkins</p>
+<p class="text-[10px] text-slate-500">Billing Admin</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-[10px] font-bold text-slate-400 bg-slate-800 px-2 py-1 rounded">Editor</span>
+<button class="text-slate-500 hover:text-white"><span class="material-icons text-lg">settings</span></button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 rounded-lg bg-slate-900/40 border border-slate-800">
+<div class="flex items-center gap-3">
+<img alt="Team member" class="w-10 h-10 rounded-full border border-slate-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJwub-zAuhC-MdB6xEoSfmeShg14xTUb_FZPMvtQwW-uoK6bCGFWpZt-gF3cI-0hWNQhy0EBk_O2e78wOOHDg94ygds1YLWo93aMTdbzMWJrtgzcBUTuPK2IxsBRe_gXqiyUJTsUYYFP9uCR_Q_sJE1EfGW97fQcpJhNyYW3cDS2pWBMtlQcl1feBB19hwyXLTH644eFlGHEBxXAdtSyfHWhdWdg03HlSW-_0vDKKPNMST-KrgN8BtPAGsyjvZ2M2HYoekAq4Yr0mi"/>
+<div>
+<p class="text-sm font-bold text-white">David Chen</p>
+<p class="text-[10px] text-slate-500">Stakeholder</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-[10px] font-bold text-slate-400 bg-slate-800 px-2 py-1 rounded">Viewer</span>
+<button class="text-slate-500 hover:text-white"><span class="material-icons text-lg">settings</span></button>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-8">
+<h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">key</span>
+                        Integration API Keys
+                    </h3>
+<div class="space-y-4">
+<div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800/50">
+<div class="flex justify-between items-center mb-3">
+<div>
+<p class="text-sm font-bold text-white">Production Key</p>
+<p class="text-[10px] text-slate-500">Last used: 24 mins ago</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400"><span class="material-icons text-sm">visibility_off</span></button>
+<button class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400"><span class="material-icons text-sm">content_copy</span></button>
+</div>
+</div>
+<div class="font-mono text-xs text-primary/70 bg-black/40 p-3 rounded border border-white/5 overflow-hidden text-ellipsis">
+                                dtl_live_49202_84hd92ks02la84hd92ks02la84hd92ks02la
+                            </div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<div class="glass-card rounded-xl p-6">
+<h3 class="text-md font-bold text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">shield</span>
+                        Security
+                    </h3>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm font-medium text-white leading-tight">Two-Factor Auth</p>
+<p class="text-[10px] text-slate-500 mt-0.5">Protect your account</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="pt-4 border-t border-slate-800">
+<button class="w-full py-2.5 rounded-lg border border-slate-700 text-slate-300 text-xs font-bold hover:bg-slate-800 transition-colors">
+                                Change Password
+                            </button>
+</div>
+<div class="pt-2">
+<p class="text-[10px] text-slate-500 text-center">Last password change: 3 months ago</p>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-6">
+<h3 class="text-md font-bold text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">notifications</span>
+                        Notifications
+                    </h3>
+<div class="space-y-5">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<p class="text-sm text-slate-300">Project Updates</p>
+<div class="flex gap-3">
+<span class="material-icons text-[18px] text-primary">mail</span>
+<span class="material-icons text-[18px] text-slate-600">smartphone</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-sm text-slate-300">Billing Alerts</p>
+<div class="flex gap-3">
+<span class="material-icons text-[18px] text-primary">mail</span>
+<span class="material-icons text-[18px] text-primary">smartphone</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-sm text-slate-300">Security Events</p>
+<div class="flex gap-3">
+<span class="material-icons text-[18px] text-primary">mail</span>
+<span class="material-icons text-[18px] text-primary">smartphone</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-800">
+<div class="flex items-center justify-between">
+<p class="text-xs font-bold text-slate-500 uppercase">Do Not Disturb</p>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-6 bg-gradient-to-br from-slate-900/40 to-transparent">
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Active Sessions</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-green-500 glow-green"></div>
+<div>
+<p class="text-[11px] font-bold text-white">MacOS • Chrome</p>
+<p class="text-[9px] text-slate-500">Current Session • London, UK</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-slate-600"></div>
+<div>
+<p class="text-[11px] font-bold text-slate-400">iPhone 15 Pro</p>
+<p class="text-[9px] text-slate-600">2 hours ago • London, UK</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

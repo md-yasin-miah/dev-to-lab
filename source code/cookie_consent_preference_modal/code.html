@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cookie Consent Preference - DevToLab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0db9f2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101e22",
+                        "deep-tech": "#171717",
+                        "electric-violet": "#8b5cf6"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glassmorphism {
+            background: rgba(23, 23, 23, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(13, 185, 242, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center font-display text-slate-200 overflow-hidden">
+<!-- Background Mockup for Context -->
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-electric-violet/10 rounded-full blur-[120px]"></div>
+<div class="p-12 max-w-7xl mx-auto opacity-20 pointer-events-none">
+<h1 class="text-6xl font-bold mb-8">Engineering the Future.</h1>
+<div class="grid grid-cols-3 gap-6">
+<div class="h-64 bg-primary/5 border border-primary/10 rounded-xl"></div>
+<div class="h-64 bg-primary/5 border border-primary/10 rounded-xl"></div>
+<div class="h-64 bg-primary/5 border border-primary/10 rounded-xl"></div>
+</div>
+</div>
+</div>
+<!-- Overlay / Backdrop -->
+<div class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"></div>
+<!-- Cookie Consent Modal -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-full max-w-2xl z-50 px-4">
+<div class="glassmorphism rounded-xl p-8 shadow-2xl border border-white/10 flex flex-col gap-6">
+<!-- Header Section -->
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+<span class="material-icons text-primary text-lg">security</span>
+</div>
+<span class="text-xs font-semibold tracking-widest uppercase text-primary/80">DevToLab Core</span>
+</div>
+<h2 class="text-2xl font-bold text-white tracking-tight">Trust &amp; Transparency</h2>
+<p class="text-sm text-slate-400 mt-2 max-w-lg leading-relaxed">
+                        The Lab utilizes advanced data protocols to optimize engineering performance and streamline development workflows. Customize your preference to balance performance with privacy.
+                    </p>
+</div>
+</div>
+<!-- Toggles Section -->
+<div class="space-y-4">
+<!-- Essential Cookies -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5">
+<div class="flex flex-col">
+<span class="text-white font-medium flex items-center gap-2">
+                            Essential
+                            <span class="material-icons text-[10px] text-slate-500">lock</span>
+</span>
+<span class="text-xs text-slate-500 mt-1">Required for the site to function. Cannot be disabled.</span>
+</div>
+<div class="relative inline-flex items-center cursor-not-allowed">
+<div class="w-11 h-6 bg-primary/40 rounded-full"></div>
+<div class="absolute left-6 top-1 w-4 h-4 bg-white rounded-full transition-transform"></div>
+</div>
+</div>
+<!-- Analytical Cookies -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5">
+<div class="flex flex-col">
+<span class="text-white font-medium">Analytical</span>
+<span class="text-xs text-slate-500 mt-1">Help us understand how you interact with our engineering tools.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Marketing Cookies -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5">
+<div class="flex flex-col">
+<span class="text-white font-medium">Marketing</span>
+<span class="text-xs text-slate-500 mt-1">Personalized updates regarding new Lab features and services.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- Actions Section -->
+<div class="flex flex-col sm:flex-row items-center gap-4 mt-2">
+<button class="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-primary to-electric-violet text-white font-bold rounded-full glow-hover transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2">
+                    Accept All
+                    <span class="material-icons text-sm">bolt</span>
+</button>
+<button class="w-full sm:w-auto px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium rounded-full transition-all duration-300">
+                    Save Preferences
+                </button>
+<a class="text-xs text-slate-500 hover:text-primary transition-colors underline decoration-slate-500/30 underline-offset-4 ml-auto" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+<!-- Background Decoration Image -->
+<div class="fixed top-0 right-0 p-4 pointer-events-none">
+<img alt="High tech circuit patterns" class="w-32 h-32 opacity-10 grayscale invert dark:invert-0" data-alt="Futuristic glowing circuit board patterns on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfee75-SU0612CRXQMAbt1Ymm5DZY2YNvxqlQGMBrdith7ySwM_xEg8m3Fb7ZkENRwoRnvXrTYzs4ONJXWA9upzQu9xPNpw2hP6myrg5oF9NrSDNvL3fbOeojWjc5UEu2hNZ8VXfF4h0cMWgbd1j8mnEbOHqlzcr4WkNd0ULDmx1kpTiITTBz5i-n1afQ-KfY6GOsanyH16z8ZH0ug7YNHa0iKDy-W208-9v11rzt7xeFzXq5kwFY2Aipiu5GbbMh9SQfva9Om1a_c"/>
+</div>
+</body></html>

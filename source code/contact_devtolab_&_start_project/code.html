@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact DevToLab | Start Your Project</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8B5CF6", // Electric Violet inspired
+                        "cyber-blue": "#00F0FF",
+                        "background-dark": "#0A0A0A",
+                        "field-bg": "#171717",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+        }
+        .glow-violet {
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
+        }
+        .glow-violet:hover {
+            box-shadow: 0 0 35px rgba(139, 92, 246, 0.7);
+        }
+        .glass-panel-calendly {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-panel {
+            background: rgba(23, 23, 23, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+        }
+        .input-tech {
+            @apply bg-field-bg border-neutral-800 text-white placeholder:text-neutral-600 outline-none transition-all;
+        }
+        .input-tech:focus {
+            @apply border-cyber-blue ring-1 ring-cyber-blue/30;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-100 font-display min-h-screen">
+<nav class="border-b border-white/5 bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="text-white font-black text-xl">D</span>
+</div>
+<span class="text-xl font-extrabold tracking-tight">DevTo<span class="text-primary">Lab</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-cyber-blue transition-colors" href="#">Services</a>
+<a class="text-sm font-medium hover:text-cyber-blue transition-colors" href="#">Portfolio</a>
+<a class="text-sm font-medium hover:text-cyber-blue transition-colors" href="#">About</a>
+<a class="px-5 py-2.5 btn-gradient text-white rounded-lg text-sm font-semibold glow-violet transition-all" href="#">Book a Call</a>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+<div class="max-w-3xl mb-16">
+<h1 class="text-5xl lg:text-7xl font-extrabold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-primary">
+                Ready to build something amazing?
+            </h1>
+<p class="text-xl text-slate-400 leading-relaxed">
+                Fill out the form below or book a direct technical consultation with our engineering team in Dhaka. Typical response time: <span class="text-cyber-blue font-bold">&lt; 12 hours</span>.
+            </p>
+</div>
+<div class="grid lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-5 space-y-8">
+<div class="glass-panel-calendly p-8 rounded-2xl border-t border-white/10">
+<div class="flex items-start justify-between mb-6">
+<div>
+<h3 class="text-2xl font-bold mb-2">Book a Meeting</h3>
+<p class="text-slate-400 text-sm">Schedule a 30-minute discovery call with our solutions architect.</p>
+</div>
+<span class="material-symbols-outlined text-cyber-blue text-4xl">calendar_today</span>
+</div>
+<div class="space-y-4 mb-8">
+<div class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-lg text-cyber-blue">check_circle</span>
+<span>Direct access to engineering leads</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-lg text-cyber-blue">check_circle</span>
+<span>Project feasibility assessment</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-lg text-cyber-blue">check_circle</span>
+<span>Rough cost &amp; timeline estimate</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-xl border border-white/20 hover:border-cyber-blue text-white hover:bg-cyber-blue/10 font-bold transition-all flex items-center justify-center gap-2">
+                        Open Scheduling Assistant
+                    </button>
+</div>
+<a class="flex items-center gap-4 glass-panel p-6 rounded-xl hover:border-green-500/50 group transition-all" href="#">
+<div class="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center text-white group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Chat on WhatsApp</h4>
+<p class="text-slate-400 text-sm">Quick questions? Message us now.</p>
+</div>
+</a>
+<div class="glass-panel p-8 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="uppercase tracking-widest text-xs font-bold text-slate-500">Headquarters</span>
+</div>
+<h4 class="text-xl font-bold mb-1">Dhaka, Bangladesh</h4>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Banani, Block E, Road 11<br/>
+                            Dhaka 1213, Bangladesh
+                        </p>
+<div class="h-32 rounded-lg bg-neutral-900 overflow-hidden">
+<img alt="Map of Dhaka Bangladesh" class="w-full h-full object-cover opacity-40 grayscale hover:opacity-70 hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvd9Ib1c8N06WyUSbb-Yu4MyLs71iASMlJCR5Br2DADg_VDkna4sqJIPhzIsuBAXyuC3b23uVaJEqRdoxXzB2Eo0KXEng9xLWgchOlw82Pm9NE_SdRp1oipp8M0zt5wQ-20EzVSgdnS2OByO6o1pVBN9QwZm49q2pcN309mS-InFuu_44Rjnex44TOsr0FG21mrQMhMGsxm4FBTBBNjEP0NGRmrMyYZIXynvdLfDu63KQrqICxeqXucWslmS-bhKC9B229AcCEp4dW"/>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<form class="glass-panel p-8 lg:p-12 rounded-2xl space-y-8">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs font-bold text-slate-500 tracking-widest uppercase">Full Name</label>
+<input class="w-full input-tech rounded-xl px-4 py-3" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-slate-500 tracking-widest uppercase">Work Email</label>
+<input class="w-full input-tech rounded-xl px-4 py-3" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-slate-500 tracking-widest uppercase">Project Type</label>
+<div class="relative">
+<select class="w-full input-tech rounded-xl px-4 py-3 appearance-none">
+<option value="web">Web Application</option>
+<option value="mobile">Mobile Application</option>
+<option value="ai">AI / Machine Learning</option>
+<option value="cloud">Cloud Infrastructure</option>
+<option value="other">Other Engineering Task</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">expand_more</span>
+</div>
+</div>
+<div class="space-y-4">
+<label class="text-xs font-bold text-slate-500 tracking-widest uppercase">Budget Range (USD)</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<label class="relative cursor-pointer group">
+<input class="peer sr-only" name="budget" type="radio"/>
+<div class="p-3 text-center rounded-xl border border-neutral-800 bg-field-bg peer-checked:border-cyber-blue peer-checked:bg-cyber-blue/10 peer-checked:text-white text-slate-400 transition-all">
+<span class="block text-sm font-bold">&lt; $5k</span>
+</div>
+</label>
+<label class="relative cursor-pointer group">
+<input class="peer sr-only" name="budget" type="radio"/>
+<div class="p-3 text-center rounded-xl border border-neutral-800 bg-field-bg peer-checked:border-cyber-blue peer-checked:bg-cyber-blue/10 peer-checked:text-white text-slate-400 transition-all">
+<span class="block text-sm font-bold">$5k-$20k</span>
+</div>
+</label>
+<label class="relative cursor-pointer group">
+<input checked="" class="peer sr-only" name="budget" type="radio"/>
+<div class="p-3 text-center rounded-xl border border-neutral-800 bg-field-bg peer-checked:border-cyber-blue peer-checked:bg-cyber-blue/10 peer-checked:text-white text-slate-400 transition-all">
+<span class="block text-sm font-bold">$20k-$50k</span>
+</div>
+</label>
+<label class="relative cursor-pointer group">
+<input class="peer sr-only" name="budget" type="radio"/>
+<div class="p-3 text-center rounded-xl border border-neutral-800 bg-field-bg peer-checked:border-cyber-blue peer-checked:bg-cyber-blue/10 peer-checked:text-white text-slate-400 transition-all">
+<span class="block text-sm font-bold">$50k+</span>
+</div>
+</label>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-slate-500 tracking-widest uppercase">Project Description</label>
+<textarea class="w-full input-tech rounded-xl px-4 py-3 resize-none" placeholder="Tell us about your project requirements, goals, and any specific technologies you're considering..." rows="5"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full py-5 btn-gradient text-white rounded-xl font-extrabold text-lg transition-all glow-violet flex items-center justify-center gap-3" type="submit">
+                            Send Proposal
+                            <span class="material-symbols-outlined">send</span>
+</button>
+<p class="text-center text-slate-500 text-[10px] mt-6 uppercase tracking-widest">
+                            By clicking "Send Proposal", you agree to our privacy policy.
+                        </p>
+</div>
+</form>
+</div>
+</div>
+<div class="mt-24 pt-12 border-t border-white/5">
+<p class="text-center text-slate-600 text-xs uppercase tracking-[0.3em] font-bold mb-12">Trusted by industry leaders worldwide</p>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-20 grayscale">
+<div class="h-6 w-32 bg-slate-500 rounded-full"></div>
+<div class="h-6 w-24 bg-slate-500 rounded-full"></div>
+<div class="h-6 w-36 bg-slate-500 rounded-full"></div>
+<div class="h-6 w-28 bg-slate-500 rounded-full"></div>
+<div class="h-6 w-32 bg-slate-500 rounded-full"></div>
+</div>
+</div>
+</main>
+<footer class="bg-neutral-950 py-12 px-6 border-t border-white/5">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="text-white font-black text-sm">D</span>
+</div>
+<span class="text-lg font-bold">DevToLab</span>
+</div>
+<div class="text-slate-500 text-sm">
+                © 2023 DevToLab Engineering. Built with precision in Dhaka.
+            </div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-cyber-blue transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-slate-400 hover:text-cyber-blue transition-colors" href="#"><span class="material-symbols-outlined">terminal</span></a>
+<a class="text-slate-400 hover:text-cyber-blue transition-colors" href="#"><span class="material-symbols-outlined">hub</span></a>
+</div>
+</div>
+</footer>
+
+</body></html>

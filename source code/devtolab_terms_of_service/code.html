@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevToLab - Terms of Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0db9f2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101e22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-container {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101e22;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0db9f233;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0db9f266;
+        }
+        .progress-bar {
+            height: 3px;
+            background: #0db9f2;
+            width: 35%; /* Representative progress */
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-display">
+<!-- Progress Indicator -->
+<div class="fixed top-0 left-0 w-full z-50">
+<div class="progress-bar"></div>
+</div>
+<!-- Navigation Header -->
+<header class="sticky top-0 z-40 w-full glass-container border-b border-white/10 px-6 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-sm">terminal</span>
+</div>
+<span class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">DevToLab</span>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">Documentation</a>
+<a class="hover:text-primary transition-colors" href="#">Compliance</a>
+<a class="px-4 py-2 bg-primary/10 text-primary rounded border border-primary/20 hover:bg-primary/20 transition-all" href="#">Back to Home</a>
+</nav>
+<button class="md:hidden text-slate-400">
+<span class="material-icons">menu</span>
+</button>
+</div>
+</header>
+<main class="relative max-w-7xl mx-auto px-6 py-12 lg:py-20 flex gap-12">
+<!-- Sidebar Navigation -->
+<aside class="hidden lg:block w-64 shrink-0 sticky top-32 h-fit">
+<nav class="space-y-1">
+<p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 px-3">On this page</p>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-primary bg-primary/10 border-r-2 border-primary" href="#intro">
+<span class="text-sm font-medium">Introduction</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-slate-400 hover:text-primary hover:bg-primary/5 transition-colors" href="#service-delivery">
+<span class="text-sm font-medium">1. Service Delivery</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-slate-400 hover:text-primary hover:bg-primary/5 transition-colors" href="#intellectual-property">
+<span class="text-sm font-medium">2. Intellectual Property</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-slate-400 hover:text-primary hover:bg-primary/5 transition-colors" href="#payment-terms">
+<span class="text-sm font-medium">3. Payment Terms</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-slate-400 hover:text-primary hover:bg-primary/5 transition-colors" href="#liability">
+<span class="text-sm font-medium">4. Liability &amp; Warranties</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-slate-400 hover:text-primary hover:bg-primary/5 transition-colors" href="#termination">
+<span class="text-sm font-medium">5. Termination</span>
+</a>
+</nav>
+<div class="mt-12 p-4 rounded-lg bg-primary/5 border border-primary/10">
+<p class="text-xs text-slate-400 leading-relaxed italic">
+                    Need a PDF version? 
+                    <a class="text-primary hover:underline block mt-1 font-medium" href="#">Download Terms (PDF)</a>
+</p>
+</div>
+</aside>
+<!-- Main Content Container -->
+<div class="flex-1 max-w-3xl">
+<div class="mb-12">
+<h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">Terms of Service</h1>
+<p class="text-slate-500 dark:text-slate-400 flex items-center gap-2">
+<span class="material-icons text-sm">schedule</span>
+                    Last Updated: October 24, 2023
+                </p>
+</div>
+<article class="glass-container rounded-xl p-8 md:p-12 shadow-2xl space-y-12 leading-relaxed text-slate-700 dark:text-slate-300">
+<section class="scroll-mt-32" id="intro">
+<p class="text-lg leading-relaxed">
+                        Welcome to DevToLab. These Terms of Service ("Terms") govern your access to and use of our software engineering services. By engaging DevToLab for technical consultancy or development, you agree to be bound by these terms. Please read them carefully.
+                    </p>
+</section>
+<hr class="border-white/5"/>
+<section class="scroll-mt-32" id="service-delivery">
+<div class="flex items-baseline gap-4 mb-6">
+<span class="text-2xl font-bold text-primary">1.0</span>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Service Delivery</h2>
+</div>
+<div class="space-y-4">
+<p>
+                            DevToLab provides specialized software engineering services including full-stack development, cloud architecture, and technical auditing. The scope of each engagement is defined in the Statement of Work (SOW) executed between the parties.
+                        </p>
+<div class="bg-white/5 rounded p-4 border-l-4 border-primary/50">
+<p class="text-sm font-medium mb-2 uppercase text-primary tracking-wide">1.1 Milestones</p>
+<p>All projects are divided into predetermined milestones. DevToLab will provide updates via Git repositories or staging environments upon completion of each stage.</p>
+</div>
+<p>
+                            Client responsibilities include providing timely feedback, necessary API keys, and internal documentation. Delays in client feedback may result in timeline adjustments.
+                        </p>
+</div>
+</section>
+<section class="scroll-mt-32" id="intellectual-property">
+<div class="flex items-baseline gap-4 mb-6">
+<span class="text-2xl font-bold text-primary">2.0</span>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Intellectual Property</h2>
+</div>
+<div class="space-y-4">
+<p>
+                            Ownership of the Deliverables, including custom code, design assets, and documentation, will transfer to the Client upon <span class="text-primary font-medium">full payment</span> of all outstanding invoices related to the project.
+                        </p>
+<ul class="list-disc pl-6 space-y-2 marker:text-primary">
+<li><span class="font-medium text-slate-900 dark:text-white">Third-Party Libraries:</span> Some code may include open-source libraries. Ownership is subject to their respective licenses (MIT, Apache 2.0, etc.).</li>
+<li><span class="font-medium text-slate-900 dark:text-white">DevToLab Frameworks:</span> We retain rights to any pre-existing proprietary tools or internal libraries used during the build.</li>
+</ul>
+</div>
+</section>
+<section class="scroll-mt-32" id="payment-terms">
+<div class="flex items-baseline gap-4 mb-6">
+<span class="text-2xl font-bold text-primary">3.0</span>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Payment Terms</h2>
+</div>
+<div class="space-y-4">
+<p>
+                            Invoicing occurs bi-weekly or upon milestone completion as specified in the SOW. All payments are due within <span class="text-slate-900 dark:text-white font-bold">14 business days</span> from the date of invoice.
+                        </p>
+<p>
+                            Late payments exceeding 30 days will incur a <span class="text-primary">2.5% monthly interest fee</span>. DevToLab reserves the right to suspend development and hosting of staging environments if accounts are delinquent.
+                        </p>
+</div>
+</section>
+<section class="scroll-mt-32" id="liability">
+<div class="flex items-baseline gap-4 mb-6">
+<span class="text-2xl font-bold text-primary">4.0</span>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Liability &amp; Warranties</h2>
+</div>
+<div class="space-y-4">
+<p>
+                            Software is provided "as is" without warranty of any kind. DevToLab does not guarantee that the software will be error-free or uninterrupted.
+                        </p>
+<p>
+                            In no event shall DevToLab be liable for any indirect, incidental, or consequential damages, including loss of profits, data, or business interruption, even if advised of the possibility of such damages.
+                        </p>
+</div>
+</section>
+<section class="scroll-mt-32" id="termination">
+<div class="flex items-baseline gap-4 mb-6">
+<span class="text-2xl font-bold text-primary">5.0</span>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Termination</h2>
+</div>
+<div class="space-y-4">
+<p>
+                            Either party may terminate the agreement with 30 days written notice. In the event of termination, the Client shall pay for all work completed up to the termination date.
+                        </p>
+</div>
+</section>
+</article>
+<!-- Footer Contact -->
+<footer class="mt-20 py-12 border-t border-white/10 text-center">
+<p class="text-slate-500 mb-6">Questions about our Terms?</p>
+<a class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-bold rounded-lg hover:shadow-[0_0_20px_rgba(13,185,242,0.4)] transition-all" href="mailto:legal@devtolab.io">
+<span class="material-icons text-sm">email</span>
+                    Contact Legal Team
+                </a>
+<div class="mt-12 flex justify-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-600">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Security</a>
+<a class="hover:text-primary transition-colors" href="#">GDPR</a>
+</div>
+</footer>
+</div>
+<!-- Right Side Decoration -->
+<div class="hidden xl:block w-32 shrink-0">
+<div class="h-full border-l border-dashed border-white/5 flex flex-col items-center py-10 gap-20">
+<div class="rotate-90 origin-center whitespace-nowrap text-[10px] tracking-[0.5em] font-bold text-slate-700 uppercase">
+                    DevToLab / Legal Division / v2.4.0
+                </div>
+<div class="w-1 h-32 bg-gradient-to-b from-primary to-transparent opacity-20"></div>
+</div>
+</div>
+</main>
+<!-- Floating Background Elements -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none overflow-hidden">
+<div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute top-[60%] -right-[5%] w-[30%] h-[30%] bg-primary/5 rounded-full blur-[100px]"></div>
+</div>
+</body></html>

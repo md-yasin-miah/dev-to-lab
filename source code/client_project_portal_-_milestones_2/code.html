@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevToLab | Nexus AI Project Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3d84f5",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0A0A0A",
+                        "slate-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0A;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-blue {
+            box-shadow: 0 0 15px rgba(61, 132, 245, 0.3);
+        }
+        .glow-green {
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+        }
+        .sidebar-item-active {
+            border-right: 3px solid #3d84f5;
+            background: linear-gradient(90deg, rgba(61, 132, 245, 0.1) 0%, rgba(61, 132, 245, 0) 100%);
+        }
+    </style>
+</head>
+<body class="font-display text-slate-200 bg-background-light dark:bg-background-dark min-h-screen">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-slate-800/50 flex flex-col fixed h-full bg-background-dark z-20">
+<div class="p-8 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg glow-blue">
+<span class="material-icons text-white">biotech</span>
+</div>
+<div>
+<h1 class="font-bold text-white text-lg tracking-tight leading-none">DevToLab</h1>
+<span class="text-[10px] text-primary font-bold uppercase tracking-widest">Engineering Lab</span>
+</div>
+</div>
+<nav class="mt-4 flex-grow">
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-icons text-[20px]">dashboard</span>
+<span class="text-sm font-medium tracking-wide">Project Overview</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-white sidebar-item-active transition-all" href="#">
+<span class="material-icons text-[20px] text-primary">analytics</span>
+<span class="text-sm font-medium tracking-wide">Milestones</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-icons text-[20px]">description</span>
+<span class="text-sm font-medium tracking-wide">Documents</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-icons text-[20px]">payments</span>
+<span class="text-sm font-medium tracking-wide">Billing</span>
+</a>
+</nav>
+<div class="p-8 border-t border-slate-800/50">
+<div class="flex items-center gap-3">
+<img alt="User" class="w-10 h-10 rounded-full border border-slate-700" data-alt="Professional user profile portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC588EyweFD7XTstDrcZYqgtkpoCWNZKslkmuw2ZcgEtO5zGdPlnD2R-WlSV5akfwD87fcUmYbB5jU3J872JOHZcmmrh1PLgT_WQXTfT5n_Mo9JfjZ2q-Dg4eg8nthhtNaRZ7d2njOAMMdEQWeLIOjGXyVEce0NV-FOrotzTLs5RS3gxysjAwuY4Q63AmQB1tb6AuY3S5HX0Zv6XbtEmshnFedGHrUHskUwkmp41l-wTJRxLu1L534TK28Q_FIjB1Ek0H0w0njrGEYY"/>
+<div>
+<p class="text-sm font-semibold text-white">Alex Sterling</p>
+<p class="text-[10px] text-slate-500 font-medium">Project Lead</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-64 flex-grow p-10 max-w-[1400px]">
+<!-- Header Section -->
+<header class="flex justify-between items-end mb-10">
+<div>
+<div class="flex items-center gap-2 text-xs text-slate-500 mb-2 uppercase tracking-widest font-bold">
+<span>Projects</span>
+<span class="material-icons text-[12px]">chevron_right</span>
+<span class="text-primary/80">Nexus AI Platform</span>
+</div>
+<h2 class="text-3xl font-bold text-white tracking-tight">Project Milestones</h2>
+</div>
+<div class="flex gap-4">
+<button class="px-5 py-2.5 rounded-lg border border-slate-700 text-slate-300 text-sm font-medium hover:bg-slate-800 transition-colors flex items-center gap-2">
+<span class="material-icons text-sm">cloud_download</span> Export Report
+                    </button>
+<button class="px-5 py-2.5 rounded-lg bg-primary text-white text-sm font-bold shadow-lg glow-blue hover:bg-primary/90 transition-colors">
+                        Request Sync
+                    </button>
+</div>
+</header>
+<!-- Dashboard Grid -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Left Column: Progress & Timeline -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<!-- Progress Overview Hero -->
+<div class="glass-card rounded-xl p-8 flex items-center gap-10">
+<div class="relative w-40 h-40">
+<!-- Progress Ring SVG -->
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-slate-800" cx="80" cy="80" fill="transparent" r="70" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="80" cy="80" fill="transparent" r="70" stroke="currentColor" stroke-dasharray="440" stroke-dashoffset="154" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-bold text-white leading-none">65%</span>
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-1">Overall</span>
+</div>
+</div>
+<div class="flex-grow">
+<h3 class="text-xl font-bold text-white mb-2">Nexus AI Core Development</h3>
+<p class="text-slate-400 text-sm leading-relaxed max-w-lg mb-6">
+                                The project is currently in the late stages of Phase 2 (Architecture Implementation). Infrastructure provisioning is 90% complete, and we are initiating initial API integration sprints.
+                            </p>
+<div class="grid grid-cols-3 gap-4">
+<div class="bg-slate-900/50 p-3 rounded-lg border border-slate-800">
+<p class="text-[10px] text-slate-500 font-bold uppercase mb-1">Days Remaining</p>
+<p class="text-lg font-bold text-white">42 Days</p>
+</div>
+<div class="bg-slate-900/50 p-3 rounded-lg border border-slate-800">
+<p class="text-[10px] text-slate-500 font-bold uppercase mb-1">Current Velocity</p>
+<p class="text-lg font-bold text-primary">1.4x</p>
+</div>
+<div class="bg-slate-900/50 p-3 rounded-lg border border-slate-800">
+<p class="text-[10px] text-slate-500 font-bold uppercase mb-1">Next Release</p>
+<p class="text-lg font-bold text-white">Oct 12</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Milestone Timeline -->
+<div class="glass-card rounded-xl p-8">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-lg font-bold text-white">Phase Roadmap</h3>
+<span class="text-xs text-slate-500 font-medium">Updated 2 hours ago</span>
+</div>
+<div class="space-y-0 relative">
+<!-- Vertical Line -->
+<div class="absolute left-[11px] top-2 bottom-2 w-0.5 bg-slate-800"></div>
+<!-- Phase 1 -->
+<div class="relative pl-10 pb-10">
+<div class="absolute left-0 top-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center glow-green z-10">
+<span class="material-icons text-white text-[14px] font-bold">done</span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-white font-bold text-base">Project Discovery &amp; Scope</h4>
+<p class="text-slate-400 text-sm mt-1">Requirement gathering, user story mapping, and technical feasibility studies.</p>
+</div>
+<span class="text-[10px] font-bold text-green-500 bg-green-500/10 px-2 py-1 rounded border border-green-500/20 uppercase">Completed</span>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="relative pl-10 pb-10">
+<div class="absolute left-0 top-1 w-6 h-6 bg-primary rounded-full flex items-center justify-center glow-blue z-10 animate-pulse">
+<div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-white font-bold text-base">Architecture &amp; System Design</h4>
+<p class="text-slate-400 text-sm mt-1">Building the foundation of the Nexus AI engine and database schema optimizations.</p>
+<div class="mt-4 flex gap-2">
+<span class="text-[11px] bg-slate-800 text-slate-300 px-3 py-1 rounded-full border border-slate-700">Vector DB Setup</span>
+<span class="text-[11px] bg-slate-800 text-slate-300 px-3 py-1 rounded-full border border-slate-700">Auth Flow</span>
+</div>
+</div>
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded border border-primary/20 uppercase">In Progress</span>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 border-2 border-slate-700 bg-background-dark rounded-full z-10"></div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-slate-500 font-bold text-base">Development &amp; Core Integration</h4>
+<p class="text-slate-600 text-sm mt-1">Implementation of the core neural modules and third-party API hookups.</p>
+</div>
+<span class="text-[10px] font-bold text-slate-600 bg-slate-800/50 px-2 py-1 rounded border border-slate-700 uppercase">Upcoming</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Team & Next Sprint -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Lab Team Section -->
+<div class="glass-card rounded-xl p-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-md font-bold text-white tracking-wide">Lab Team</h3>
+<button class="text-primary text-xs font-bold hover:underline">Full Team</button>
+</div>
+<div class="space-y-4">
+<!-- Team Member 1 -->
+<div class="flex items-center gap-3 p-3 rounded-lg bg-slate-900/30 border border-slate-800/50">
+<div class="relative">
+<img alt="Architect" class="w-11 h-11 rounded-lg" data-alt="Professional male software architect portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPxHEJ6SsT2Pv8Hk1-bco_X9tTK6NzLatBGWK6so5Ng0mXaczw2vLJPxr9Sp595izTGnz9sO7hDJrDhpGItE5lEvL9H9LnrVxeNlw2pisPTa0I5rdiWrpxjkVj2bQGhVtZVGQC4iFmjwVEa0si7BjUi-1NcyD-_k0zhr13jpfFacFm1qxTgBWiObR-K5iYbkLlBP7WyWIeYrAazGFLOMwiyJDRV5qbQdcsfjJg4OoTrkXDdMM6rxHXAVSLubdcdPK7xUuk97WV4sRM"/>
+<div class="absolute -bottom-1 -right-1 bg-background-dark p-0.5 rounded shadow-sm border border-slate-800">
+<img alt="Python" class="w-3 h-3" data-alt="Python programming language icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv3bwNaTHJ6OktwyG_ibFWi8CTsPlGn62VTEBSuhLFGfzy_UARAiPHZ2x9z-pkx_5AXQZeExAecUp_-BzA4n6NG3erT4Me1l6oRvStVm9uN3jc6iG5pt8MGu8wYZVWjGxZ-XCTyyIpPyguB0dxmOqPJU21OynX_ChtOBMNyRKUmPjWLaeQ2qrUaUdgrvFkXwseKs4CzfvP9WiUrA2gdAkezkweyMbfKQpx0wOKTVpOEhv3HC--BxbGjkqUK5rWIpOfyM6A3q-jTrMY"/>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold text-white leading-none">Marcus Thorne</p>
+<p class="text-[11px] text-slate-500 mt-1">Lead AI Architect</p>
+</div>
+<span class="ml-auto material-icons text-slate-600 text-[18px]">more_vert</span>
+</div>
+<!-- Team Member 2 -->
+<div class="flex items-center gap-3 p-3 rounded-lg bg-slate-900/30 border border-slate-800/50">
+<div class="relative">
+<img alt="Frontend Lead" class="w-11 h-11 rounded-lg" data-alt="Professional female software engineer portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN3d-oUGnT0tc4Qzlg0zKgnXKvONNqPmi-T3iwSNS7IrQ-gL3uIomS6XNnRcKcqcPOLwngBO_9lUyuIE88WPgSjLbv9TW8qZ4unUZjiIUoqnhua04szxy0WhZwRj2nyzJ8czWSQeLW_0FuVjV8fTlClqCfJlog4Dx6CorILnCXHebI7xQWwPtCrXKjO-ZQpAeX-D0DG9urz0HlyYoLfO3OSg6BNkEb5EAink1SN64uIJ2_BwIqX1y8XlrOdK5xkUU2C_eenVLN7G2D"/>
+<div class="absolute -bottom-1 -right-1 bg-background-dark p-0.5 rounded shadow-sm border border-slate-800">
+<img alt="React" class="w-3 h-3" data-alt="React JS library icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFNz1ienVbWegNBBRNESvp-irRbhRugmu4DdGYeSbZ97BRJss48pEZpw_6DPAk5flfKvvotBzljEKXXxfZxDHJ9qpCPiqefTX4CQRE-nCssUrOGwa6YWfvHmBHGkkBfULubBbyotDxOA-HEPPJ0iaJhxfRT6Wam6pM7AtpH1pD3yjiwjQ6fHXgYztcVFNkToyCig6OhY4WnREaGAmrtDRKkz25j1gKVAr-9CJzTbNPaXTYbfkcFklXcDjgRcTc8cdt1RH85inRcxNE"/>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold text-white leading-none">Elena Rossi</p>
+<p class="text-[11px] text-slate-500 mt-1">Frontend Lead</p>
+</div>
+<span class="ml-auto material-icons text-slate-600 text-[18px]">more_vert</span>
+</div>
+<!-- Team Member 3 -->
+<div class="flex items-center gap-3 p-3 rounded-lg bg-slate-900/30 border border-slate-800/50">
+<div class="relative">
+<img alt="DevOps" class="w-11 h-11 rounded-lg" data-alt="Professional male developer portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJwub-zAuhC-MdB6xEoSfmeShg14xTUb_FZPMvtQwW-uoK6bCGFWpZt-gF3cI-0hWNQhy0EBk_O2e78wOOHDg94ygds1YLWo93aMTdbzMWJrtgzcBUTuPK2IxsBRe_gXqiyUJTsUYYFP9uCR_Q_sJE1EfGW97fQcpJhNyYW3cDS2pWBMtlQcl1feBB19hwyXLTH644eFlGHEBxXAdtSyfHWhdWdg03HlSW-_0vDKKPNMST-KrgN8BtPAGsyjvZ2M2HYoekAq4Yr0mi"/>
+<div class="absolute -bottom-1 -right-1 bg-background-dark p-0.5 rounded shadow-sm border border-slate-800">
+<img alt="Docker" class="w-3 h-3" data-alt="Docker container icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeLZyZMKdEb09i_Qf9j-NCJvOB165TfWshMg-qUQAGVbuYraG4oWq-xJvjJzTLMtn3sTjLmQ6TSYYO7KfzO_MMjmXoYWQLdxVMw9FGN4qUBzXjOhgfN0XTl5rbjwYBKqrMNPib3ij4AXBF_LK8oABEf1ee1VDdSWhiWx8LApYdruE6Nf8hLHmaoFhLfEa71PwtrQJ3_CHzMolNAkJa-SF1ZyTbVZAyvflVEa6XBL7bGW7h9-sdq8vZOABbMllriJh2COtS_Os9ENUa"/>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold text-white leading-none">James Wu</p>
+<p class="text-[11px] text-slate-500 mt-1">Infrastructure</p>
+</div>
+<span class="ml-auto material-icons text-slate-600 text-[18px]">more_vert</span>
+</div>
+</div>
+</div>
+<!-- Next Sprint Glass Card -->
+<div class="glass-card rounded-xl p-6 relative overflow-hidden">
+<!-- Abstract Gradient Pattern -->
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -left-10 -bottom-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h3 class="text-md font-bold text-white mb-6 flex items-center gap-2">
+<span class="material-icons text-primary text-[20px]">bolt</span>
+                                Current Sprint
+                            </h3>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<div class="w-5 h-5 rounded border-2 border-primary bg-primary/20 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-icons text-[14px] text-white">check</span>
+</div>
+<div>
+<p class="text-sm font-medium text-white leading-tight">API Gateway Implementation</p>
+<p class="text-[10px] text-slate-500 mt-0.5">Assigned to James Wu</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-5 h-5 rounded border-2 border-slate-700 bg-slate-800 shrink-0 mt-0.5"></div>
+<div>
+<p class="text-sm font-medium text-white leading-tight">Vector DB Partitioning</p>
+<p class="text-[10px] text-slate-500 mt-0.5">In Progress - Marcus Thorne</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-5 h-5 rounded border-2 border-slate-700 bg-slate-800 shrink-0 mt-0.5"></div>
+<div>
+<p class="text-sm font-medium text-white leading-tight">User Dashboard Prototyping</p>
+<p class="text-[10px] text-slate-500 mt-0.5">Backlog - Elena Rossi</p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-700/50 flex justify-between items-center">
+<div>
+<p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Sprint Ends In</p>
+<p class="text-sm font-bold text-white">4d 12h 45m</p>
+</div>
+<button class="text-[11px] font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+                                    VIEW BOARD <span class="material-icons text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

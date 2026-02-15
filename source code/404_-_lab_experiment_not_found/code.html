@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>404 - Lab Experiment Not Found | DevToLab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0db9f2",
+                "accent-violet": "#8b5cf6",
+                "background-light": "#f5f8f8",
+                "background-dark": "#0A0A0A",
+                "eerie-black": "#0A0A0A",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .tech-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(13, 185, 242, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(13, 185, 242, 0.05) 1px, transparent 1px);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #0db9f2, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cyber-glow {
+            box-shadow: 0 0 20px rgba(13, 185, 242, 0.4);
+        }
+        .glass-panel {
+            background: rgba(13, 185, 242, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(13, 185, 242, 0.2);
+        }
+        .glitch-flask {
+            position: relative;
+            filter: drop-shadow(0 0 15px rgba(13, 185, 242, 0.3));
+        }
+        .particle {
+            position: absolute;
+            background: #0db9f2;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 min-h-screen flex items-center justify-center overflow-hidden">
+<!-- Tech Grid Background Layer -->
+<div class="fixed inset-0 tech-grid z-0"></div>
+<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] z-0"></div>
+<main class="relative z-10 w-full max-w-4xl px-6 text-center">
+<!-- Header / Logo Area -->
+<div class="mb-12 flex justify-center">
+<div class="flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
+<span class="material-icons text-primary text-sm">science</span>
+<span class="text-xs font-bold tracking-widest uppercase text-primary">DevToLab Engineering</span>
+</div>
+</div>
+<!-- Central Visual: The Broken Flask -->
+<div class="relative h-64 flex items-center justify-center mb-12">
+<!-- Particle Effects (Decorative) -->
+<div class="absolute top-10 left-1/2 -translate-x-32 w-2 h-2 bg-primary rounded-full opacity-60"></div>
+<div class="absolute top-20 right-1/2 translate-x-40 w-1.5 h-1.5 bg-accent-violet rounded-full opacity-40"></div>
+<div class="absolute bottom-10 left-1/2 -translate-x-20 w-1 h-1 bg-primary rounded-full opacity-50"></div>
+<div class="glitch-flask relative">
+<!-- SVG Illustration of a futuristic broken flask/circuitry -->
+<svg class="mx-auto" fill="none" height="240" viewbox="0 0 240 240" width="240" xmlns="http://www.w3.org/2000/svg">
+<!-- Base Flask Shape -->
+<path class="opacity-30" d="M80 40H160L160 80L180 120L180 200C180 211.046 171.046 220 160 220H80C68.9543 220 60 211.046 60 200L60 120L80 80L80 40Z" stroke="url(#paint0_linear)" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- "Broken" Liquid/Data -->
+<path d="M65 160C65 160 90 145 120 160C150 175 175 160 175 160V195C175 203.284 168.284 210 160 210H80C71.7157 210 65 203.284 65 195V160Z" fill="url(#paint1_linear)" fill-opacity="0.2"></path>
+<!-- Glitch Lines -->
+<rect class="opacity-80" fill="#0db9f2" height="2" width="140" x="50" y="140"></rect>
+<rect class="opacity-60" fill="#8b5cf6" height="1" width="100" x="70" y="145"></rect>
+<!-- Circuitry details -->
+<circle cx="120" cy="60" fill="#0db9f2" r="3"></circle>
+<path d="M120 63V80" stroke="#0db9f2" stroke-width="1.5"></path>
+<path d="M100 120L85 140" stroke="#0db9f2" stroke-width="1.5"></path>
+<path d="M140 120L155 140" stroke="#0db9f2" stroke-width="1.5"></path>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="paint0_linear" x1="120" x2="120" y1="40" y2="220">
+<stop stop-color="#0db9f2"></stop>
+<stop offset="1" stop-color="#8b5cf6"></stop>
+</lineargradient>
+<lineargradient gradientunits="userSpaceOnUse" id="paint1_linear" x1="120" x2="120" y1="140" y2="210">
+<stop stop-color="#0db9f2"></stop>
+<stop offset="1" stop-color="#8b5cf6"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Image Fallback/Data Alt -->
+<div class="hidden" data-alt="Futuristic glitching digital flask with glowing circuitry patterns"></div>
+</div>
+</div>
+<!-- Typography Section -->
+<h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">
+            404: Lab Experiment Not Found
+        </h1>
+<p class="text-slate-400 dark:text-slate-500 text-lg md:text-xl max-w-2xl mx-auto mb-12">
+            The resource you are looking for has been decommissioned, encrypted, or moved to a new sector in our high-performance cloud infrastructure.
+        </p>
+<!-- Search & Actions -->
+<div class="max-w-md mx-auto space-y-8">
+<div class="relative group">
+<div class="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent-violet rounded-full blur opacity-20 group-focus-within:opacity-40 transition duration-500"></div>
+<div class="relative flex items-center glass-panel rounded-full px-6 py-4">
+<span class="material-icons text-primary mr-3">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-white w-full placeholder:text-slate-600" placeholder="Search the database..." type="text"/>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-primary rounded-full transition-all duration-300 hover:scale-105 cyber-glow overflow-hidden" href="#">
+<span class="relative z-10 flex items-center">
+<span class="material-icons mr-2 text-sm">home</span>
+                        Return to Base
+                    </span>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+</a>
+<a class="px-8 py-4 font-medium text-slate-400 hover:text-primary transition-colors flex items-center" href="#">
+<span class="material-icons mr-2 text-sm">bug_report</span>
+                    Report a Bug
+                </a>
+</div>
+</div>
+<!-- Footer Utility Links -->
+<footer class="mt-24 pt-8 border-t border-primary/10 flex flex-wrap justify-center gap-8 text-xs font-medium uppercase tracking-widest text-slate-600">
+<a class="hover:text-primary transition-colors" href="#">Documentation</a>
+<a class="hover:text-primary transition-colors" href="#">API Status</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+</footer>
+</main>
+<!-- Visual Accents -->
+<div class="fixed bottom-0 left-0 p-8 opacity-20 pointer-events-none hidden lg:block">
+<div class="text-[10px] font-mono space-y-1">
+<p>&gt; ERROR_CODE: 0xDE7701AB</p>
+<p>&gt; SYSTEM_STATUS: ANOMALY_DETECTED</p>
+<p>&gt; TRACE_ID: 882-911-LAB</p>
+<p>&gt; LATENCY: 0.002ms</p>
+</div>
+</div>
+<div class="fixed top-0 right-0 p-8 opacity-20 pointer-events-none hidden lg:block">
+<div class="text-[10px] font-mono text-right space-y-1">
+<p>DEVTOLAB_OS v4.0.4</p>
+<p>SECTOR_7G_ACCESS: DENIED</p>
+<p>KERNEL_PANIC: NULL_POINTER</p>
+</div>
+</div>
+</body></html>

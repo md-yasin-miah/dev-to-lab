@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevToLab FAQ - Deep Tech Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "violet-accent": "#8b5cf6",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#0A0A0A",
+                        "slate-white": "#e2e8f0",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0A;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-primary {
+            box-shadow: 0 0 15px rgba(19, 127, 236, 0.3);
+        }
+        .accordion-active {
+            border-color: rgba(19, 127, 236, 0.5) !important;
+            box-shadow: 0 0 20px rgba(19, 127, 236, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #137fec, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-display text-slate-white bg-background-dark min-h-screen">
+<!-- Navigation Header -->
+<nav class="fixed top-0 w-full z-50 glass-card border-b border-white/10 h-16 flex items-center px-8">
+<div class="max-w-7xl mx-auto w-full flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-xl">terminal</span>
+</div>
+<span class="text-xl font-bold tracking-tight uppercase">DevTo<span class="text-primary">Lab</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">Services</a>
+<a class="hover:text-primary transition-colors" href="#">Stack</a>
+<a class="text-primary" href="#">FAQ</a>
+<a class="px-4 py-2 bg-primary rounded-lg text-white hover:bg-primary/90 transition-all" href="#">Start Project</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 max-w-5xl mx-auto">
+<!-- Hero Header -->
+<header class="text-center mb-16">
+<h1 class="text-5xl font-bold mb-4 tracking-tight">Technical <span class="text-gradient">Knowledge Base</span></h1>
+<p class="text-slate-400 max-w-2xl mx-auto text-lg">Detailed insights into our engineering workflows, pricing structures, and deep tech expertise.</p>
+</header>
+<!-- Search Bar -->
+<div class="relative max-w-2xl mx-auto mb-16">
+<span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">search</span>
+<input class="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-slate-600" placeholder="Search technical documentation, tech stacks, or billing..." type="text"/>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Sidebar Categories -->
+<aside class="lg:col-span-3">
+<div class="flex flex-col gap-2 sticky top-24">
+<button class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/20 border border-primary/30 text-primary font-medium">
+<span class="material-icons text-sm">settings</span>
+                        Process
+                    </button>
+<button class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 border border-transparent transition-all text-slate-400 hover:text-white">
+<span class="material-icons text-sm">payments</span>
+                        Pricing
+                    </button>
+<button class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 border border-transparent transition-all text-slate-400 hover:text-white">
+<span class="material-icons text-sm">memory</span>
+                        Technology
+                    </button>
+<button class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 border border-transparent transition-all text-slate-400 hover:text-white">
+<span class="material-icons text-sm">security</span>
+                        Security
+                    </button>
+</div>
+</aside>
+<!-- FAQ List -->
+<div class="lg:col-span-9 space-y-4">
+<!-- Category Section: Process -->
+<div class="mb-8">
+<h2 class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold mb-6 flex items-center gap-2">
+<span class="w-2 h-2 bg-violet-accent rounded-full"></span>
+                        Development Process
+                    </h2>
+<div class="space-y-4">
+<!-- Accordion Item 1 (Active/Open State) -->
+<div class="glass-card rounded-xl overflow-hidden accordion-active">
+<button class="w-full px-6 py-5 flex items-center justify-between text-left group">
+<span class="text-lg font-medium">How do you manage sprint cycles and communication?</span>
+<span class="material-icons text-primary transition-transform">remove</span>
+</button>
+<div class="px-6 pb-6 text-slate-400 leading-relaxed border-t border-white/5 pt-4">
+<p class="mb-4">We operate on bi-weekly sprint cycles using an Agile-Scrum methodology. Every client gets a dedicated Slack channel and access to our Jira project boards for real-time tracking.</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2">
+<span class="material-icons text-violet-accent text-sm mt-1">check_circle</span>
+<span>Daily async standups via Slack/Geekbot.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-icons text-violet-accent text-sm mt-1">check_circle</span>
+<span>Bi-weekly recorded video demos of functional code.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-icons text-violet-accent text-sm mt-1">check_circle</span>
+<span>CI/CD pipelines with staging deployments for every PR.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="glass-card rounded-xl overflow-hidden hover:border-white/20 transition-all">
+<button class="w-full px-6 py-5 flex items-center justify-between text-left group">
+<span class="text-lg font-medium">Can we integrate our internal engineers into your team?</span>
+<span class="material-icons text-slate-500 group-hover:text-primary transition-colors">add</span>
+</button>
+</div>
+<!-- Accordion Item 3 -->
+<div class="glass-card rounded-xl overflow-hidden hover:border-white/20 transition-all">
+<button class="w-full px-6 py-5 flex items-center justify-between text-left group">
+<span class="text-lg font-medium">What is your typical onboarding timeframe for new projects?</span>
+<span class="material-icons text-slate-500 group-hover:text-primary transition-colors">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Category Section: Technology -->
+<div class="pt-8">
+<h2 class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold mb-6 flex items-center gap-2">
+<span class="w-2 h-2 bg-violet-accent rounded-full"></span>
+                        Technology &amp; Infrastructure
+                    </h2>
+<div class="space-y-4">
+<!-- Accordion Item 4 -->
+<div class="glass-card rounded-xl overflow-hidden hover:border-white/20 transition-all">
+<button class="w-full px-6 py-5 flex items-center justify-between text-left group">
+<span class="text-lg font-medium">Which technologies do you specialize in for high-load systems?</span>
+<span class="material-icons text-slate-500 group-hover:text-primary transition-colors">add</span>
+</button>
+</div>
+<!-- Accordion Item 5 -->
+<div class="glass-card rounded-xl overflow-hidden hover:border-white/20 transition-all">
+<button class="w-full px-6 py-5 flex items-center justify-between text-left group">
+<span class="text-lg font-medium">How do you handle data residency and GDPR compliance?</span>
+<span class="material-icons text-slate-500 group-hover:text-primary transition-colors">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Call to Action Section -->
+<section class="mt-24">
+<div class="glass-card rounded-2xl p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 border border-white/10">
+<!-- Background Glow Decor -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
+<div class="absolute -left-20 -top-20 w-64 h-64 bg-violet-accent/10 blur-[100px] rounded-full"></div>
+<div class="relative z-10 max-w-lg text-center md:text-left">
+<h3 class="text-3xl font-bold mb-4">Still have technical questions?</h3>
+<p class="text-slate-400">Our solution architects are available for a deep-dive technical consultation to discuss your specific infrastructure needs.</p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<a class="px-8 py-4 bg-white text-background-dark font-bold rounded-lg hover:bg-slate-200 transition-all text-center" href="#">
+                        Book a Technical Call
+                    </a>
+<a class="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-lg hover:bg-white/10 transition-all text-center" href="#">
+                        Contact Support
+                    </a>
+</div>
+</div>
+</section>
+<!-- Image Gallery/Resources (Visual Context) -->
+<section class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="group relative rounded-xl overflow-hidden h-48 glass-card">
+<img class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" data-alt="Abstract lines of code on a dark screen with blue neon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPgAWnlyy3mJZ19CYKfbEgI5GalOIIbSuzbvSE5uZTTjTC9G4XtNAA8O74k8NlBPh_i9eXgcmGwo0_ov3pmZKl9UhbXAiQcz4PMg51AYYcXt67brYYcUaGt_Yylg9ocR1X0ACmvlPJhyxcztoBrijIh-sxmgW-15n5fOr-c5J5zWBwr8PfYLXrFEajQ4H_GHM6CNzRVi17fdVvucoKGPDsUkx5udK0EJWmJu9sFCZRA_p5JgceobefnGJqakkOjdR6YcSHLi5gtnnJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-xs font-bold uppercase tracking-widest text-primary mb-1">Architecture</p>
+<p class="text-sm font-medium">View our Stack</p>
+</div>
+</div>
+<div class="group relative rounded-xl overflow-hidden h-48 glass-card">
+<img class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" data-alt="Close up of a server hardware with blue LED lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkpfgMQUgMoaLBPyY8v6IAq2FR67FIjB0VO5XzBEW-9tEwFGtHy9-lmOwKFa9IU9CKIDbsLT2yV2A56_QRICsQxCrljLp3KePY_sNNietCOhWiQMxJsYRuuJZtO6SxnQfi9FMdop7pj0qBWV6__GSi93m8u_brxXV7s0balIBkDEboWsh0SAbCFOLWKpbXrRA9j40v-APrbirUJP9jAD1swx92D7hEnKwIybsooIZVcVeODxb6hofPOzLkt94mgq2ByPDKtZRzCZsa"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-xs font-bold uppercase tracking-widest text-violet-accent mb-1">Infrastructure</p>
+<p class="text-sm font-medium">DevOps Standards</p>
+</div>
+</div>
+<div class="group relative rounded-xl overflow-hidden h-48 glass-card">
+<img class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" data-alt="Blue digital earth with neural network connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaHhl5hRL1GhYi9fBJs_yhESg3WNfsDjIkN1gtbdZEDfPOz4aUhUfokm6jY0m-kmCRDTzETL0dmqHEvY7i0i65DyyQNZ8AN0ubwdID-DPmk60T8mOiZLh1qLmxd1ZvI1bOQ7WD-xmNQj_WHLM6Cg3Bn39_IqMl97qp_uopcBBn01H6vLVmFofQ-ZL2YkdNqFgl7_Bs6dzM4rdcFbsv5umM4giKPOVkHpahRc_lJonv0J4rXhDUB2xwOvb3i5GuFkQaYox5rOa6eLm2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-xs font-bold uppercase tracking-widest text-primary mb-1">Security</p>
+<p class="text-sm font-medium">Protocol Overview</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-white/10 py-12 px-8 mt-20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 bg-primary rounded-sm"></div>
+<span class="font-bold tracking-tight uppercase text-sm">DevTo<span class="text-primary">Lab</span></span>
+</div>
+<p class="text-slate-500 text-sm">© 2024 DevToLab Engineering. All rights reserved. Precision engineered software.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-icons text-xl">code</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-icons text-xl">share</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-icons text-xl">storage</span></a>
+</div>
+</div>
+</footer>
+</body></html>

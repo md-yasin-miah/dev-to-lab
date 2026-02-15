@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Lab | Technical Insights by DevToLab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8B5CF6", // Electric Violet
+                        "background-dark": "#0A0A0A",
+                        "slate-white": "#F8FAFC",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-background-dark text-slate-white font-display antialiased;
+            }
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+        .card-violet-accent {
+            background: linear-gradient(180deg, rgba(139, 92, 246, 0.03) 0%, rgba(139, 92, 246, 0) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+        }
+        .card-violet-accent:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+            background: linear-gradient(180deg, rgba(139, 92, 246, 0.08) 0%, rgba(139, 92, 246, 0.02) 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f3f;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary/30">
+<nav class="sticky top-0 z-50 border-b border-white/5 bg-background-dark/80 backdrop-blur-xl">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center shadow-[0_0_15px_rgba(139,92,246,0.4)]">
+<span class="material-symbols-outlined text-white text-xl font-bold">terminal</span>
+</div>
+<span class="font-display font-extrabold text-xl tracking-tight uppercase">DevTo<span class="text-primary">Lab</span></span>
+</div>
+<div class="hidden md:flex items-center space-x-10 text-xs font-bold uppercase tracking-widest text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Services</a>
+<a class="hover:text-primary transition-colors" href="#">Case Studies</a>
+<a class="text-slate-white border-b-2 border-primary pb-1" href="#">The Lab</a>
+<a class="hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<button class="bg-white text-black px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+                Start Project
+            </button>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-16">
+<header class="mb-20 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start space-x-2 text-primary mb-6">
+<span class="w-12 h-[1px] bg-primary"></span>
+<span class="uppercase tracking-[0.3em] text-[10px] font-bold font-mono">Engineering Journal v2.0</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-display font-black mb-8 tracking-tighter text-slate-white">
+            The Lab<span class="text-primary text-glow">.</span>
+</h1>
+<p class="max-w-2xl text-xl text-slate-400 font-light leading-relaxed">
+            Technical dissections of high-scale architecture and the future of production-grade software engineering.
+        </p>
+</header>
+<div class="flex overflow-x-auto pb-6 mb-16 no-scrollbar space-x-2 items-center border-b border-white/5">
+<button class="bg-primary text-white px-8 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-[0_0_20px_rgba(139,92,246,0.2)]">All Insights</button>
+<button class="text-slate-500 hover:text-slate-white px-8 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all">Architecture</button>
+<button class="text-slate-500 hover:text-slate-white px-8 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all">Frontend</button>
+<button class="text-slate-500 hover:text-slate-white px-8 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all">Backend</button>
+<button class="text-slate-500 hover:text-slate-white px-8 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all">DevOps</button>
+<button class="text-slate-500 hover:text-slate-white px-8 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all">Mobile</button>
+</div>
+<section class="mb-24">
+<div class="group relative overflow-hidden rounded-2xl card-violet-accent transition-all duration-500">
+<div class="flex flex-col lg:flex-row">
+<div class="lg:w-3/5 relative h-[300px] lg:h-[540px] overflow-hidden">
+<img alt="Technical Visualization" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiLjZFy7TGBF28ueZr8tL_fWuuTydx-CaY9lU87GQOGwwFknvQA-MbLLeUzPI6SozArjSx_l2LXK0iGDao_pRbqjPii3lPn58VRHYap9L2Qovx48Egax1gt9rItvqQc-qNQhWVqIPiq1SAJs93UsrmqZURq-jkcENF_jY9RPceO-czAQ0VhaGXFkqveCQxYTFI8v_8MI4ahEiOUAh7ZSmVwWSoNNABPd-EXFMP9pR1KhVhm2KKPuDCFtBhpZ827mRfqjSMSLnDesnk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/80 via-background-dark/20 to-transparent"></div>
+</div>
+<div class="lg:w-2/5 p-10 lg:p-16 flex flex-col justify-center border-l border-white/5">
+<div class="flex items-center space-x-4 mb-8">
+<span class="text-primary font-mono text-[10px] font-bold tracking-[0.2em] uppercase">Architecture</span>
+<span class="w-1 h-1 rounded-full bg-slate-700"></span>
+<span class="text-slate-500 font-mono text-[10px] uppercase">12 Min Read</span>
+</div>
+<h2 class="text-3xl lg:text-5xl font-display font-bold mb-8 leading-[1.1] tracking-tight text-slate-white group-hover:text-primary transition-colors duration-300">
+                        Scaling Next.js for Enterprise: A DevToLab Deep Dive.
+                    </h2>
+<p class="text-slate-400 mb-10 text-lg font-light leading-relaxed">
+                        An exhaustive exploration of caching strategies, ISR implementation at scale, and custom middleware for multi-tenant enterprise applications.
+                    </p>
+<div class="flex items-center justify-between mt-auto pt-8 border-t border-white/5">
+<div class="flex items-center space-x-4">
+<img alt="Alex Rivers" class="w-12 h-12 rounded-full ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsTgX7CXEvFI22NnDi7cW97xG-0Sz-tjUYQUjVmfQqdTD9pRuKmD9UhnVohHAoNfeLvmwL-YiEZLXZLe-bi9rDsVgr4XVc7rhLaYbWx5GAC2rYA0e3wfzasYXT11orNzCwOD-5ApZHg6CNQQLT19W7NQKtDpT15coE5AcwbsE5tsudiY_3LSQd0Zy3o3h86-GUNFbwephF0t073subbWHKvzAWras43RV79pj8T-UHC5ZonsH2bW6BvYH-_7VaRyGncTu1hsk7IHdd"/>
+<div>
+<p class="text-sm font-bold text-slate-white">Alex Rivers</p>
+<p class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Lead Architect</p>
+</div>
+</div>
+<a class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-slate-white">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-24">
+<div class="group flex flex-col">
+<div class="relative h-72 mb-8 overflow-hidden rounded-xl border border-white/5 bg-neutral-900">
+<img alt="Mobile Development" class="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-all duration-700 grayscale group-hover:grayscale-0 scale-110 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtOM-JSehKXHGgh1qrkyWvHt9dDKvxQj8YFrfTuTne2GOmFoaKzX9Dd-mY7s_N5huN8Fs1FMfgGLC_pSxIIeO-EG4XgtmiewsGF8pOBPXTlHAGsz4fVV_FEej-jJaeYVhHzQVtkwP4BkB-Et_7hZTdd6PhK1ChT6gdqJlyV6xbdxq7ogAl-KEFjIA118yTlIlhEuPzZIF_CiTD3XNdhgZk6eDZS6MpseJdowN_YFIjAltS9PtdI1Z37KEk8LfHdSziuNygQ2ktLK35"/>
+<div class="absolute top-6 left-6">
+<span class="px-3 py-1 bg-background-dark/90 backdrop-blur-md text-primary text-[10px] font-bold font-mono tracking-widest rounded border border-primary/20">MOBILE</span>
+</div>
+</div>
+<div class="flex items-center space-x-3 text-[10px] text-slate-500 mb-4 font-mono uppercase tracking-widest">
+<span>Oct 24, 2024</span>
+<span class="w-1 h-1 rounded-full bg-primary/40"></span>
+<span>8 Min Read</span>
+</div>
+<h3 class="text-2xl font-bold mb-5 leading-tight text-slate-white group-hover:text-primary transition-colors duration-300">
+                Native vs Cross-platform: Choosing the stack in 2024.
+            </h3>
+<p class="text-slate-400 text-sm font-light mb-8 line-clamp-3 leading-relaxed">
+                We compare Flutter, React Native, and Swift/Kotlin to help you decide which approach maximizes ROI for your startup.
+            </p>
+<div class="flex items-center space-x-3 mt-auto">
+<img alt="Sarah Chen" class="w-8 h-8 rounded-full border border-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYqD0yvElPw9CULcL70aik631u7KHcfRdVa7ok48WtEPE-jKJxA3i7VcOAYK8HFk4_W--9V_wlDBpmkpUJSDfGiCRLTTGFWo1-AmHJfxb91yFIteRsql9dcOGlvyBVmTG4Plsm-Y6imcorn-scJo_ierCVmaJYLDgP1RJDLmfJE6zK4eQ1w37RCj2tXbO6rrbT4wJ00q90qlTicFgm-6A8qMzO8ip2RVrRUXDLfeoLR1OdXtnBuC9N1Arz2uzuuBAYbVGUj1V50RHZ"/>
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Sarah Chen</span>
+</div>
+</div>
+<div class="group flex flex-col">
+<div class="relative h-72 mb-8 overflow-hidden rounded-xl border border-white/5 bg-neutral-900">
+<img alt="Database" class="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-all duration-700 grayscale group-hover:grayscale-0 scale-110 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRsCARN1QKEW52ELpm3d9ZAGnkwGlAfib38HED4nSsTgpphinZtttqwsl6HEjsJ-6CJojE04530hnB7Z-2YHRrDu_e-esd0IjM_o17AOJB4relGikrqXlm2PgJqyNdKuvWC-c-f7BM2DnI8roXt2ALfsUyhCLLe1K-jq8auDohwACiFtrCCGVRjMnkRIoqqGXiKk45NvEdulQjsxKPTrhjtkj19Jh0jRgZgS8afnIO7BRk6f8_TywEsk0eKB0aCAHoJhJ1SzcPqFJU"/>
+<div class="absolute top-6 left-6">
+<span class="px-3 py-1 bg-background-dark/90 backdrop-blur-md text-primary text-[10px] font-bold font-mono tracking-widest rounded border border-primary/20">BACKEND</span>
+</div>
+</div>
+<div class="flex items-center space-x-3 text-[10px] text-slate-500 mb-4 font-mono uppercase tracking-widest">
+<span>Oct 21, 2024</span>
+<span class="w-1 h-1 rounded-full bg-primary/40"></span>
+<span>6 Min Read</span>
+</div>
+<h3 class="text-2xl font-bold mb-5 leading-tight text-slate-white group-hover:text-primary transition-colors duration-300">
+                Supabase: The developer's secret weapon for rapid scaling.
+            </h3>
+<p class="text-slate-400 text-sm font-light mb-8 line-clamp-3 leading-relaxed">
+                Leveraging Row Level Security (RLS) and real-time listeners to build production-grade backends in record time.
+            </p>
+<div class="flex items-center space-x-3 mt-auto">
+<img alt="Alex Rivers" class="w-8 h-8 rounded-full border border-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTTDHgoGMwH5E8VmVpezCKVmdFBCDP07V_xTTK9qZilk9fpgqVvqlsCcvQceVBTbucT0xSNOhgsUvucJQwk0bFH3mn34oFzEX69Ptfa_WJhCD13D2Hrz47kC52MX2yfjdOWzTBpJMquCjoqa87NMWfRRPmxooW1vcyviVc3gxAV6vw5-OpkOoY0rbKkZbmspH1Qzv7ckDK4FT4JhjoYZ_Tyba7UNHQvBzFc7eghooC3SWQSKiKbjS2-2v-3bN7m1DNj-5Y-crjvfPW"/>
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Alex Rivers</span>
+</div>
+</div>
+<div class="group flex flex-col">
+<div class="relative h-72 mb-8 overflow-hidden rounded-xl border border-white/5 bg-neutral-900">
+<img alt="V8 Engine" class="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-all duration-700 grayscale group-hover:grayscale-0 scale-110 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWRI932h6Elk6mxKcNfJ9lzRc51Eb1HzCfDdUpzqlsdvGiLhupx3-1TZm8o3d9LfjzYC3PMKC4gZE1ZmMzajwJDxLFMEB9ntCalHk5yWwWyTO-mmlVuIxHUgcVo6nMNB7PX2fxULIPO8-XWe0z3AV3yyN_602XN1XXjhk11xZO4Qd61kwdA4_KS6ScUPjRiawisW59JRfCM0WJQIZSdNemjpEb7NtegjEDOoYY2-0V7PnFMQnA6G-htTu5hRSsx-dSAZuyM7pj55Is"/>
+<div class="absolute top-6 left-6">
+<span class="px-3 py-1 bg-background-dark/90 backdrop-blur-md text-primary text-[10px] font-bold font-mono tracking-widest rounded border border-primary/20">DEVOPS</span>
+</div>
+</div>
+<div class="flex items-center space-x-3 text-[10px] text-slate-500 mb-4 font-mono uppercase tracking-widest">
+<span>Oct 18, 2024</span>
+<span class="w-1 h-1 rounded-full bg-primary/40"></span>
+<span>15 Min Read</span>
+</div>
+<h3 class="text-2xl font-bold mb-5 leading-tight text-slate-white group-hover:text-primary transition-colors duration-300">
+                Optimizing V8 Engine Performance in Node.js.
+            </h3>
+<p class="text-slate-400 text-sm font-light mb-8 line-clamp-3 leading-relaxed">
+                A technical teardown of garbage collection, memory leaks, and hidden classes in high-throughput environments.
+            </p>
+<div class="flex items-center space-x-3 mt-auto">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-[10px] font-bold text-white">MW</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Marcus Wright</span>
+</div>
+</div>
+</section>
+<section class="mb-24">
+<div class="relative p-[1px] rounded-3xl overflow-hidden bg-gradient-to-r from-primary/40 via-transparent to-primary/40">
+<div class="bg-neutral-900 rounded-[calc(1.5rem-1px)] p-12 md:p-20 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[120px] rounded-full -mr-48 -mt-48"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2">
+<span class="text-primary font-mono text-xs font-bold tracking-[0.3em] block mb-6 uppercase">Stay Updated</span>
+<h2 class="text-4xl md:text-5xl font-display font-black text-slate-white mb-6 leading-tight">Monthly Technical Digest</h2>
+<p class="text-slate-400 text-lg font-light">Zero fluff. High-signal engineering insights from our senior laboratory engineers delivered monthly.</p>
+</div>
+<div class="md:w-1/2 w-full">
+<form class="space-y-4">
+<div class="relative group">
+<input class="w-full bg-white/5 border border-white/10 focus:border-primary focus:ring-0 rounded-2xl px-6 py-5 text-slate-white placeholder:text-slate-600 outline-none transition-all duration-300" placeholder="engineer@company.com" type="email"/>
+</div>
+<button class="w-full bg-primary text-white font-black py-5 rounded-2xl hover:brightness-110 shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all duration-300 uppercase tracking-widest text-xs">
+                                Subscribe to Insights
+                            </button>
+<p class="text-[9px] text-center text-slate-500 uppercase tracking-[0.2em] font-mono">100% signal • 0% noise • Unsubscribe anytime</p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="border-t border-white/5 pt-20 mb-20">
+<div class="flex items-end justify-between mb-16">
+<div>
+<h2 class="text-3xl font-display font-bold tracking-tight text-slate-white mb-2">Recent Archives</h2>
+<p class="text-slate-500 text-sm font-light">Past explorations from the laboratory files.</p>
+</div>
+<a class="text-primary text-[10px] font-bold uppercase tracking-widest flex items-center hover:translate-x-1 transition-transform" href="#">
+                View All Archives <span class="material-symbols-outlined text-sm ml-2">east</span>
+</a>
+</div>
+<div class="divide-y divide-white/5">
+<div class="group py-10 flex flex-col md:flex-row md:items-center justify-between hover:bg-white/[0.02] transition-colors -mx-6 px-6 rounded-xl">
+<div class="md:w-3/4">
+<span class="text-[9px] font-mono text-primary font-bold uppercase tracking-[0.2em] mb-4 block">Performance Engineering</span>
+<h4 class="text-2xl font-display font-bold text-slate-300 group-hover:text-slate-white transition-colors cursor-pointer">React 19: The New Compiler Architecture Explained</h4>
+</div>
+<div class="flex items-center space-x-10 mt-6 md:mt-0 font-mono text-[10px] text-slate-500 uppercase">
+<span>Oct 12, 2024</span>
+<span class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-sm">timer</span>
+<span>5 min</span>
+</span>
+</div>
+</div>
+<div class="group py-10 flex flex-col md:flex-row md:items-center justify-between hover:bg-white/[0.02] transition-colors -mx-6 px-6 rounded-xl">
+<div class="md:w-3/4">
+<span class="text-[9px] font-mono text-primary font-bold uppercase tracking-[0.2em] mb-4 block">Cloud Infrastructure</span>
+<h4 class="text-2xl font-display font-bold text-slate-300 group-hover:text-slate-white transition-colors cursor-pointer">Zero-Downtime Database Migrations with Prisma</h4>
+</div>
+<div class="flex items-center space-x-10 mt-6 md:mt-0 font-mono text-[10px] text-slate-500 uppercase">
+<span>Oct 05, 2024</span>
+<span class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-sm">timer</span>
+<span>9 min</span>
+</span>
+</div>
+</div>
+<div class="group py-10 flex flex-col md:flex-row md:items-center justify-between hover:bg-white/[0.02] transition-colors -mx-6 px-6 rounded-xl">
+<div class="md:w-3/4">
+<span class="text-[9px] font-mono text-primary font-bold uppercase tracking-[0.2em] mb-4 block">Security</span>
+<h4 class="text-2xl font-display font-bold text-slate-300 group-hover:text-slate-white transition-colors cursor-pointer">Post-Quantum Cryptography in Modern Web Apps</h4>
+</div>
+<div class="flex items-center space-x-10 mt-6 md:mt-0 font-mono text-[10px] text-slate-500 uppercase">
+<span>Sep 28, 2024</span>
+<span class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-sm">timer</span>
+<span>12 min</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-neutral-900/50 border-t border-white/5 py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-16 mb-24">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center space-x-3 mb-8">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm">terminal</span>
+</div>
+<span class="font-display font-black text-lg tracking-tight uppercase">DevTo<span class="text-primary">Lab</span></span>
+</div>
+<p class="text-slate-500 text-sm font-light leading-relaxed mb-8 max-w-xs">
+                    An elite engineering collective helping technology leaders build and scale through absolute technical excellence.
+                </p>
+<div class="flex space-x-6">
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">language</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-bold text-[10px] mb-8 uppercase tracking-[0.3em] text-slate-300 font-mono">Knowledge</h5>
+<ul class="space-y-4 text-xs font-medium text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">The Lab</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Technical Case Studies</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Architecture Patterns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Open Source Contributions</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-[10px] mb-8 uppercase tracking-[0.3em] text-slate-300 font-mono">Collective</h5>
+<ul class="space-y-4 text-xs font-medium text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Our Engineering Philosophy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Core Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers / Fellowships</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-[10px] mb-8 uppercase tracking-[0.3em] text-slate-300 font-mono">Governance</h5>
+<ul class="space-y-4 text-xs font-medium text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Protocol</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Engagement</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Security Disclosure</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between pt-10 border-t border-white/5 text-[10px] font-mono text-slate-600 uppercase tracking-widest">
+<p>© 2024 DevToLab Engineering Collective. EST 2021.</p>
+<div class="mt-6 md:mt-0 flex items-center space-x-8">
+<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-green-500 mr-2 shadow-[0_0_8px_rgba(34,197,94,0.4)]"></span> All Systems Operational</span>
+<span>Optimized for Devs</span>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

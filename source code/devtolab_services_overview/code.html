@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevToLab | Services Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#3B82F6",
+                "cyber-blue": "#3B82F6",
+                "slate-white": "#F8FAFC",
+                "cool-gray": "#94A3B8",
+                "deep-bg": "#0A0A0A",
+                "card-bg": "#171717",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"],
+                "mono": ["JetBrains Mono", "monospace"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #3B82F6;
+            --bg-main: #0A0A0A;
+            --bg-card: #171717;
+            --text-heading: #F8FAFC;
+            --text-sub: #94A3B8;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background-color: var(--bg-main);
+        }
+        .code-glow {
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+        }
+        .grid-bg {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .radial-glow {
+            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+        }
+        .glass-panel {
+            background: rgba(23, 23, 23, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .service-card {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-deep-bg text-cool-gray font-display">
+<nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-cyber-blue rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">terminal</span>
+</div>
+<span class="text-xl font-extrabold tracking-tight text-slate-white">DevTo<span class="text-cyber-blue">Lab</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium text-cool-gray">
+<a class="hover:text-cyber-blue transition-colors" href="#">Documentation</a>
+<a class="hover:text-cyber-blue transition-colors" href="#">Showcase</a>
+<a class="text-slate-white" href="#">Services</a>
+<a class="hover:text-cyber-blue transition-colors" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 text-sm font-medium hover:text-slate-white transition-colors">Log in</button>
+<button class="bg-cyber-blue hover:bg-cyber-blue/90 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all">Start Project</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 overflow-hidden">
+<section class="relative max-w-7xl mx-auto px-6 mb-32">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-full h-[500px] radial-glow -z-10"></div>
+<div class="grid-bg absolute inset-0 opacity-40 -z-20"></div>
+<div class="text-center space-y-6 max-w-4xl mx-auto">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-blue/10 border border-cyber-blue/20 text-cyber-blue text-xs font-bold tracking-widest uppercase">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyber-blue opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-cyber-blue"></span>
+</span>
+                    Engineering Excellence
+                </div>
+<h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter text-slate-white leading-[1.1]">
+                    Build at the speed <br/>
+<span class="bg-clip-text text-transparent bg-gradient-to-r from-cyber-blue via-blue-400 to-cyan-400">of engineering.</span>
+</h1>
+<p class="text-xl text-cool-gray max-w-2xl mx-auto leading-relaxed">
+                    We architect, design, and deploy high-performance applications using the modern stack. From Next.js scale to Supabase reliability.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+<button class="w-full sm:w-auto px-8 py-4 bg-cyber-blue text-white font-bold rounded-xl flex items-center justify-center gap-2 group transition-all hover:ring-4 hover:ring-cyber-blue/20">
+                        Explore Our Stack
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="w-full sm:w-auto px-8 py-4 service-card text-slate-white font-bold rounded-xl border border-white/10 hover:bg-white/5 transition-all">
+                        View Documentation
+                    </button>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6 mb-32">
+<div class="group relative p-0.5 rounded-2xl transition-all duration-500 hover:scale-[1.01]">
+<div class="absolute inset-0 bg-gradient-to-br from-cyber-blue/30 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative h-full service-card p-8 rounded-2xl flex flex-col justify-between overflow-hidden">
+<div>
+<div class="w-12 h-12 rounded-lg bg-cyber-blue/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-cyber-blue">layers</span>
+</div>
+<h3 class="text-2xl font-bold text-slate-white mb-4">Web Application Development</h3>
+<p class="text-cool-gray leading-relaxed mb-8">
+                            Specializing in Next.js ecosystems. We build SSR/ISR applications optimized for Core Web Vitals and edge delivery.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">Next.js 14</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">TypeScript</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">Tailwind CSS</span>
+</div>
+</div>
+<div class="relative h-32 w-full bg-black/40 rounded-lg border border-white/5 p-4 font-mono text-[10px] text-slate-500 overflow-hidden">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-2 h-2 rounded-full bg-red-500/30"></div>
+<div class="w-2 h-2 rounded-full bg-yellow-500/30"></div>
+<div class="w-2 h-2 rounded-full bg-green-500/30"></div>
+</div>
+<code class="block text-cyber-blue">export async function GET() {</code>
+<code class="block ml-4">const data = await db.project.findMany();</code>
+<code class="block ml-4">return Response.json({ data });</code>
+<code class="block text-cyber-blue">}</code>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-bg/80 to-transparent"></div>
+</div>
+</div>
+</div>
+<div class="group relative p-0.5 rounded-2xl transition-all duration-500 hover:scale-[1.01]">
+<div class="absolute inset-0 bg-gradient-to-br from-cyber-blue/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative h-full service-card p-8 rounded-2xl flex flex-col justify-between overflow-hidden">
+<div>
+<div class="w-12 h-12 rounded-lg bg-cyber-blue/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-cyber-blue">phone_iphone</span>
+</div>
+<h3 class="text-2xl font-bold text-slate-white mb-4">Native Mobile Engineering</h3>
+<p class="text-cool-gray leading-relaxed mb-8">
+                            Cross-platform excellence with Flutter and React Native. High-fidelity animations and native hardware integration.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">Flutter</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">React Native</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">Fastlane</span>
+</div>
+</div>
+<div class="relative h-32 w-full bg-black/40 rounded-lg border border-white/5 p-4 flex justify-around items-end">
+<div class="w-12 h-24 bg-white/5 rounded-t-lg border-x border-t border-white/10 relative overflow-hidden">
+<div class="absolute inset-x-2 top-4 h-1 bg-cyber-blue/40 rounded-full"></div>
+<div class="absolute inset-x-2 top-7 h-10 bg-white/5 rounded"></div>
+</div>
+<div class="w-14 h-28 bg-white/10 rounded-t-xl border-x border-t border-white/20 relative shadow-2xl">
+<div class="absolute inset-x-3 top-5 h-1.5 bg-cyber-blue/60 rounded-full"></div>
+<div class="absolute inset-x-3 top-10 h-12 bg-white/10 rounded"></div>
+</div>
+<div class="w-12 h-20 bg-white/5 rounded-t-lg border-x border-t border-white/10 relative">
+<div class="absolute inset-x-2 top-4 h-1 bg-cyber-blue/40 rounded-full"></div>
+<div class="absolute inset-x-2 top-7 h-8 bg-white/5 rounded"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative p-0.5 rounded-2xl transition-all duration-500 hover:scale-[1.01]">
+<div class="absolute inset-0 bg-gradient-to-br from-cyber-blue/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative h-full service-card p-8 rounded-2xl flex flex-col justify-between overflow-hidden">
+<div>
+<div class="w-12 h-12 rounded-lg bg-cyber-blue/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-cyber-blue">auto_awesome</span>
+</div>
+<h3 class="text-2xl font-bold text-slate-white mb-4">The Design Lab</h3>
+<p class="text-cool-gray leading-relaxed mb-8">
+                            We don't just design interfaces; we engineer experiences. Modular design systems built for developers and users.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">Figma Mastery</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">Design Ops</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">Storybook</span>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<div class="aspect-square bg-cyber-blue/20 rounded border border-cyber-blue/40 animate-pulse"></div>
+<div class="aspect-square bg-white/5 rounded border border-white/10"></div>
+<div class="aspect-square bg-white/5 rounded border border-white/10"></div>
+<div class="aspect-square bg-white/5 rounded border border-white/10"></div>
+<div class="aspect-square bg-white/5 rounded border border-white/10"></div>
+<div class="aspect-square bg-white/5 rounded border border-white/10"></div>
+<div class="aspect-square bg-cyber-blue/20 rounded border border-cyber-blue/40"></div>
+<div class="aspect-square bg-white/5 rounded border border-white/10"></div>
+</div>
+</div>
+</div>
+<div class="group relative p-0.5 rounded-2xl transition-all duration-500 hover:scale-[1.01]">
+<div class="absolute inset-0 bg-gradient-to-br from-cyber-blue/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative h-full service-card p-8 rounded-2xl flex flex-col justify-between overflow-hidden">
+<div>
+<div class="w-12 h-12 rounded-lg bg-cyber-blue/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-cyber-blue">dns</span>
+</div>
+<h3 class="text-2xl font-bold text-slate-white mb-4">Infrastructure &amp; Cloud</h3>
+<p class="text-cool-gray leading-relaxed mb-8">
+                            Scaleable backends powered by Supabase and AWS. We handle the orchestration so you can focus on the business logic.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">Supabase</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">PostgreSQL</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded text-xs font-mono text-cool-gray">Serverless</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="h-2 w-full bg-white/5 rounded overflow-hidden">
+<div class="h-full w-[85%] bg-cyber-blue/50"></div>
+</div>
+<div class="h-2 w-full bg-white/5 rounded overflow-hidden">
+<div class="h-full w-[60%] bg-cyber-blue/50"></div>
+</div>
+<div class="h-2 w-full bg-white/5 rounded overflow-hidden">
+<div class="h-full w-[92%] bg-cyber-blue/50"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-32">
+<div class="max-w-7xl mx-auto px-6 mb-12">
+<p class="text-center text-sm font-semibold text-cool-gray uppercase tracking-widest">Powering industry leaders with</p>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+<img class="h-8 w-auto object-contain brightness-200" data-alt="Next js logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMEj2dZQ2NdXG8MshwdXVBlW_mJ6zgYUdKMNgqSJqaFP5NqPggmueYvO6X9JSviPqrScuOGyR2DuBGnFm83zyJMnWajcvOP_ytN32lkDfpb-Jm0OzoN3rv7IrLhp1iH1yZrAFCKAmvynMP6ouS91WYOO4DI_cnULhImI5NkEDvSK1lnDfr8i1zLKfvL3nVnZe9oJl1FnqJ2lGLCx-OSxApglac3rjn-btDTy_06lvlG4DCXqKmTKuXaijXM1bTa6J84QS0YRJY_M8k"/>
+<img class="h-8 w-auto object-contain brightness-200" data-alt="React logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCusiXUUiwRlBYxSWS7Bsw7UqpgAXmoEku_MPh9PaNIj3_Sy0gyTJ8aT8Lufxwz3fYLQkGQwXkLWKNne1XB_etwkSKFD0S_84P_dUO9dJ2kVZlWGPqWa2mZfCfFKL9NJKMG4CSYRHc2mMDCIKqomuAuXy8HbO8v84S8o0kXlfMRAR9I-B7ol6Nx-DZAqWBvGBro9bLz8a0QL0M62HzSLpBAoY8n4JQeAiz9EhaljMiv4TvNR04ern11BtUeFYtpcKIprpbFcfkLoi5q"/>
+<img class="h-8 w-auto object-contain brightness-200" data-alt="Supabase logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASzOkrlC6MzL4xmB_JA8A9mS0vhQW4oDN162zYZDxStcuxn9nO-JFpEHg3YO0kFDZIk72ingz8AM-70fgm51rE_9BQiRkmHmfi5W4vufQuXi9sVZ0YSejYu2LroiyBo2gHtnvLfWyT7kn8-M-SJ_96wEl-AgsT-8pPP4jz067RvMlKwf84knjM-qsynowjqGrBaLa2xPXVXsJdlh91JV2Flv1stUSQmGOM1L2XQdCfB_UsApw_atkxCRd416KLm1M8TE-OrmJ-hqzF"/>
+<img class="h-8 w-auto object-contain brightness-200" data-alt="Vercel logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHSrnCTC6L0k21ebOY-mp7LhdRO1oNsAm8OBn5Pv3BEQfWnKx9U0sP7wC72iKyYRSgWDEtz0XTFcTuYQoH_oO4elsLbYneI1B-sMDsrGIgsXb0PGIbzv2Y2--pX2-7h3nXZCCXhQQGK--b1xs70C2B0-hr3ne29_DQi_aVpJrBXRz_pTz8V5223O-jiKtW-ILXsKv5a15J1OStpgSUtnYctCJfUTajCbmpUf7V0fALrzsToEkQyEJxMnY6BokQ1QsZbu8IVHXgwuQB"/>
+<img class="h-8 w-auto object-contain brightness-200" data-alt="Flutter logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwxy7CWUXLYrjzWjL4kvjrA8ewQFsUFXsGRAG1kuXUthEC9sDR7R_GHAaq1cAuw0T1Fqs0YXeLX7v7zGPdVaGviKHi05b8a9ednyZL7DeJ0q3g4A5lZv_2e8cfySrsqpMf1VpX4JJU-bl5zdGg63NvR77yJqQbEWZtC3jUKWTZcIEQVwvrYJSQXq1mWdA2JZuKUnE5qpCqkSbO6lmtyDrziH9oR1g9wfNqdfYFR0JTwQAsefKC8qqNP8-pjH0xx9eVeedUzA2bUGhp"/>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-6 mb-32">
+<div class="service-card rounded-3xl overflow-hidden grid md:grid-cols-2">
+<div class="p-12 flex flex-col justify-center">
+<h2 class="text-4xl font-bold text-slate-white mb-6">The Lab: <br/><span class="text-cyber-blue">Design Engineering</span></h2>
+<p class="text-cool-gray text-lg leading-relaxed mb-8">
+                        We bridge the gap between design and production code. Our "Lab" environment ensures every pixel is a direct translation of component logic.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-cool-gray">
+<span class="material-symbols-outlined text-cyber-blue text-lg">check_circle</span>
+                            Atomic Design Systems
+                        </li>
+<li class="flex items-center gap-3 text-cool-gray">
+<span class="material-symbols-outlined text-cyber-blue text-lg">check_circle</span>
+                            Zero-Latency Prototypes
+                        </li>
+<li class="flex items-center gap-3 text-cool-gray">
+<span class="material-symbols-outlined text-cyber-blue text-lg">check_circle</span>
+                            Accessibility-First Mindset
+                        </li>
+</ul>
+</div>
+<div class="bg-black/40 p-6 relative border-l border-white/5">
+<div class="absolute inset-0 grid-bg opacity-10"></div>
+<div class="relative z-10 space-y-4">
+<div class="bg-white/5 p-4 rounded-xl border border-white/10 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-cyber-blue/10"></div>
+<div>
+<div class="h-3 w-24 bg-white/10 rounded"></div>
+<div class="h-2 w-16 bg-white/5 rounded mt-2"></div>
+</div>
+</div>
+<div class="h-6 w-12 bg-cyber-blue/30 rounded-full"></div>
+</div>
+<div class="bg-white/5 p-4 rounded-xl border border-white/10">
+<div class="h-40 w-full rounded-lg bg-white/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-white/5">insights</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-1 bg-white/5 p-4 rounded-xl border border-white/10 h-20"></div>
+<div class="flex-1 bg-white/5 p-4 rounded-xl border border-white/10 h-20"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-5xl mx-auto px-6 text-center">
+<div class="bg-gradient-to-b from-cyber-blue/10 to-transparent p-12 rounded-[2rem] border border-cyber-blue/20">
+<h2 class="text-4xl font-bold text-slate-white mb-6">Ready to engineer your future?</h2>
+<p class="text-cool-gray text-lg mb-10 max-w-xl mx-auto">
+                    Join the 50+ companies that have scaled their digital infrastructure with DevToLab.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="px-10 py-4 bg-cyber-blue text-white font-bold rounded-xl hover:bg-cyber-blue/90 transition-all shadow-xl shadow-cyber-blue/20">
+                        Schedule a Consultation
+                    </button>
+<button class="px-10 py-4 bg-white/5 text-slate-white font-bold rounded-xl border border-white/10 hover:bg-white/10 transition-all">
+                        View Open Source
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-white/5 pt-20 pb-10 bg-deep-bg">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-6 h-6 bg-cyber-blue rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xs">terminal</span>
+</div>
+<span class="text-lg font-extrabold tracking-tight text-slate-white">DevTo<span class="text-cyber-blue">Lab</span></span>
+</div>
+<p class="text-cool-gray max-w-xs text-sm leading-relaxed">
+                        High-performance software engineering for startups and enterprises. Built with the future in mind.
+                    </p>
+</div>
+<div>
+<h4 class="text-slate-white font-bold mb-6 text-sm">Services</h4>
+<ul class="space-y-4 text-sm text-cool-gray">
+<li><a class="hover:text-cyber-blue transition-colors" href="#">Web Apps</a></li>
+<li><a class="hover:text-cyber-blue transition-colors" href="#">Mobile Apps</a></li>
+<li><a class="hover:text-cyber-blue transition-colors" href="#">Design Systems</a></li>
+<li><a class="hover:text-cyber-blue transition-colors" href="#">Cloud Infra</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-white font-bold mb-6 text-sm">Company</h4>
+<ul class="space-y-4 text-sm text-cool-gray">
+<li><a class="hover:text-cyber-blue transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-cyber-blue transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-cyber-blue transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-cyber-blue transition-colors" href="#">Privacy</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-xs text-cool-gray/50">
+<p>© 2024 DevToLab Engineering. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-slate-white transition-colors" href="#">Twitter</a>
+<a class="hover:text-slate-white transition-colors" href="#">GitHub</a>
+<a class="hover:text-slate-white transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

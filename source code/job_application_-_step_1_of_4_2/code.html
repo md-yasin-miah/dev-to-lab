@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevToLab | Job Application - Step 3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#0A0A0A",
+                        "surface": "#171717",
+                        "cyber-blue": "#137fec",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A;
+            color: #ffffff;
+        }
+        .glass {
+            background: rgba(23, 23, 23, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .step-active {
+            box-shadow: 0 0 15px rgba(19, 127, 236, 0.4);
+        }
+        .cyber-grid {
+            background-image: linear-gradient(rgba(19, 127, 236, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(19, 127, 236, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .dashed-border {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23137fec' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display min-h-screen selection:bg-primary/30 selection:text-primary-foreground">
+<div class="fixed inset-0 cyber-grid pointer-events-none"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 py-8 md:py-12">
+<header class="flex justify-between items-center mb-12">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(19,127,236,0.3)]">
+<span class="material-icons text-white">developer_board</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight">DevToLab</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold">Engineering Agency</p>
+</div>
+</div>
+<div class="hidden md:flex items-center space-x-2 text-sm text-slate-400">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="font-mono">SYSTEMS_OPERATIONAL</span>
+</div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 space-y-8">
+<nav class="flex items-center justify-between mb-8 overflow-x-auto pb-4 md:pb-0">
+<div class="flex flex-col items-center flex-1">
+<div class="w-10 h-10 rounded-lg bg-primary/20 border border-primary/40 flex items-center justify-center text-primary z-10">
+<span class="material-icons text-sm">check</span>
+</div>
+<span class="mt-2 text-[11px] font-mono text-primary/60 font-medium">01_PERSONAL</span>
+</div>
+<div class="h-[2px] flex-1 bg-primary/40 -mt-6"></div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-10 h-10 rounded-lg bg-primary/20 border border-primary/40 flex items-center justify-center text-primary z-10">
+<span class="material-icons text-sm">check</span>
+</div>
+<span class="mt-2 text-[11px] font-mono text-primary/60 uppercase">02_SOCIALS</span>
+</div>
+<div class="h-[2px] flex-1 bg-primary/40 -mt-6"></div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white step-active z-10">
+<span class="material-icons text-sm text-white">work_history</span>
+</div>
+<span class="mt-2 text-[11px] font-mono text-primary uppercase font-bold">03_EXP</span>
+</div>
+<div class="h-[2px] flex-1 bg-white/10 -mt-6"></div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-10 h-10 rounded-lg bg-surface border border-white/10 flex items-center justify-center text-slate-500 z-10">
+<span class="material-icons text-sm">fact_check</span>
+</div>
+<span class="mt-2 text-[11px] font-mono text-slate-500 uppercase">04_REVIEW</span>
+</div>
+</nav>
+<div class="glass rounded-xl p-8 md:p-10 border-white/10">
+<div class="mb-10">
+<h2 class="text-2xl font-semibold mb-2">Engineering Experience</h2>
+<p class="text-slate-400 text-sm font-mono uppercase tracking-tight">Step 3 of 4: Showcase your technical history and architectural mindset.</p>
+</div>
+<form class="space-y-10">
+<div class="space-y-4">
+<label class="block text-xs font-mono text-slate-400 uppercase tracking-wider">Resume / CV Upload</label>
+<div class="relative dashed-border rounded-xl p-12 transition-all hover:bg-primary/5 group cursor-pointer text-center">
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" type="file"/>
+<div class="space-y-4">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto border border-primary/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">upload_file</span>
+</div>
+<div>
+<p class="text-lg font-medium text-white">Drag and drop your file here</p>
+<p class="text-sm text-slate-400 mt-1">PDF, DOCX up to 10MB</p>
+</div>
+<button class="px-6 py-2 bg-primary/20 border border-primary/30 rounded-lg text-primary text-sm font-semibold hover:bg-primary/30 transition-colors" type="button">
+                                    Browse Files
+                                </button>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<label class="block text-xs font-mono text-slate-400 uppercase tracking-wider">Most complex architectural challenge</label>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-widest">Characters: 0 / 1000</span>
+</div>
+<div class="relative">
+<div class="absolute top-4 left-4 text-primary opacity-30 select-none">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<textarea class="w-full bg-surface/50 border-white/10 rounded-xl focus:ring-primary focus:border-primary text-white py-4 pl-12 pr-4 min-h-[220px] placeholder:text-slate-700 transition-all outline-none font-mono text-sm leading-relaxed" placeholder="// Describe a scenario where you had to make critical technical trade-offs, solve for scale, or debug a deep system-level issue..."></textarea>
+</div>
+</div>
+<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-white/5">
+<button class="order-2 md:order-1 flex items-center text-slate-400 hover:text-white transition-colors text-sm font-medium group" type="button">
+<span class="material-icons mr-2 text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                            Back to Socials
+                        </button>
+<button class="order-1 md:order-2 w-full md:w-auto bg-primary hover:bg-primary/90 text-white font-semibold py-3.5 px-10 rounded-lg flex items-center justify-center transition-all group shadow-[0_4px_20px_rgba(19,127,236,0.3)]" type="submit">
+                            Continue to Review
+                            <span class="material-icons ml-2 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<div class="lg:col-span-4 space-y-6">
+<div class="glass rounded-xl overflow-hidden sticky top-8 border-white/10">
+<div class="relative h-40">
+<img alt="Cyberpunk workstation with blue lights" class="w-full h-full object-cover opacity-60" data-alt="High tech hardware and blue neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN-3B3q6qQF-Yjtgcyd5_FHBD8HStphz4dW7UxIy3TgY3s9mG9kUeybbAM9Ao5f0_Q_lXW_f1NqQQXnH09J0zTv7jRMYQYx__C0FoUl3bQuS1StsvMfAN0iVGZbJv0KeCFXu_6zvEGRUJ9Y2W1I6a4T80xJ_jTMbblpcDAtl-3CrkfhQnoc4Sckw8-Hu50DwsYfTBTNPZXbv3Bq5Sht5MqqnZanysgUS-W5-vigL5ZS9nLN8LzU4XY1fqXs0fGVioVH09HQDUMrr6l"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="inline-block px-2 py-1 rounded bg-primary text-[10px] font-bold uppercase tracking-widest text-white mb-2">Open Position</span>
+<h2 class="text-xl font-bold">Senior Frontend Engineer</h2>
+</div>
+</div>
+<div class="p-6 space-y-6">
+<div class="space-y-4">
+<div class="flex items-center text-slate-400 text-sm">
+<span class="material-icons text-primary mr-3 text-lg">location_on</span>
+<span>Remote (Global)</span>
+</div>
+<div class="flex items-center text-slate-400 text-sm">
+<span class="material-icons text-primary mr-3 text-lg">payments</span>
+<span>$140k - $190k + Equity</span>
+</div>
+<div class="flex items-center text-slate-400 text-sm">
+<span class="material-icons text-primary mr-3 text-lg">schedule</span>
+<span>Full-time contract</span>
+</div>
+</div>
+<hr class="border-white/5"/>
+<div class="space-y-3">
+<p class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Required Tech Stack</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded text-xs text-slate-300 font-mono">React</span>
+<span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded text-xs text-slate-300 font-mono">TypeScript</span>
+<span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded text-xs text-slate-300 font-mono">Rust</span>
+<span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded text-xs text-slate-300 font-mono">WASM</span>
+<span class="px-2.5 py-1 bg-white/5 border border-white/10 rounded text-xs text-slate-300 font-mono">Tailwind</span>
+</div>
+</div>
+<div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+<div class="flex items-start space-x-3">
+<span class="material-icons text-primary text-lg">info</span>
+<p class="text-xs text-slate-300 leading-relaxed">
+                                We're looking for an engineer who thrives in low-latency environments and loves building modular, high-performance web systems.
+                            </p>
+</div>
+</div>
+<div class="pt-4">
+<div class="flex items-center space-x-2 text-xs text-slate-500">
+<span class="material-icons text-[14px]">map</span>
+<span>HQ Location:</span>
+</div>
+<div class="mt-2 h-32 w-full rounded-lg overflow-hidden border border-white/10 grayscale contrast-125 brightness-75">
+<img alt="Map of San Francisco area" class="w-full h-full object-cover" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA54aPvMMLtbgXKY5nfYhC_yBdZ4muTXzEXos0mZgLp1fxjOVGMV7M3HBXGiBszLwMJGer4gXX1DZsWE6A_10EjcTRMpCvbolLAXOJn9KMcswTLzpQdHlv166ttjptLyd31P6k-oxkeQmpUDqqzhsXf9gih4kWph7lRV0FmuVShXFJomdwpFo6m-E-JEyGmivU41dMX95nRgyNY5xK1S1bqZeh-N_9-lcxTKnH6SaASm20CK0tnb2MPDIMdPZn5sRDcWwu2Gu7PjuMQ"/>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 text-center">
+<p class="text-[10px] text-slate-600 font-mono uppercase tracking-[0.2em]">Secure Session ID: DT-2023-F-491</p>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

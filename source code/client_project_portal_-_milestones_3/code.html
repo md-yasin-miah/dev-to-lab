@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevToLab | Legal Documents Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3d84f5",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0A0A0A",
+                        "slate-dark": "#1e293b",
+                        "cyber-blue": "#3d84f5",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --glass-bg: rgba(30, 41, 59, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.05);
+        }
+        body {
+            background-color: #0A0A0A;
+        }
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+        }
+        .glow-blue {
+            box-shadow: 0 0 15px rgba(61, 132, 245, 0.3);
+        }
+        .sidebar-item-active {
+            border-right: 3px solid #3d84f5;
+            background: linear-gradient(90deg, rgba(61, 132, 245, 0.1) 0%, rgba(61, 132, 245, 0) 100%);
+        }
+        .dashed-border {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%233D84F5FF' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        }
+    </style>
+</head>
+<body class="font-display text-slate-200 bg-background-dark min-h-screen">
+<div class="flex min-h-screen">
+<aside class="w-64 border-r border-slate-800/50 flex flex-col fixed h-full bg-background-dark z-20">
+<div class="p-8 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg glow-blue">
+<span class="material-icons text-white">biotech</span>
+</div>
+<div>
+<h1 class="font-bold text-white text-lg tracking-tight leading-none">DevToLab</h1>
+<span class="text-[10px] text-primary font-bold uppercase tracking-widest">Engineering Lab</span>
+</div>
+</div>
+<nav class="mt-4 flex-grow">
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-icons text-[20px]">dashboard</span>
+<span class="text-sm font-medium tracking-wide">Project Overview</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-icons text-[20px]">analytics</span>
+<span class="text-sm font-medium tracking-wide">Milestones</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-white sidebar-item-active transition-all" href="#">
+<span class="material-icons text-[20px] text-primary">gavel</span>
+<span class="text-sm font-medium tracking-wide">Legal Docs</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-icons text-[20px]">payments</span>
+<span class="text-sm font-medium tracking-wide">Billing</span>
+</a>
+</nav>
+<div class="p-8 border-t border-slate-800/50">
+<div class="flex items-center gap-3">
+<img alt="User" class="w-10 h-10 rounded-full border border-slate-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC588EyweFD7XTstDrcZYqgtkpoCWNZKslkmuw2ZcgEtO5zGdPlnD2R-WlSV5akfwD87fcUmYbB5jU3J872JOHZcmmrh1PLgT_WQXTfT5n_Mo9JfjZ2q-Dg4eg8nthhtNaRZ7d2njOAMMdEQWeLIOjGXyVEce0NV-FOrotzTLs5RS3gxysjAwuY4Q63AmQB1tb6AuY3S5HX0Zv6XbtEmshnFedGHrUHskUwkmp41l-wTJRxLu1L534TK28Q_FIjB1Ek0H0w0njrGEYY"/>
+<div>
+<p class="text-sm font-semibold text-white">Alex Sterling</p>
+<p class="text-[10px] text-slate-500 font-medium">Project Lead</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="ml-64 flex-grow p-10 max-w-[1440px]">
+<header class="flex justify-between items-end mb-8">
+<div>
+<div class="flex items-center gap-2 text-xs text-slate-500 mb-2 uppercase tracking-widest font-bold">
+<span>Repository</span>
+<span class="material-icons text-[12px]">chevron_right</span>
+<span class="text-primary/80">Compliance &amp; Legal</span>
+</div>
+<h2 class="text-3xl font-bold text-white tracking-tight">Legal Documents</h2>
+</div>
+<div class="flex gap-4">
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm">search</span>
+<input class="bg-slate-900/50 border border-slate-700 rounded-lg pl-10 pr-4 py-2 text-sm text-slate-300 focus:ring-primary focus:border-primary w-64" placeholder="Search contracts..." type="text"/>
+</div>
+<button class="px-5 py-2.5 rounded-lg border border-slate-700 text-slate-300 text-sm font-medium hover:bg-slate-800 transition-colors flex items-center gap-2">
+<span class="material-icons text-sm">filter_list</span> Filters
+                </button>
+</div>
+</header>
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<div class="dashed-border rounded-xl p-8 flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-primary/5 transition-all">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-icons text-primary">cloud_upload</span>
+</div>
+<h3 class="text-white font-bold mb-1">Upload New Document</h3>
+<p class="text-slate-500 text-xs">Drag and drop or click to browse<br/>(PDF, DOCX up to 25MB)</p>
+</div>
+<div class="glass-card rounded-xl p-6">
+<h3 class="text-sm font-bold text-white uppercase tracking-wider mb-6">Document Categories</h3>
+<div class="space-y-2">
+<button class="w-full flex items-center justify-between p-3 rounded-lg bg-primary/10 border border-primary/20 text-white transition-all">
+<div class="flex items-center gap-3">
+<span class="material-icons text-primary text-sm">folder</span>
+<span class="text-sm font-medium">All Documents</span>
+</div>
+<span class="text-xs bg-primary/20 px-2 py-0.5 rounded-full text-primary">12</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-slate-800/50 text-slate-400 transition-all">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-600 text-sm">description</span>
+<span class="text-sm font-medium">Master Service Agreements</span>
+</div>
+<span class="text-xs bg-slate-800 px-2 py-0.5 rounded-full">1</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-slate-800/50 text-slate-400 transition-all">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-600 text-sm">assignment</span>
+<span class="text-sm font-medium">Statement of Work (SOW)</span>
+</div>
+<span class="text-xs bg-slate-800 px-2 py-0.5 rounded-full">8</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-slate-800/50 text-slate-400 transition-all">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-600 text-sm">security</span>
+<span class="text-sm font-medium">NDAs &amp; DPAs</span>
+</div>
+<span class="text-xs bg-slate-800 px-2 py-0.5 rounded-full">3</span>
+</button>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-8 space-y-6">
+<div class="glass-card rounded-xl p-6 flex items-start gap-6 border-l-4 border-l-green-500">
+<div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-green-500 text-3xl">contract_edit</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="text-white font-bold text-lg">Master Services Agreement (MSA)</h4>
+<p class="text-slate-500 text-xs">MSA-2023-DEV-001 • v2.4</p>
+</div>
+<span class="px-2 py-1 bg-green-500/10 text-green-500 text-[10px] font-bold uppercase rounded border border-green-500/20">Active</span>
+</div>
+<p class="text-slate-400 text-sm mb-4 leading-relaxed">Framework agreement covering overall engagement terms, IP ownership, and liability protections for all future SOWs.</p>
+<div class="flex items-center gap-6 pt-4 border-t border-slate-800/50">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 uppercase font-bold">Signed Date</span>
+<span class="text-sm text-slate-300">Jan 12, 2023</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 uppercase font-bold">Expiry</span>
+<span class="text-sm text-slate-300">Jan 12, 2026</span>
+</div>
+<div class="ml-auto flex gap-2">
+<button class="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition-colors">
+<span class="material-icons text-sm">visibility</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-white text-sm font-bold flex items-center gap-2 hover:bg-primary/90 transition-colors">
+<span class="material-icons text-sm">download</span> Download
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-6 flex items-start gap-6 border-l-4 border-l-amber-500">
+<div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-amber-500 text-3xl">assignment_late</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="text-white font-bold text-lg">SOW #08: Nexus AI Core Infrastructure</h4>
+<p class="text-slate-500 text-xs">SOW-2023-NX-08 • v1.1</p>
+</div>
+<span class="px-2 py-1 bg-amber-500/10 text-amber-500 text-[10px] font-bold uppercase rounded border border-amber-500/20">Expiring Soon</span>
+</div>
+<p class="text-slate-400 text-sm mb-4 leading-relaxed">Detailed scope for the development of the neural engine, cloud provisioning, and initial API security layers.</p>
+<div class="flex items-center gap-6 pt-4 border-t border-slate-800/50">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 uppercase font-bold">Signed Date</span>
+<span class="text-sm text-slate-300">Sep 05, 2023</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 uppercase font-bold">Renewal Date</span>
+<span class="text-sm text-amber-500 font-bold">Oct 15, 2023</span>
+</div>
+<div class="ml-auto flex gap-2">
+<button class="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition-colors">
+<span class="material-icons text-sm">visibility</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-white text-sm font-bold flex items-center gap-2 hover:bg-primary/90 transition-colors">
+<span class="material-icons text-sm">sync</span> Renew
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-6 flex items-start gap-6 border-l-4 border-l-blue-500">
+<div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-blue-500 text-3xl">verified_user</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="text-white font-bold text-lg">Mutual Non-Disclosure Agreement</h4>
+<p class="text-slate-500 text-xs">NDA-CORP-2022-04 • v3.0</p>
+</div>
+<span class="px-2 py-1 bg-blue-500/10 text-blue-500 text-[10px] font-bold uppercase rounded border border-blue-500/20">Signed</span>
+</div>
+<p class="text-slate-400 text-sm mb-4 leading-relaxed">Confidentiality and non-disclosure agreement protecting proprietary trade secrets and technical data exchange.</p>
+<div class="flex items-center gap-6 pt-4 border-t border-slate-800/50">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 uppercase font-bold">Last Modified</span>
+<span class="text-sm text-slate-300">Nov 20, 2022</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 uppercase font-bold">History</span>
+<button class="text-sm text-primary hover:underline flex items-center gap-1">View 2 Versions <span class="material-icons text-[12px]">history</span></button>
+</div>
+<div class="ml-auto flex gap-2">
+<button class="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition-colors">
+<span class="material-icons text-sm">visibility</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-sm font-bold flex items-center gap-2 hover:bg-slate-700 transition-colors">
+<span class="material-icons text-sm">download</span> PDF
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-6 flex items-start gap-6 border-l-4 border-l-slate-600">
+<div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-slate-500 text-3xl">history_edu</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="text-slate-400 font-bold text-lg">SOW #07: Discovery Phase (Nexus)</h4>
+<p class="text-slate-600 text-xs">SOW-2022-NX-07 • v1.0</p>
+</div>
+<span class="px-2 py-1 bg-slate-800 text-slate-500 text-[10px] font-bold uppercase rounded border border-slate-700">Archived</span>
+</div>
+<p class="text-slate-500 text-sm mb-4 leading-relaxed">Project kickoff documentation and initial technical feasibility report for the Nexus Platform.</p>
+<div class="flex items-center gap-6 pt-4 border-t border-slate-800/50">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-500 uppercase font-bold">Completed</span>
+<span class="text-sm text-slate-500">Aug 15, 2023</span>
+</div>
+<div class="ml-auto flex gap-2">
+<button class="p-2 rounded-lg bg-slate-900/50 text-slate-600 hover:text-slate-400 transition-colors">
+<span class="material-icons text-sm">visibility</span>
+</button>
+<button class="p-2 rounded-lg bg-slate-900/50 text-slate-600 hover:text-slate-400 transition-colors">
+<span class="material-icons text-sm">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

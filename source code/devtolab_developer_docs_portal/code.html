@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevToLab Developer Docs Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3d84f5",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0A0A0A",
+                        "accent-violet": "#8b5cf6",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .search-glow:focus-within {
+            box-shadow: 0 0 20px rgba(61, 132, 245, 0.3);
+            border-color: #3d84f5;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        .code-block {
+            background: #111111;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 antialiased overflow-hidden">
+<!-- Top Navigation -->
+<header class="h-16 border-b border-white/10 flex items-center justify-between px-6 sticky top-0 z-50 bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons-round text-white text-xl">terminal</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-white">DevToLab <span class="text-primary/80 font-normal">Docs</span></span>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Showcase</a>
+<a class="hover:text-primary transition-colors" href="#">Community</a>
+<a class="hover:text-primary transition-colors" href="#">Enterprise</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<a class="text-slate-400 hover:text-white transition-colors" href="https://github.com">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+<button class="bg-primary text-white px-4 py-1.5 rounded text-sm font-semibold hover:bg-blue-600 transition-all">Sign In</button>
+</div>
+</header>
+<div class="flex h-[calc(100vh-64px)] overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-white/10 hidden lg:flex flex-col flex-shrink-0 bg-background-dark">
+<div class="flex-1 overflow-y-auto custom-scrollbar p-6">
+<div class="space-y-8">
+<div>
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Getting Started</h3>
+<ul class="space-y-3">
+<li><a class="text-sm text-primary flex items-center gap-2 group" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Quickstart</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white flex items-center gap-2 transition-colors" href="#">Architecture</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white flex items-center gap-2 transition-colors" href="#">Environments</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">API Reference</h3>
+<ul class="space-y-3">
+<li><a class="text-sm text-slate-400 hover:text-white flex items-center gap-2 transition-colors" href="#">Authentication</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white flex items-center gap-2 transition-colors" href="#">Endpoints</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white flex items-center gap-2 transition-colors" href="#">Rate Limits</a></li>
+<li><a class="text-sm text-slate-400 hover:text-white flex items-center gap-2 transition-colors" href="#">Errors</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">SDKs</h3>
+<ul class="space-y-3 text-sm text-slate-400">
+<li class="flex items-center justify-between hover:text-white cursor-pointer transition-colors"><span>React</span> <span class="text-[10px] px-1.5 bg-white/5 rounded">v2.4</span></li>
+<li class="flex items-center justify-between hover:text-white cursor-pointer transition-colors"><span>Node.js</span> <span class="text-[10px] px-1.5 bg-white/5 rounded text-primary">v3.0</span></li>
+<li class="flex items-center justify-between hover:text-white cursor-pointer transition-colors"><span>Python</span></li>
+<li class="flex items-center justify-between hover:text-white cursor-pointer transition-colors"><span>Go</span></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Integrations</h3>
+<ul class="space-y-3 text-sm text-slate-400">
+<li><a class="hover:text-white transition-colors" href="#">Webhooks</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Slack App</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Stripe Sync</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="p-6 border-t border-white/10">
+<div class="flex items-center gap-3">
+<span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+<span class="text-xs text-slate-400 font-medium">All systems operational</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto custom-scrollbar bg-background-dark relative">
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] pointer-events-none rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-accent-violet/5 blur-[100px] pointer-events-none rounded-full"></div>
+<div class="max-w-4xl mx-auto px-8 py-16">
+<!-- Hero Section -->
+<div class="text-center mb-16">
+<h1 class="text-5xl font-extrabold text-white mb-6 tracking-tight">Build the future with DevToLab</h1>
+<p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
+                        High-performance documentation for high-performance teams. Discover APIs, SDKs, and deep tech integrations for your next engineering feat.
+                    </p>
+<div class="max-w-xl mx-auto group">
+<div class="relative search-glow glass-card rounded-xl transition-all duration-300">
+<span class="material-icons-round absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">search</span>
+<input class="w-full bg-transparent border-none py-4 pl-12 pr-20 text-white placeholder-slate-500 focus:ring-0 text-base" placeholder="Search documentation..." type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex gap-1">
+<kbd class="px-2 py-1 bg-white/10 rounded text-[10px] text-slate-400 border border-white/10">CMD</kbd>
+<kbd class="px-2 py-1 bg-white/10 rounded text-[10px] text-slate-400 border border-white/10">K</kbd>
+</div>
+</div>
+</div>
+</div>
+<!-- Topic Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+<div class="glass-card p-6 rounded-xl group cursor-pointer hover:border-primary/50 transition-all duration-300">
+<div class="w-12 h-12 bg-accent-violet/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-accent-violet">lock</span>
+</div>
+<h3 class="text-lg font-semibold text-white mb-2">Authentication</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Secure your requests with OAuth2, JWT tokens, and biometric passkeys in seconds.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-medium">
+                            Explore Auth <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl group cursor-pointer hover:border-primary/50 transition-all duration-300">
+<div class="w-12 h-12 bg-accent-violet/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-accent-violet">sync_alt</span>
+</div>
+<h3 class="text-lg font-semibold text-white mb-2">Webhooks</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Real-time event streaming via high-throughput webhooks with guaranteed delivery.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-medium">
+                            Setup Hooks <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl group cursor-pointer hover:border-primary/50 transition-all duration-300">
+<div class="w-12 h-12 bg-accent-violet/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-accent-violet">terminal</span>
+</div>
+<h3 class="text-lg font-semibold text-white mb-2">CLI Tooling</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Manage environments and deploy deployments directly from your terminal with our CLI.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-medium">
+                            Install CLI <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl group cursor-pointer hover:border-primary/50 transition-all duration-300">
+<div class="w-12 h-12 bg-accent-violet/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-accent-violet">security</span>
+</div>
+<h3 class="text-lg font-semibold text-white mb-2">Data Privacy</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Built-in compliance for GDPR, HIPAA, and SOC2 across all global regions.</p>
+<div class="mt-4 flex items-center text-primary text-sm font-medium">
+                            Read Policy <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Code Snippet Section -->
+<div class="mb-16">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xl font-bold text-white">Start Building</h2>
+<div class="flex gap-4">
+<button class="text-xs font-semibold text-primary border-b-2 border-primary pb-1 px-1">Node.js</button>
+<button class="text-xs font-semibold text-slate-500 hover:text-slate-300 pb-1 px-1">Python</button>
+<button class="text-xs font-semibold text-slate-500 hover:text-slate-300 pb-1 px-1">Go</button>
+</div>
+</div>
+<div class="code-block rounded-xl overflow-hidden shadow-2xl">
+<div class="bg-white/5 px-4 py-2 flex items-center justify-between border-b border-white/5">
+<div class="flex gap-1.5">
+<div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-amber-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-emerald-500/50"></div>
+</div>
+<span class="text-xs text-slate-500 font-mono">index.js</span>
+</div>
+<div class="p-6 font-mono text-sm leading-relaxed overflow-x-auto">
+<pre><span class="text-accent-violet">import</span> { DevToLab } <span class="text-accent-violet">from</span> <span class="text-emerald-400">'@devtolab/sdk'</span>;
+
+<span class="text-slate-500">// Initialize with your API key</span>
+<span class="text-accent-violet">const</span> client = <span class="text-accent-violet">new</span> <span class="text-blue-400">DevToLab</span>({
+  apiKey: <span class="text-emerald-400">'dtl_test_51...xyz'</span>
+});
+
+<span class="text-accent-violet">async function</span> <span class="text-blue-400">main</span>() {
+  <span class="text-accent-violet">const</span> response = <span class="text-accent-violet">await</span> client.<span class="text-blue-400">projects</span>.<span class="text-blue-400">create</span>({
+    name: <span class="text-emerald-400">'HyperScale-Backend'</span>,
+    region: <span class="text-emerald-400">'us-east-1'</span>
+  });
+  
+  <span class="text-blue-400">console</span>.<span class="text-blue-400">log</span>(<span class="text-emerald-400">'Project ID:'</span>, response.id);
+}
+
+<span class="text-blue-400">main</span>();</pre>
+</div>
+</div>
+</div>
+<!-- Footer-ish content -->
+<div class="flex flex-col md:flex-row gap-8 py-12 border-t border-white/10">
+<div class="flex-1">
+<h4 class="text-white font-semibold mb-2">Need help?</h4>
+<p class="text-sm text-slate-400 mb-4">Our engineering team is available 24/7 for premium support tiers.</p>
+<a class="inline-flex items-center text-sm font-semibold text-primary hover:underline" href="#">
+                            Open a support ticket <span class="material-icons-round text-sm ml-1">launch</span>
+</a>
+</div>
+<div class="flex-1">
+<h4 class="text-white font-semibold mb-2">Community</h4>
+<p class="text-sm text-slate-400 mb-4">Join 50k+ developers on our Discord server and share your builds.</p>
+<a class="inline-flex items-center text-sm font-semibold text-primary hover:underline" href="#">
+                            Join Discord <span class="material-icons-round text-sm ml-1">groups</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Right Side: Updates Feed -->
+<aside class="w-80 border-l border-white/10 hidden xl:flex flex-col flex-shrink-0 bg-background-dark">
+<div class="p-6">
+<h3 class="text-sm font-bold text-white mb-6 flex items-center gap-2">
+<span class="material-icons-round text-primary text-sm">bolt</span> Latest Updates
+                </h3>
+<div class="space-y-8 relative before:absolute before:left-[11px] before:top-2 before:bottom-0 before:w-[1px] before:bg-white/10">
+<div class="relative pl-8">
+<div class="absolute left-0 top-1.5 w-6 h-6 bg-background-dark flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-primary/20"></div>
+</div>
+<div class="text-xs font-mono text-slate-500 mb-1">MAY 24, 2024</div>
+<h4 class="text-sm font-semibold text-white mb-1">New Node.js SDK v3.0</h4>
+<p class="text-xs text-slate-400 leading-relaxed">Complete rewrite with full TypeScript support and 40% smaller bundle size.</p>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-0 top-1.5 w-6 h-6 bg-background-dark flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-slate-700"></div>
+</div>
+<div class="text-xs font-mono text-slate-500 mb-1">MAY 18, 2024</div>
+<h4 class="text-sm font-semibold text-white mb-1">Global Edge Cache</h4>
+<p class="text-xs text-slate-400 leading-relaxed">API responses now cached globally at the edge for sub-10ms latency.</p>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-0 top-1.5 w-6 h-6 bg-background-dark flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-slate-700"></div>
+</div>
+<div class="text-xs font-mono text-slate-500 mb-1">MAY 12, 2024</div>
+<h4 class="text-sm font-semibold text-white mb-1">PostgreSQL Adapter</h4>
+<p class="text-xs text-slate-400 leading-relaxed">Direct SQL querying support via the main GraphQL interface.</p>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-0 top-1.5 w-6 h-6 bg-background-dark flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-slate-700"></div>
+</div>
+<div class="text-xs font-mono text-slate-500 mb-1">MAY 05, 2024</div>
+<h4 class="text-sm font-semibold text-white mb-1">SOC2 Type II Compliance</h4>
+<p class="text-xs text-slate-400 leading-relaxed">Successfully completed our annual security audit.</p>
+</div>
+</div>
+<div class="mt-10 p-4 rounded-xl glass-card">
+<div class="flex items-center gap-3 mb-3">
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-icons-round text-primary text-lg">verified_user</span>
+</div>
+<span class="text-xs font-bold text-white uppercase">Beta Access</span>
+</div>
+<p class="text-xs text-slate-400 mb-4">Get early access to our new AI-powered code generation features.</p>
+<button class="w-full py-2 bg-white/5 border border-white/10 hover:bg-white/10 text-white rounded text-xs font-bold transition-all">Join the Waitlist</button>
+</div>
+</div>
+</aside>
+</div>
+</body></html>

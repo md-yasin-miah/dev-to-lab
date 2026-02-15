@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevToLab | Client Portal Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3d84f5",
+                        "background-dark": "#0A0A0A",
+                        "slate-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-glow: rgba(61, 132, 245, 0.3);
+        }
+        body {
+            background-color: #0A0A0A;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-blue {
+            box-shadow: 0 0 15px var(--primary-glow);
+        }
+        .sidebar-item-active {
+            border-right: 3px solid #3d84f5;
+            background: linear-gradient(90deg, rgba(61, 132, 245, 0.1) 0%, rgba(61, 132, 245, 0) 100%);
+        }
+        .sparkline {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 0;
+        }
+        .radar-grid {
+            stroke: rgba(255, 255, 255, 0.1);
+            fill: none;
+        }
+    </style>
+</head>
+<body class="font-display text-slate-200 bg-background-dark min-h-screen">
+<div class="flex min-h-screen">
+<aside class="w-64 border-r border-slate-800/50 flex flex-col fixed h-full bg-background-dark z-20">
+<div class="p-8 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg glow-blue">
+<span class="material-icons text-white">biotech</span>
+</div>
+<div>
+<h1 class="font-bold text-white text-lg tracking-tight leading-none">DevToLab</h1>
+<span class="text-[10px] text-primary font-bold uppercase tracking-widest">Engineering Lab</span>
+</div>
+</div>
+<nav class="mt-4 flex-grow">
+<a class="flex items-center gap-4 px-8 py-4 text-white sidebar-item-active transition-all" href="#">
+<span class="material-symbols-outlined text-[20px] text-primary">dashboard</span>
+<span class="text-sm font-medium tracking-wide">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+<span class="text-sm font-medium tracking-wide">Projects</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span class="text-sm font-medium tracking-wide">Billing &amp; Invoices</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+<span class="text-sm font-medium tracking-wide">Legal Docs</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-slate-400 hover:text-white hover:bg-slate-900/50 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-sm font-medium tracking-wide">Settings</span>
+</a>
+</nav>
+<div class="p-8 border-t border-slate-800/50">
+<div class="flex items-center gap-3">
+<img alt="User" class="w-10 h-10 rounded-full border border-slate-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC588EyweFD7XTstDrcZYqgtkpoCWNZKslkmuw2ZcgEtO5zGdPlnD2R-WlSV5akfwD87fcUmYbB5jU3J872JOHZcmmrh1PLgT_WQXTfT5n_Mo9JfjZ2q-Dg4eg8nthhtNaRZ7d2njOAMMdEQWeLIOjGXyVEce0NV-FOrotzTLs5RS3gxysjAwuY4Q63AmQB1tb6AuY3S5HX0Zv6XbtEmshnFedGHrUHskUwkmp41l-wTJRxLu1L534TK28Q_FIjB1Ek0H0w0njrGEYY"/>
+<div>
+<p class="text-sm font-semibold text-white">Alex Rivera</p>
+<p class="text-[10px] text-slate-500 font-medium uppercase">Premium Client</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="ml-64 flex-grow p-10 max-w-[1600px]">
+<header class="mb-10 flex justify-between items-center">
+<div>
+<h2 class="text-3xl font-bold text-white tracking-tight">Welcome back, Alex</h2>
+<p class="text-slate-400 mt-1">Here is a high-level overview of your engineering lab status.</p>
+</div>
+<div class="flex gap-4">
+<div class="px-4 py-2 bg-slate-900/50 border border-slate-800 rounded-lg flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+<span class="text-xs font-bold text-slate-300 uppercase tracking-widest">Lab Systems Online</span>
+</div>
+</div>
+</header>
+<div class="grid grid-cols-12 gap-6 mb-8">
+<div class="col-span-12 md:col-span-4 glass-card rounded-xl p-6 relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-1">Active Projects</p>
+<h3 class="text-2xl font-bold text-white">04</h3>
+</div>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">rocket_launch</span>
+</div>
+<div class="h-12 w-full flex items-end">
+<svg class="w-full h-full" viewBox="0 0 100 30">
+<path class="sparkline" d="M0 25 Q 10 5, 20 20 T 40 10 T 60 22 T 80 5 T 100 15" fill="none" stroke="#3d84f5" stroke-width="2"></path>
+</svg>
+</div>
+<p class="text-[10px] text-green-500 font-bold mt-2">+12% velocity vs last month</p>
+</div>
+<div class="col-span-12 md:col-span-4 glass-card rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-1">Engineering Hours</p>
+<h3 class="text-2xl font-bold text-white">1,248 <span class="text-sm font-normal text-slate-500">h</span></h3>
+</div>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">query_builder</span>
+</div>
+<div class="flex items-center gap-2 mt-6">
+<div class="flex-grow bg-slate-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[78%]"></div>
+</div>
+<span class="text-xs font-bold text-slate-400">78% cap</span>
+</div>
+<p class="text-[10px] text-slate-500 mt-2">Current billing cycle: Sep 01 - Sep 30</p>
+</div>
+<div class="col-span-12 md:col-span-4 glass-card rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-1">Upcoming Releases</p>
+<h3 class="text-2xl font-bold text-white">03</h3>
+</div>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">event</span>
+</div>
+<div class="space-y-2 mt-4">
+<div class="flex items-center justify-between p-2 bg-slate-900/30 rounded border border-slate-800/50">
+<span class="text-xs text-white font-medium">Nexus v2.4</span>
+<span class="text-[9px] font-bold bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded uppercase">In 2 Days</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-slate-900/30 rounded border border-slate-800/50">
+<span class="text-xs text-white font-medium">Auth Microservice</span>
+<span class="text-[9px] font-bold bg-slate-700 text-slate-400 px-1.5 py-0.5 rounded uppercase">Oct 12</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-6">
+<div class="col-span-12 lg:col-span-5 glass-card rounded-xl p-8">
+<div class="flex justify-between items-center mb-10">
+<h3 class="text-lg font-bold text-white tracking-tight">Project Health Lab</h3>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-white transition-colors">info</span>
+</div>
+<div class="flex justify-center items-center py-4">
+<div class="relative w-64 h-64">
+<svg class="w-full h-full transform -rotate-18" viewBox="0 0 100 100">
+<polygon class="radar-grid" points="50,0 100,38 81,100 19,100 0,38"></polygon>
+<polygon class="radar-grid" points="50,15 85,41 72,85 28,85 15,41"></polygon>
+<polygon class="radar-grid" points="50,30 70,45 62,70 38,70 30,45"></polygon>
+<polygon fill="rgba(61, 132, 245, 0.4)" points="50,10 90,40 70,80 35,90 20,40" stroke="#3d84f5" stroke-width="2"></polygon>
+</svg>
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-slate-500 uppercase">Velocity</div>
+<div class="absolute top-1/4 -right-10 text-[10px] font-bold text-slate-500 uppercase">Quality</div>
+<div class="absolute -bottom-6 right-4 text-[10px] font-bold text-slate-500 uppercase">Budget</div>
+<div class="absolute -bottom-6 left-4 text-[10px] font-bold text-slate-500 uppercase">Scope</div>
+<div class="absolute top-1/4 -left-12 text-[10px] font-bold text-slate-500 uppercase">Uptime</div>
+</div>
+</div>
+<div class="mt-12 grid grid-cols-2 gap-4">
+<div class="p-3 bg-slate-900/50 rounded-lg border border-slate-800">
+<p class="text-[9px] text-slate-500 font-bold uppercase mb-1">Efficiency Score</p>
+<p class="text-xl font-bold text-white">92%</p>
+</div>
+<div class="p-3 bg-slate-900/50 rounded-lg border border-slate-800">
+<p class="text-[9px] text-slate-500 font-bold uppercase mb-1">Compliance</p>
+<p class="text-xl font-bold text-primary">A+</p>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7 glass-card rounded-xl p-8">
+<h3 class="text-lg font-bold text-white tracking-tight mb-8">System Activity Feed</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="mt-1 w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px] text-blue-400">commit</span>
+</div>
+<div class="flex-grow border-b border-slate-800 pb-4">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold text-white">Git Commit: <span class="text-primary">#42a9d</span></h4>
+<span class="text-[10px] text-slate-500 font-medium">12m ago</span>
+</div>
+<p class="text-xs text-slate-400 mt-1">Marcus Thorne pushed to <span class="text-slate-200">nexus-core/main</span>: Refactored vector embedding logic for improved latency.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px] text-green-400">cloud_done</span>
+</div>
+<div class="flex-grow border-b border-slate-800 pb-4">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold text-white">Deployment Successful</h4>
+<span class="text-[10px] text-slate-500 font-medium">2h ago</span>
+</div>
+<p class="text-xs text-slate-400 mt-1">Production environment <span class="text-slate-200">US-EAST-1</span> updated to build v2.3.9-stable.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px] text-orange-400">description</span>
+</div>
+<div class="flex-grow border-b border-slate-800 pb-4">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold text-white">Document Updated</h4>
+<span class="text-[10px] text-slate-500 font-medium">5h ago</span>
+</div>
+<p class="text-xs text-slate-400 mt-1">Project Roadmap Q4 was modified by Alex Sterling. Added Milestone: Multi-region expansion.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold text-white">Internal Audit Completed</h4>
+<span class="text-[10px] text-slate-500 font-medium">Yesterday</span>
+</div>
+<p class="text-xs text-slate-400 mt-1">Weekly performance audit for Nexus AI Platform passed with 99.98% reliability score.</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-2 border border-slate-700 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition-all">
+                    VIEW FULL AUDIT LOG
+                </button>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

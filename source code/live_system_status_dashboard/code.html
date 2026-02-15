@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevToLab | Live System Status</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10b748",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                        "cyber-blue": "#3B82F6",
+                        "deep-black": "#0A0A0A",
+                        "glass-card": "#171717",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0A;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(16, 183, 72, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .glass-effect {
+            background: rgba(23, 23, 23, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(16, 183, 72, 0.1);
+        }
+        .glow-pulse {
+            box-shadow: 0 0 20px rgba(16, 183, 72, 0.4);
+        }
+        .status-dot-pulse {
+            position: relative;
+        }
+        .status-dot-pulse::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #10b748;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="font-display text-white selection:bg-primary/30 min-h-screen">
+<!-- Navigation -->
+<nav class="border-b border-primary/10 bg-deep-black/80 backdrop-blur-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-deep-black font-bold">terminal</span>
+</div>
+<span class="text-xl font-bold tracking-tighter">DEVTOLAB<span class="text-primary">.STATUS</span></span>
+</div>
+<div class="flex items-center gap-6 text-sm font-medium text-white/60">
+<a class="hover:text-primary transition-colors" href="#">Documentation</a>
+<a class="hover:text-primary transition-colors" href="#">API Reference</a>
+<a class="px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded hover:bg-primary/20 transition-all" href="#">Support Center</a>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-12 space-y-12">
+<!-- Global Status Hero -->
+<section class="glass-effect rounded-xl p-8 md:p-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] rounded-full -mr-32 -mt-32"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="space-y-4 text-center md:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Live Monitoring
+                    </div>
+<h1 class="text-4xl md:text-6xl font-bold tracking-tight">ALL SYSTEMS <span class="text-primary">OPERATIONAL</span></h1>
+<p class="text-white/50 text-lg">Current uptime is 99.99% across all global zones. No active incidents detected.</p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2">
+<span class="text-white/40 text-xs uppercase tracking-widest">Last Updated</span>
+<span class="text-2xl font-mono text-white/80 tracking-tighter">2023-10-24 14:02:11 UTC</span>
+<div class="flex gap-1 mt-2">
+<div class="w-1 h-6 bg-primary rounded-full"></div>
+<div class="w-1 h-8 bg-primary rounded-full"></div>
+<div class="w-1 h-10 bg-primary rounded-full"></div>
+<div class="w-1 h-6 bg-primary rounded-full"></div>
+<div class="w-1 h-9 bg-primary rounded-full"></div>
+<div class="w-1 h-11 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- API Gateway -->
+<div class="glass-effect p-6 rounded-xl group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-bold text-white/90">API Gateway</h3>
+<p class="text-xs text-white/40">v2.4.1 Production</p>
+</div>
+<span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded font-bold uppercase">Stable</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-end justify-between">
+<span class="text-3xl font-bold tracking-tighter">99.98<span class="text-sm text-white/40 font-normal ml-1">%</span></span>
+<span class="text-xs text-primary flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span> 0.02%
+                        </span>
+</div>
+<div class="h-12 w-full flex items-end gap-1">
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[60%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[80%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[70%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[90%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[85%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[100%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[95%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[98%]"></div>
+</div>
+<div class="flex justify-between text-[10px] text-white/30 font-medium">
+<span>24H AGO</span>
+<span>CURRENT</span>
+</div>
+</div>
+</div>
+<!-- Core Database -->
+<div class="glass-effect p-6 rounded-xl group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-bold text-white/90">Core Database</h3>
+<p class="text-xs text-white/40">Postgres Cluster</p>
+</div>
+<span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded font-bold uppercase">Optimal</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-end justify-between">
+<span class="text-3xl font-bold tracking-tighter">12<span class="text-sm text-white/40 font-normal ml-1">ms</span></span>
+<span class="text-xs text-primary flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm">bolt</span> Latency
+                        </span>
+</div>
+<div class="h-12 w-full flex items-end gap-1">
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[40%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[45%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[42%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[38%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[40%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[41%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[39%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[35%]"></div>
+</div>
+<div class="flex justify-between text-[10px] text-white/30 font-medium">
+<span>24H AGO</span>
+<span>CURRENT</span>
+</div>
+</div>
+</div>
+<!-- CDN Edge -->
+<div class="glass-effect p-6 rounded-xl group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-bold text-white/90">CDN Edge</h3>
+<p class="text-xs text-white/40">Global Delivery</p>
+</div>
+<span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded font-bold uppercase">100%</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-end justify-between">
+<span class="text-3xl font-bold tracking-tighter">2.4<span class="text-sm text-white/40 font-normal ml-1">TB/s</span></span>
+<span class="text-xs text-primary flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm">public</span> Traffic
+                        </span>
+</div>
+<div class="h-12 w-full flex items-end gap-1">
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[90%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[88%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[92%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[95%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[94%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[96%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[98%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[100%]"></div>
+</div>
+<div class="flex justify-between text-[10px] text-white/30 font-medium">
+<span>24H AGO</span>
+<span>CURRENT</span>
+</div>
+</div>
+</div>
+<!-- Mobile Sync -->
+<div class="glass-effect p-6 rounded-xl group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-bold text-white/90">Mobile Sync</h3>
+<p class="text-xs text-white/40">Socket.io Service</p>
+</div>
+<span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded font-bold uppercase">Active</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-end justify-between">
+<span class="text-3xl font-bold tracking-tighter">0<span class="text-sm text-white/40 font-normal ml-1">err</span></span>
+<span class="text-xs text-primary flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm">check_circle</span> Healthy
+                        </span>
+</div>
+<div class="h-12 w-full flex items-end gap-1">
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[5%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[3%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[4%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[2%]"></div>
+<div class="flex-1 bg-cyber-blue/30 rounded-t h-[0%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[0%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[0%]"></div>
+<div class="flex-1 bg-cyber-blue/50 rounded-t h-[0%]"></div>
+</div>
+<div class="flex justify-between text-[10px] text-white/30 font-medium">
+<span>24H AGO</span>
+<span>CURRENT</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Global Latency Map Visualization -->
+<div class="lg:col-span-2 glass-effect rounded-xl overflow-hidden flex flex-col">
+<div class="p-6 border-b border-primary/10 flex justify-between items-center">
+<div>
+<h2 class="font-bold text-lg">Global Latency Map</h2>
+<p class="text-sm text-white/40">Real-time edge node response times</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-[10px] font-bold text-white/60">OK</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-cyber-blue"></div>
+<span class="text-[10px] font-bold text-white/60">NODE</span>
+</div>
+</div>
+</div>
+<div class="flex-1 relative min-h-[400px] bg-[#0c0c0c]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale brightness-50" data-alt="World map with glowing digital connections" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRz8asGjUiGtQ-l0N0mTROE9Htm-HY5ubolH1yTCp--DhJWYA_zlmDmtx42RT1TsRyHWJigKOh0LEemEninwGUdKHz0SQrv9JQhjKPQiAsZ3Hsbz9xjsRfpI5L3rLLqI4_-5H6vdw4LEpDGfr49b3W74xI3xJYjmNwjxOIvkM7nud3cGqcKuUmBZJPIqcYjaVXqBOiy4ASdN14Mv5aSOV9m2rLzh9gy7Fx6HEamm5iCR8A9sRLE1Q0I_Z1r_DHT8HiDE9Ex5QIOfu5"/>
+<!-- Latency Points -->
+<div class="absolute top-1/4 left-1/4 group cursor-pointer">
+<div class="w-4 h-4 bg-primary/40 rounded-full flex items-center justify-center">
+<div class="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_#10b748]"></div>
+</div>
+<div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 glass-effect p-2 rounded hidden group-hover:block z-20 min-w-[120px]">
+<p class="text-[10px] font-bold">US-EAST (VA)</p>
+<p class="text-xs text-primary font-mono">14ms</p>
+</div>
+</div>
+<div class="absolute top-1/3 left-[48%] group cursor-pointer">
+<div class="w-4 h-4 bg-primary/40 rounded-full flex items-center justify-center">
+<div class="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_#10b748]"></div>
+</div>
+<div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 glass-effect p-2 rounded hidden group-hover:block z-20 min-w-[120px]">
+<p class="text-[10px] font-bold">EU-WEST (LON)</p>
+<p class="text-xs text-primary font-mono">22ms</p>
+</div>
+</div>
+<div class="absolute bottom-1/3 right-1/4 group cursor-pointer">
+<div class="w-4 h-4 bg-primary/40 rounded-full flex items-center justify-center">
+<div class="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_#10b748]"></div>
+</div>
+<div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 glass-effect p-2 rounded hidden group-hover:block z-20 min-w-[120px]">
+<p class="text-[10px] font-bold">ASIA-PAC (SIN)</p>
+<p class="text-xs text-primary font-mono|">41ms</p>
+</div>
+</div>
+<div class="absolute bottom-6 right-6 glass-effect p-4 rounded-lg space-y-3 min-w-[180px]">
+<div class="flex justify-between items-center text-xs">
+<span class="text-white/40">US-East</span>
+<span class="font-mono text-primary">14ms</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-white/40">EU-West</span>
+<span class="font-mono text-primary">22ms</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-white/40">Asia-Pacific</span>
+<span class="font-mono text-primary">41ms</span>
+</div>
+<div class="pt-2 border-t border-white/10 text-[10px] text-center text-white/30 uppercase tracking-widest font-bold">
+                            Avg Latency: 25.6ms
+                        </div>
+</div>
+</div>
+</div>
+<!-- Maintenance History -->
+<div class="glass-effect rounded-xl flex flex-col">
+<div class="p-6 border-b border-primary/10">
+<h2 class="font-bold text-lg text-white">Maintenance History</h2>
+<p class="text-sm text-white/40">Past 30 days incident log</p>
+</div>
+<div class="p-6 flex-1 space-y-8 relative">
+<div class="absolute left-9 top-8 bottom-8 w-px bg-primary/20"></div>
+<!-- Entry 1 -->
+<div class="relative pl-10">
+<div class="absolute left-[7px] top-1.5 w-3 h-3 bg-primary rounded-full outline outline-4 outline-primary/10"></div>
+<div class="space-y-1">
+<span class="text-[10px] font-bold text-primary/60 uppercase tracking-tighter">Oct 22, 2023 - 04:00 UTC</span>
+<h4 class="text-sm font-bold text-white/90">Scheduled Core DB Migration</h4>
+<p class="text-xs text-white/40 leading-relaxed">Optimization of indexing structures for enhanced search performance. Completed without downtime.</p>
+<span class="inline-block mt-2 text-[10px] bg-primary/10 text-primary border border-primary/20 px-2 py-0.5 rounded">Completed</span>
+</div>
+</div>
+<!-- Entry 2 -->
+<div class="relative pl-10">
+<div class="absolute left-[7px] top-1.5 w-3 h-3 bg-primary rounded-full outline outline-4 outline-primary/10"></div>
+<div class="space-y-1">
+<span class="text-[10px] font-bold text-primary/60 uppercase tracking-tighter">Oct 18, 2023 - 21:15 UTC</span>
+<h4 class="text-sm font-bold text-white/90">CDN Cache Invalidation Layer Update</h4>
+<p class="text-xs text-white/40 leading-relaxed">Rolling update to edge nodes to support instant global cache purging.</p>
+<span class="inline-block mt-2 text-[10px] bg-primary/10 text-primary border border-primary/20 px-2 py-0.5 rounded">Completed</span>
+</div>
+</div>
+<!-- Entry 3 -->
+<div class="relative pl-10 opacity-50">
+<div class="absolute left-[7px] top-1.5 w-3 h-3 bg-cyber-blue rounded-full outline outline-4 outline-cyber-blue/10"></div>
+<div class="space-y-1">
+<span class="text-[10px] font-bold text-cyber-blue/60 uppercase tracking-tighter">Oct 12, 2023 - 11:30 UTC</span>
+<h4 class="text-sm font-bold text-white/90">API Rate Limiting Adjusted</h4>
+<p class="text-xs text-white/40 leading-relaxed">Routine maintenance to handle increased burst traffic on mobile sync endpoints.</p>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-primary/10 text-center">
+<button class="text-xs font-bold text-white/40 hover:text-primary transition-colors uppercase tracking-widest">View Full Archive</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="max-w-7xl mx-auto px-6 py-12 border-t border-primary/10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1 bg-primary/5 border border-primary/20 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-[10px] font-bold text-primary uppercase">All Systems Normal</span>
+</div>
+<span class="text-xs text-white/30">© 2023 DevToLab Engineering Group</span>
+</div>
+<div class="flex gap-8 text-xs font-bold text-white/40 uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Security</a>
+<a class="hover:text-primary transition-colors" href="#">Compliance</a>
+</div>
+</div>
+</footer>
+</body></html>

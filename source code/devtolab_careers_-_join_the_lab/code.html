@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevToLab Careers - Join the Lab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#0A0A0A",
+                        "accent-violet": "#8b5cf6",
+                        "accent-mint": "#10b981",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass:hover {
+            border-color: rgba(19, 127, 236, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(19, 127, 236, 0.3);
+        }
+        .radial-glow-violet {
+            background: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+        }
+        .radial-glow-blue {
+            background: radial-gradient(circle at center, rgba(19, 127, 236, 0.1) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary/30 min-h-screen overflow-x-hidden">
+<!-- Subtle Background Glows -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+<div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] radial-glow-violet opacity-50"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] radial-glow-blue opacity-50"></div>
+</div>
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 border-b border-white/5 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2 group cursor-pointer">
+<div class="w-10 h-10 bg-primary rounded flex items-center justify-center">
+<span class="material-icons-round text-white text-2xl">science</span>
+</div>
+<span class="text-xl font-bold tracking-tight">DevToLab<span class="text-primary">.</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Engineering Culture</a>
+<a class="hover:text-primary transition-colors" href="#roles">Open Roles</a>
+<a class="hover:text-primary transition-colors" href="#">Tech Stack</a>
+<a class="px-5 py-2.5 bg-primary/10 text-primary border border-primary/20 rounded-lg hover:bg-primary hover:text-white transition-all" href="#">
+                    General Application
+                </a>
+</div>
+<button class="md:hidden text-white">
+<span class="material-icons-round">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 px-6">
+<div class="max-w-7xl mx-auto text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-8">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    We are hiring
+                </div>
+<h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">
+                    Join the Lab<span class="text-primary">.</span>
+</h1>
+<p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 font-light leading-relaxed">
+                    Solve complex problems with a world-class engineering team. We don't just build apps; 
+                    <span class="text-slate-200">we engineer high-performance deep tech systems.</span>
+</p>
+<div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="px-8 py-4 bg-primary text-white font-bold rounded-lg glow-blue hover:translate-y-[-2px] transition-all flex items-center gap-2" href="#roles">
+                        View Open Positions
+                        <span class="material-icons-round text-sm">arrow_downward</span>
+</a>
+<a class="px-8 py-4 border border-white/10 hover:bg-white/5 rounded-lg transition-all text-slate-300" href="#">
+                        Our Engineering Handbook
+                    </a>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="pb-24 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="p-6 glass rounded-xl text-center">
+<div class="text-3xl font-bold text-primary mb-1">100%</div>
+<div class="text-xs text-slate-500 uppercase tracking-widest">Remote First</div>
+</div>
+<div class="p-6 glass rounded-xl text-center">
+<div class="text-3xl font-bold text-primary mb-1">$5k</div>
+<div class="text-xs text-slate-500 uppercase tracking-widest">Learning Budget</div>
+</div>
+<div class="p-6 glass rounded-xl text-center">
+<div class="text-3xl font-bold text-primary mb-1">24ms</div>
+<div class="text-xs text-slate-500 uppercase tracking-widest">Avg. API Latency</div>
+</div>
+<div class="p-6 glass rounded-xl text-center">
+<div class="text-3xl font-bold text-primary mb-1">Top 1%</div>
+<div class="text-xs text-slate-500 uppercase tracking-widest">Talent Network</div>
+</div>
+</div>
+</section>
+<!-- Open Roles Section -->
+<section class="py-24 px-6 relative" id="roles">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] radial-glow-violet opacity-30 -z-10"></div>
+<div class="max-w-7xl mx-auto">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-4xl font-bold mb-4">Open Roles</h2>
+<p class="text-slate-400">Join a squad of specialized engineers pushing boundaries.</p>
+</div>
+<div class="hidden md:block">
+<span class="text-sm text-slate-500">Showing 3 results</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<!-- Role 1 -->
+<div class="glass p-8 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-8 transition-all group">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-accent-violet/10 text-accent-violet text-[10px] font-bold uppercase">Frontend</span>
+<span class="text-slate-500 text-sm italic">Remote / Full-time</span>
+</div>
+<h3 class="text-2xl font-bold group-hover:text-primary transition-colors">Senior Frontend Engineer</h3>
+<div class="flex flex-wrap gap-4 text-slate-400 text-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-primary text-base">payments</span>
+                                    $120k - $160k
+                                </div>
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-primary text-base">layers</span>
+                                    Next.js, TypeScript, Tailwind
+                                </div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">TS</div>
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">NX</div>
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">TW</div>
+</div>
+<button class="px-6 py-3 bg-primary text-white font-bold rounded-lg glow-blue hover:scale-105 transition-all">
+                                Apply Now
+                            </button>
+</div>
+</div>
+<!-- Role 2 -->
+<div class="glass p-8 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-8 transition-all group">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-accent-violet/10 text-accent-violet text-[10px] font-bold uppercase">Backend</span>
+<span class="text-slate-500 text-sm italic">Remote / Full-time</span>
+</div>
+<h3 class="text-2xl font-bold group-hover:text-primary transition-colors">Backend Architect</h3>
+<div class="flex flex-wrap gap-4 text-slate-400 text-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-primary text-base">payments</span>
+                                    $140k - $180k
+                                </div>
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-primary text-base">database</span>
+                                    Supabase, PostgreSQL, Node.js
+                                </div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">SB</div>
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">PG</div>
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">JS</div>
+</div>
+<button class="px-6 py-3 bg-primary text-white font-bold rounded-lg glow-blue hover:scale-105 transition-all">
+                                Apply Now
+                            </button>
+</div>
+</div>
+<!-- Role 3 -->
+<div class="glass p-8 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-8 transition-all group">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-accent-violet/10 text-accent-violet text-[10px] font-bold uppercase">Infrastructure</span>
+<span class="text-slate-500 text-sm italic">Remote / Full-time</span>
+</div>
+<h3 class="text-2xl font-bold group-hover:text-primary transition-colors">DevOps Lead</h3>
+<div class="flex flex-wrap gap-4 text-slate-400 text-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-primary text-base">payments</span>
+                                    $130k - $170k
+                                </div>
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-primary text-base">cloud</span>
+                                    AWS, Docker, CI/CD
+                                </div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">AWS</div>
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">DK</div>
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">K8</div>
+</div>
+<button class="px-6 py-3 bg-primary text-white font-bold rounded-lg glow-blue hover:scale-105 transition-all">
+                                Apply Now
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Perks Section -->
+<section class="py-24 px-6 bg-white/[0.02] border-y border-white/5">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">Engineering Perks</h2>
+<p class="text-slate-400">We optimize for performance, both in code and for our people.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center space-y-4">
+<div class="w-16 h-16 mx-auto bg-accent-mint/10 rounded-2xl flex items-center justify-center">
+<span class="material-icons-round text-accent-mint text-3xl">public</span>
+</div>
+<h4 class="text-xl font-bold">Remote-first Culture</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Work from anywhere. We value deep work over office presence. Asynchronous workflows by default.</p>
+</div>
+<div class="text-center space-y-4">
+<div class="w-16 h-16 mx-auto bg-accent-mint/10 rounded-2xl flex items-center justify-center">
+<span class="material-icons-round text-accent-mint text-3xl">school</span>
+</div>
+<h4 class="text-xl font-bold">Learning Stipend</h4>
+<p class="text-slate-400 text-sm leading-relaxed">$5,000 annual budget for books, conferences, and courses. Stay at the bleeding edge.</p>
+</div>
+<div class="text-center space-y-4">
+<div class="w-16 h-16 mx-auto bg-accent-mint/10 rounded-2xl flex items-center justify-center">
+<span class="material-icons-round text-accent-mint text-3xl">laptop_mac</span>
+</div>
+<h4 class="text-xl font-bold">High-end Gear</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Maxed-out M3 MacBook Pro, 4K Monitor, and high-end peripherals. No compromises on dev experience.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-6">
+<div class="max-w-5xl mx-auto glass p-12 md:p-20 rounded-3xl text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] -z-10"></div>
+<h2 class="text-4xl md:text-5xl font-bold mb-8">Not seeing the right fit?</h2>
+<p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
+                    We're always looking for exceptional engineers who are passionate about high-performance systems. Send us your portfolio and let's talk.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-10 py-4 bg-white text-black font-bold rounded-lg hover:bg-slate-200 transition-colors">
+                        Send CV
+                    </button>
+<button class="px-10 py-4 border border-white/20 hover:bg-white/5 text-white font-bold rounded-lg transition-colors">
+                        Follow on GitHub
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="py-12 px-6 border-t border-white/5">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary/20 rounded flex items-center justify-center">
+<span class="material-icons-round text-primary text-xl">science</span>
+</div>
+<span class="font-bold tracking-tight">DevToLab</span>
+</div>
+<div class="flex gap-8 text-slate-500 text-sm">
+<a class="hover:text-primary" href="#">Twitter</a>
+<a class="hover:text-primary" href="#">GitHub</a>
+<a class="hover:text-primary" href="#">LinkedIn</a>
+<a class="hover:text-primary" href="#">Newsletter</a>
+</div>
+<p class="text-slate-600 text-sm">
+                © 2024 DevToLab Engineering. All rights reserved.
+            </p>
+</div>
+</footer>
+</body></html>
