@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Security &amp; Compliance Protocols | DevToLab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#0a0a0a",
+                        "card-dark": "#171717",
+                        "success-emerald": "#10b981",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .security-glow {
+            box-shadow: 0 0 40px -10px rgba(127, 19, 236, 0.3);
+        }
+        .emerald-glow {
+            box-shadow: 0 0 15px -5px rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-200 font-display selection:bg-primary/30">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-primary text-3xl">shield_lock</span>
+<span class="text-xl font-bold tracking-tight">DevToLab<span class="text-primary">.</span></span>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#">Infrastructure</a>
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#">Data Protection</a>
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#">Engineering</a>
+<a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#">Compliance</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-success-emerald/10 border border-success-emerald/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success-emerald opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-success-emerald"></span>
+</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-success-emerald">System Secure</span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold transition-all">
+                        Trust Center
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-16 overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
+<span class="material-symbols-outlined text-primary text-sm">verified_user</span>
+<span class="text-xs font-semibold uppercase tracking-widest text-slate-300">Security &amp; Compliance v3.0</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6">
+                    Enterprise-Grade <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-violet-400">Technical Safeguards</span>
+</h1>
+<p class="max-w-2xl mx-auto text-lg text-slate-400 mb-10">
+                    Comprehensive security architecture built on Vercel, AWS, and Supabase layers. Protecting your data with AES-256 encryption and continuous compliance monitoring.
+                </p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform security-glow">
+<span class="material-symbols-outlined">description</span>
+                        Download SOC2 Report
+                    </button>
+<button class="bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">terminal</span>
+                        Technical Specs
+                    </button>
+</div>
+</div>
+</section>
+<!-- Infrastructure Layers -->
+<section class="py-16 bg-white/5 border-y border-white/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-12">
+<h2 class="text-3xl font-bold text-white mb-2">Infrastructure Security Layers</h2>
+<p class="text-slate-400">Distributed multi-layer defense strategy for global performance and safety.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Layer 1: Vercel -->
+<div class="bg-card-dark border border-white/5 p-8 rounded-2xl hover:border-primary/50 transition-colors group">
+<div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">language</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Edge Network (Vercel)</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">Global DDoS protection, automated SSL encryption, and edge middleware filtering to block malicious requests before they reach your origin.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-success-emerald text-sm">check_circle</span>
+                                Global WAF Filtering
+                            </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-success-emerald text-sm">check_circle</span>
+                                TLS 1.3 Encryption
+                            </li>
+</ul>
+</div>
+<!-- Layer 2: AWS -->
+<div class="bg-card-dark border border-white/5 p-8 rounded-2xl hover:border-primary/50 transition-colors group">
+<div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">cloud</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Cloud Infrastructure (AWS)</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">Isolated VPC environments with granular IAM policies. All compute resources are ephemeral and scanned continuously for configuration drift.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-success-emerald text-sm">check_circle</span>
+                                VPC Isolation
+                            </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-success-emerald text-sm">check_circle</span>
+                                Hardware-level Security
+                            </li>
+</ul>
+</div>
+<!-- Layer 3: Supabase -->
+<div class="bg-card-dark border border-white/5 p-8 rounded-2xl hover:border-primary/50 transition-colors group">
+<div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-6 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">database</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Database Layer (Supabase)</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">PostgreSQL security with Row Level Security (RLS). Point-in-time recovery and automated backups with 99.99% durability.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-success-emerald text-sm">check_circle</span>
+                                Row-Level Security
+                            </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-success-emerald text-sm">check_circle</span>
+                                PITR Recovery
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Data Protection Section -->
+<section class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<div class="inline-flex items-center gap-2 text-success-emerald bg-success-emerald/10 px-3 py-1 rounded-full mb-6">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">AES-256 Verified</span>
+</div>
+<h2 class="text-4xl font-black text-white mb-6 tracking-tight">Data Protection &amp; <br/>Encryption Standards</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<div>
+<h4 class="text-white font-bold mb-1">Encryption at Rest</h4>
+<p class="text-slate-400 text-sm">All sensitive user data is encrypted using Advanced Encryption Standard (AES) with 256-bit keys, managed by hardware security modules (HSM).</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">sync_alt</span>
+</div>
+<div>
+<h4 class="text-white font-bold mb-1">Encryption in Transit</h4>
+<p class="text-slate-400 text-sm">All data moving between clients and our servers is protected by TLS 1.3 or higher, ensuring perfect forward secrecy and resistance to interception.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">policy</span>
+</div>
+<div>
+<h4 class="text-white font-bold mb-1">Data Minimization</h4>
+<p class="text-slate-400 text-sm">We strictly follow GDPR principles of data minimization—only collecting and retaining data necessary for core service delivery.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute inset-0 bg-primary/20 blur-[80px] rounded-full"></div>
+<div class="relative bg-card-dark border border-white/10 rounded-2xl overflow-hidden security-glow">
+<div class="bg-white/5 border-b border-white/10 p-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-amber-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-success-emerald/50"></div>
+</div>
+<span class="text-[10px] text-slate-500 font-mono tracking-widest uppercase">security_audit.log</span>
+</div>
+<div class="p-6 font-mono text-xs space-y-2 text-slate-400">
+<p><span class="text-primary">INFO</span> [2023-10-27 14:02] Initializing AES-256 Engine...</p>
+<p><span class="text-success-emerald">SUCCESS</span> Master Key Rotation (HSM-01) Complete.</p>
+<p><span class="text-slate-500">DEBUG</span> [2023-10-27 14:02] Validating RLS Policies...</p>
+<p><span class="text-success-emerald">SUCCESS</span> 452 Policy Assertions Passed.</p>
+<p><span class="text-primary">INFO</span> [2023-10-27 14:03] Snyk Vulnerability Scan: 0 Found.</p>
+<p class="pt-4 text-white font-bold">// ENCRYPTION_LAYER_ACTIVE</p>
+<div class="h-1 w-full bg-primary/20 rounded-full overflow-hidden mt-4">
+<div class="h-full bg-primary w-[88%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Compliance & Engineering Grid -->
+<section class="py-20 bg-card-dark/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Engineering Practices -->
+<div class="space-y-6">
+<h3 class="text-2xl font-bold text-white">Engineering Practices</h3>
+<div class="grid gap-4">
+<div class="p-5 bg-white/5 rounded-xl border border-white/5 flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">rate_review</span>
+<div>
+<h5 class="text-white font-bold text-sm">Mandatory PR Reviews</h5>
+<p class="text-slate-400 text-xs mt-1 leading-relaxed">No code enters production without a secondary review from a senior security engineer.</p>
+</div>
+</div>
+<div class="p-5 bg-white/5 rounded-xl border border-white/5 flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">search_check</span>
+<div>
+<h5 class="text-white font-bold text-sm">Automated Dependency Scanning</h5>
+<p class="text-slate-400 text-xs mt-1 leading-relaxed">Continuous monitoring for vulnerabilities using GitHub Advanced Security and Snyk.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Compliance Standards -->
+<div class="space-y-6">
+<h3 class="text-2xl font-bold text-white">Compliance Standards</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-6 bg-white/5 rounded-xl border border-white/5 text-center flex flex-col items-center group hover:bg-white/10 transition-all">
+<div class="w-12 h-12 rounded-full border border-success-emerald/30 bg-success-emerald/5 flex items-center justify-center mb-4 emerald-glow">
+<span class="material-symbols-outlined text-success-emerald">check</span>
+</div>
+<span class="text-white font-black tracking-widest text-lg">SOC2</span>
+<span class="text-slate-500 text-[10px] font-bold uppercase mt-1">Type II Audited</span>
+</div>
+<div class="p-6 bg-white/5 rounded-xl border border-white/5 text-center flex flex-col items-center group hover:bg-white/10 transition-all">
+<div class="w-12 h-12 rounded-full border border-success-emerald/30 bg-success-emerald/5 flex items-center justify-center mb-4 emerald-glow">
+<span class="material-symbols-outlined text-success-emerald">check</span>
+</div>
+<span class="text-white font-black tracking-widest text-lg">GDPR</span>
+<span class="text-slate-500 text-[10px] font-bold uppercase mt-1">Compliant</span>
+</div>
+<div class="p-6 bg-white/5 rounded-xl border border-white/5 text-center flex flex-col items-center group hover:bg-white/10 transition-all">
+<div class="w-12 h-12 rounded-full border border-success-emerald/30 bg-success-emerald/5 flex items-center justify-center mb-4 emerald-glow">
+<span class="material-symbols-outlined text-success-emerald">check</span>
+</div>
+<span class="text-white font-black tracking-widest text-lg">ISO 27001</span>
+<span class="text-slate-500 text-[10px] font-bold uppercase mt-1">Verified</span>
+</div>
+<div class="p-6 bg-white/5 rounded-xl border border-white/5 text-center flex flex-col items-center group hover:bg-white/10 transition-all">
+<div class="w-12 h-12 rounded-full border border-success-emerald/30 bg-success-emerald/5 flex items-center justify-center mb-4 emerald-glow">
+<span class="material-symbols-outlined text-success-emerald">check</span>
+</div>
+<span class="text-white font-black tracking-widest text-lg">HIPAA</span>
+<span class="text-slate-500 text-[10px] font-bold uppercase mt-1">Ready</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Logos -->
+<section class="py-12 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<p class="text-center text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-10">Secured with Industry Leaders</p>
+<div class="flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Partner Logo" class="h-8" data-alt="Vercel logo for infrastructure security partner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC368HPUPNjElzqtfRakwSDWSWFpNMiQbj9W_QZ5n3HTHuZQw0mP2IdZjxrcZ0FdC_gz-fgDJwl91yBJuKyeNLnIrlDih5lJtXkxztaNipH5gqR1QW6inUrxeqC4AqrK55fG9RgLWNhJjxwfEKX80HjN3OCB8Lfm4OhoA1uG6NbISuUZeesuYatp6Wrz_SZ1kD3h5OOPiAxzHHsRzpKoTqGY0wEO52HCPCZzchDyVA_9409BPmgbht0x-aWjfFpOGflQ2yYAJbE1_N9"/>
+<img alt="Partner Logo" class="h-8" data-alt="AWS logo for infrastructure security partner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhtvabbzP71p72oHzTxcAFExLTOdl3dHQJ0obPs6aS7E2H2KFzeUnWRKZXElsrakx04gi2J1E08q6pnbdjE7KVXzggjP-5bmFUCYVjzQxJyXyelv5luntVwXqI8ZbT5Aznby9xz6WBZWZDJxQkRq0nSJjenWBTiZ2qJzpiO_tK96Wb1NqP0hw5Rom06aEi2qnqgugyfkKQXxPfwxXCvvDpS-0kDnh4vuDoPMX5SlDp6NGgyeKa48LsPj-Oz68O8v1EDGbHDeovLUwj"/>
+<img alt="Partner Logo" class="h-8" data-alt="Supabase logo for database security partner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIrDiA9lb6uQ5gRfKRX7frabEiSLivqrY4juMA9KGd19IU1KbteDu7xRu_N4joKgy30tpo9ttOQGEKsyRgO2pegbdsyT4FRbfs178LfciiIs6NNoOkV3BKPoF4BFVXDoN7RTjSktV2ncGiB8XhxK6ocrhFVp1Xelhx70ou7_ZLGdtMDOx3UxTyv3Nq8aSht-AolzqkpWQ_WVikZ2gs3eNSfqvSw2dOFmi3tM97nw1zfhcn0ZgMQ2YiDcktWlq4BDZQXWxSYZWUdfgW"/>
+<img alt="Partner Logo" class="h-8" data-alt="Snyk logo for vulnerability scanning partner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfTXhfp6dqmPqKT8Gzj-JtVxo5gByvXXk1BF4u_0VXqhVPMbfIg82jqlvnYHRsWpQPYdrDMPEQUWQ2v8MtXzyNo7zT8akDvgs86QqwMyAxolgNUErmd6rIGVrVX2hi7tRf1gv1cwz8QJIPGgVc67uEpcqjaXCwgy4tFak5_SH09x57vx9YGRWotXfsPyryX12oArPXS4K8gWGwvr2Ki-jrwXpzTJIXUNMGwEfMs0uLFvDzH0bRXSOEk8WH_wI5Af-QFmsB-Oun_6oD"/>
+<img alt="Partner Logo" class="h-8" data-alt="Cloudflare logo for ddos protection partner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEo6hFDOvQj0o3hkB1NQBNzyD8v_dw4QrByVq4LrnF7GxR4F9aHqPfQmCr_cUgrYyj19hAedv1FLom7Wi5ODSahuq8xCYwcnAD2iDtwSnGVhd6Q46Fb8ZdEU12REdvBX_7Gk1vQyxn6Nn75Ub1RWKrha4R6CxRMzsIyIO1CqdmtKZOaYDkDPvP3cYQHb7Ww065V_M4Zxoc9C1jCANzcnDL-cPmC_Xg9RCs_gznOstq0g863Pozgmzz2z9Pf9C7EbP_8NbMFayl94qq"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-card-dark border-t border-white/5 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2 text-white opacity-60">
+<span class="material-symbols-outlined text-primary">shield_lock</span>
+<span class="text-lg font-bold tracking-tight">DevToLab Security</span>
+</div>
+<div class="flex gap-8">
+<a class="text-xs text-slate-500 hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-xs text-slate-500 hover:text-white transition-colors" href="#">Vulnerability Disclosure</a>
+</div>
+<p class="text-[10px] text-slate-600 uppercase tracking-widest">© 2024 DevToLab. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>
