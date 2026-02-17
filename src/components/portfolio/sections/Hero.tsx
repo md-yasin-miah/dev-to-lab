@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, PlayCircle, Terminal } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
@@ -48,57 +46,19 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-10 flex flex-col gap-4 sm:flex-row"
+          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-8"
         >
-          <Button
-            asChild
-            size="lg"
-            className="group h-12 px-8 text-base bg-linear-to-r from-blue-500 to-violet-600 hover:from-blue-600 hover:to-violet-700 dark:from-blue-400 dark:to-violet-500 dark:hover:from-blue-500 dark:hover:to-violet-600 transition-all hover:scale-105 hover:shadow-lg hover:shadow-violet-500/25 border-0"
+          <Link href="#work" className="moving-border-btn group">
+            <span className="moving-border-btn-inner block rounded-full bg-background px-10 py-4 font-bold">
+              Explore Case Studies
+            </span>
+          </Link>
+          <Link
+            href="#stack"
+            className="w-full sm:w-auto px-10 py-4 glass font-bold rounded-full hover:bg-white/10 transition-colors text-center"
           >
-            <Link href="/contact">
-              Start a Project
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="h-12 px-8 text-base backdrop-blur-sm bg-background/60 hover:bg-background/80 transition-all hover:scale-105"
-          >
-            <Link href="#work">
-              <PlayCircle className="mr-2 h-4 w-4" />
-              View Our Lab
-            </Link>
-          </Button>
-        </motion.div>
-
-        {/* Floating Code Snippet Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 max-w-md w-full"
-        >
-          <div className="relative rounded-lg border border-border/40 bg-background/60 backdrop-blur-sm p-4 shadow-lg hover:shadow-xl transition-shadow">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-              <Terminal className="h-4 w-4" />
-              <span className="font-medium">Quick Start</span>
-            </div>
-            <div className="bg-muted/50 rounded px-3 py-2 font-mono text-sm flex items-center justify-between">
-              <code className="text-foreground">
-                npx create-next-app@latest
-              </code>
-              <button
-                className="ml-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
-                onClick={() =>
-                  navigator.clipboard.writeText("npx create-next-app@latest")
-                }
-              >
-                Copy
-              </button>
-            </div>
-          </div>
+            Our Tech Stack
+          </Link>
         </motion.div>
       </div>
     </section>

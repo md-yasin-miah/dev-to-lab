@@ -8,6 +8,8 @@ export const Routes = {
   caseStudies: "/case-studies",
   techStack: "/tech-stack",
   careers: "/careers",
+  reportBug: "/report-bug",
+  faq: "/faq",
   //footer routes
   blog: "/blog",
   documentation: "/documentation",
