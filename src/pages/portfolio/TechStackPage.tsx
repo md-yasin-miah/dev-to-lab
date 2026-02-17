@@ -37,25 +37,29 @@ const FRONTEND_TECHS = [
   {
     icon: Cpu,
     title: "React Ecosystem",
-    description: "Enterprise-grade SSR, static generation, and high-performance routing protocols.",
+    description:
+      "Enterprise-grade SSR, static generation, and high-performance routing protocols.",
     tags: ["SSR", "Hybrid Rendering"],
   },
   {
     icon: Layers,
     title: "Next.js 14",
-    description: "App Router, React Server Components, and edge-first rendering for blazing speed.",
+    description:
+      "App Router, React Server Components, and edge-first rendering for blazing speed.",
     tags: ["App Router", "Edge Runtime"],
   },
   {
     icon: ShieldCheck,
     title: "TypeScript",
-    description: "End-to-end type safety across the full stack ensuring robust, maintainable codebases.",
+    description:
+      "End-to-end type safety across the full stack ensuring robust, maintainable codebases.",
     tags: ["Type-Safe", "Enterprise"],
   },
   {
     icon: Palette,
     title: "Tailwind CSS",
-    description: "Utility-first design systems for rapid deployment and consistent brand scaling.",
+    description:
+      "Utility-first design systems for rapid deployment and consistent brand scaling.",
     tags: ["JIT Engine", "Responsive"],
   },
 ];
@@ -64,13 +68,15 @@ const BACKEND_TECHS = [
   {
     icon: Zap,
     title: "Go / Golang",
-    description: "Unrivaled efficiency for cloud-native microservices. We utilize Go for high-throughput data processing.",
+    description:
+      "Unrivaled efficiency for cloud-native microservices. We utilize Go for high-throughput data processing.",
     tags: ["Concurrency", "Cloud Native"],
   },
   {
     icon: ShieldCheck,
     title: "Node.js / Express",
-    description: "Rapid API development with event-driven architecture. Perfect for real-time applications and serverless functions.",
+    description:
+      "Rapid API development with event-driven architecture. Perfect for real-time applications and serverless functions.",
     tags: ["Event-Driven", "Serverless"],
   },
 ];
@@ -80,19 +86,22 @@ const DATABASE_TECHS = [
     icon: Database,
     title: "PostgreSQL",
     subtitle: "Supabase Ecosystem",
-    tooltip: "Best-in-class reliability for financial data and complex relations.",
+    tooltip:
+      "Best-in-class reliability for financial data and complex relations.",
   },
   {
     icon: Braces,
     title: "MongoDB",
     subtitle: "Document Storage",
-    tooltip: "Dynamic schema flexibility for rapid-iteration content platforms.",
+    tooltip:
+      "Dynamic schema flexibility for rapid-iteration content platforms.",
   },
   {
     icon: Gauge,
     title: "Redis",
     subtitle: "In-Memory Cache",
-    tooltip: "Sub-millisecond latency for session management and real-time queues.",
+    tooltip:
+      "Sub-millisecond latency for session management and real-time queues.",
   },
   {
     icon: Layers,
@@ -106,21 +115,24 @@ const INFRA_TECHS = [
   {
     icon: Container,
     title: "Docker",
-    description: "Immutable environment containerization ensuring your application runs identically in any environment.",
+    description:
+      "Immutable environment containerization ensuring your application runs identically in any environment.",
     borderColor: "border-t-cyber-blue",
     iconColor: "text-cyber-blue",
   },
   {
     icon: Network,
     title: "Kubernetes",
-    description: "Advanced cluster orchestration for self-healing applications and zero-downtime updates.",
+    description:
+      "Advanced cluster orchestration for self-healing applications and zero-downtime updates.",
     borderColor: "border-t-electric-violet",
     iconColor: "text-electric-violet",
   },
   {
     icon: Cloud,
     title: "Cloud Mastery",
-    description: "Expertise across major cloud providers with infrastructure agnostic designs.",
+    description:
+      "Expertise across major cloud providers with infrastructure agnostic designs.",
     borderColor: "border-t-cyber-blue",
     iconColor: "text-cyber-blue",
   },
@@ -130,7 +142,8 @@ const AI_FEATURES = [
   {
     icon: Network,
     title: "Agentic Workflows",
-    description: "Self-healing pipelines and autonomous task execution systems.",
+    description:
+      "Self-healing pipelines and autonomous task execution systems.",
     color: "text-cyber-blue",
   },
   {
@@ -170,13 +183,17 @@ export default function TechStackPage() {
 
         {/* Corner telemetry */}
         <div className="absolute top-24 left-8 font-mono text-[10px] text-blue-500/40 hidden lg:block uppercase tracking-widest leading-loose z-10">
-          LATENCY: 12ms<br />
-          STATUS: NOMINAL<br />
+          LATENCY: 12ms
+          <br />
+          STATUS: NOMINAL
+          <br />
           UPTIME: 99.999%
         </div>
         <div className="absolute bottom-12 right-8 font-mono text-[10px] text-blue-500/40 hidden lg:block uppercase tracking-widest text-right leading-loose z-10">
-          NODES: 42_ACTIVE<br />
-          EGRESS: 4.2TB/S<br />
+          NODES: 42_ACTIVE
+          <br />
+          EGRESS: 4.2TB/S
+          <br />
           PROTOCOL: HYPER_D_V2
         </div>
 
@@ -215,7 +232,7 @@ export default function TechStackPage() {
             className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter leading-[0.9]"
           >
             World-Class Stack for <br />
-            <span className="gradient-text glow-text">Global Ambitions</span>
+            <span className="gradient-text glow-text pr-3">Global Ambitions</span>
           </motion.h1>
 
           <motion.p
@@ -264,8 +281,9 @@ export default function TechStackPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-muted-foreground max-w-md text-sm leading-relaxed"
             >
-              Crafting immersive user experiences using high-performance frameworks
-              that prioritize Core Web Vitals and fluid accessibility.
+              Crafting immersive user experiences using high-performance
+              frameworks that prioritize Core Web Vitals and fluid
+              accessibility.
             </motion.p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -284,7 +302,9 @@ export default function TechStackPage() {
                 <div className="flex items-center gap-2 text-[10px] font-bold text-muted-foreground/70 uppercase tracking-tighter">
                   {tech.tags.map((tag, j) => (
                     <span key={tag} className="flex items-center gap-2">
-                      {j > 0 && <span className="w-1 h-1 bg-muted-foreground/30 rounded-full" />}
+                      {j > 0 && (
+                        <span className="w-1 h-1 bg-muted-foreground/30 rounded-full" />
+                      )}
                       {tag}
                     </span>
                   ))}
@@ -359,7 +379,12 @@ export default function TechStackPage() {
             <div
               key={top}
               className="absolute h-px bg-linear-to-r from-transparent via-cyber-blue to-transparent opacity-15 animate-flow-x"
-              style={{ top: `${top}%`, left: "-10%", width: "200px", animationDelay: `${top * 0.03}s` }}
+              style={{
+                top: `${top}%`,
+                left: "-10%",
+                width: "200px",
+                animationDelay: `${top * 0.03}s`,
+              }}
             />
           ))}
         </div>
@@ -370,7 +395,9 @@ export default function TechStackPage() {
               <span className="text-[10px] text-cyber-blue uppercase tracking-[0.3em] font-black block mb-2">
                 Layer 03
               </span>
-              <h2 className="text-4xl font-bold">The Foundation of Data Integrity</h2>
+              <h2 className="text-4xl font-bold">
+                The Foundation of Data Integrity
+              </h2>
             </motion.div>
             <motion.p
               {...fadeUp}
@@ -378,8 +405,8 @@ export default function TechStackPage() {
               className="text-muted-foreground max-w-md text-sm leading-relaxed"
             >
               Uptime is non-negotiable. We engineer Scalable PostgreSQL
-              Architectures and Real-time Database Integrations for fault-tolerant
-              data persistence.
+              Architectures and Real-time Database Integrations for
+              fault-tolerant data persistence.
             </motion.p>
           </div>
 
@@ -428,9 +455,9 @@ export default function TechStackPage() {
                 Vector Databases: Pinecone &amp; pgvector
               </h3>
               <p className="text-muted-foreground max-w-2xl text-lg font-light leading-relaxed">
-                Fueling the Retrieval-Augmented Generation (RAG) era. We optimize
-                latent space searches and high-dimensional embeddings for advanced
-                AI memory systems.
+                Fueling the Retrieval-Augmented Generation (RAG) era. We
+                optimize latent space searches and high-dimensional embeddings
+                for advanced AI memory systems.
               </p>
             </div>
             <div className="flex flex-col gap-3 shrink-0">
@@ -467,14 +494,16 @@ export default function TechStackPage() {
                   Premium Service Highlight
                 </div>
                 <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-                  AI Innovation:<br />
+                  AI Innovation:
+                  <br />
                   <span className="gradient-text font-black uppercase italic tracking-tighter">
                     Vibe-Code
                   </span>
                 </h2>
                 <p className="text-muted-foreground text-xl leading-relaxed mb-10 font-light border-l-2 border-cyber-blue pl-6">
                   Beyond standard development. We build autonomous AI Agents and
-                  specialize in refining AI-generated codebases to production grade.
+                  specialize in refining AI-generated codebases to production
+                  grade.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {AI_FEATURES.map((feature) => (
@@ -482,7 +511,9 @@ export default function TechStackPage() {
                       key={feature.title}
                       className="p-6 rounded-2xl bg-white/3 backdrop-blur-xl border border-cyber-blue/30 hover:border-cyber-blue hover:bg-cyber-blue/8 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] transition-all"
                     >
-                      <feature.icon className={`h-7 w-7 ${feature.color} mb-4`} />
+                      <feature.icon
+                        className={`h-7 w-7 ${feature.color} mb-4`}
+                      />
                       <h4 className="font-bold mb-2">{feature.title}</h4>
                       <p className="text-xs text-muted-foreground leading-relaxed">
                         {feature.description}
@@ -540,7 +571,9 @@ export default function TechStackPage() {
                 transition={{ duration: 0.5, delay: i * 0.15 }}
                 className={`glass-panel rounded-3xl p-10 border-t-4 ${tech.borderColor} group hover:-translate-y-2 transition-all`}
               >
-                <tech.icon className={`h-10 w-10 ${tech.iconColor} drop-shadow-[0_0_8px_rgba(59,130,246,0.3)] mb-8`} />
+                <tech.icon
+                  className={`h-10 w-10 ${tech.iconColor} drop-shadow-[0_0_8px_rgba(59,130,246,0.3)] mb-8`}
+                />
                 <h3 className="text-2xl font-bold mb-4">{tech.title}</h3>
                 <p className="text-muted-foreground text-sm mb-6">
                   {tech.description}
@@ -555,7 +588,11 @@ export default function TechStackPage() {
       <section className="mt-10 mb-20 px-6">
         <div className="max-w-5xl mx-auto glass-panel rounded-3xl p-16 text-center relative overflow-hidden border-border-white-10/20">
           <div className="absolute inset-0 bg-linear-to-tr from-cyber-blue/20 via-transparent to-electric-violet/20 opacity-50" />
-          <motion.div {...fadeUp} transition={{ duration: 0.6 }} className="relative z-10">
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 0.6 }}
+            className="relative z-10"
+          >
             <h2 className="text-4xl font-bold mb-6">
               Architect Your Legacy Today
             </h2>

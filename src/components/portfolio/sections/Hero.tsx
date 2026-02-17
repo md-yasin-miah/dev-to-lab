@@ -14,7 +14,7 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-primary/15 via-background to-background opacity-60 dark:from-primary/8" />
 
       {/* Enhanced Dotted Grid Pattern */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_1px_1px,rgb(148_163_184/0.15)_1px,transparent_0)] dark:bg-[radial-gradient(circle_at_1px_1px,rgb(148_163_184/0.08)_1px,transparent_0)] [background-size:24px_24px]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_1px_1px,rgb(148_163_184/0.15)_1px,transparent_0)] dark:bg-[radial-gradient(circle_at_1px_1px,rgb(148_163_184/0.08)_1px,transparent_0)] [bg-size:24px_24px]" />
 
       <div className="container mx-auto relative z-10 flex flex-col items-center text-center">
         <motion.div
@@ -25,7 +25,7 @@ export function Hero() {
         >
           <h1 className="text-4xl font-black tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
             We Build Digital Products That{" "}
-            <span className="relative inline-block text-transparent bg-clip-text bg-linear-to-r from-blue-500 to-violet-600 dark:from-blue-400 dark:to-violet-500">
+            <span className="relative inline-block text-transparent bg-clip-text bg-linear-to-r from-blue-500 to-violet-600 dark:from-blue-400 dark:to-violet-500 pb-2">
               Defy Gravity
             </span>
             .

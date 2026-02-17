@@ -12,6 +12,7 @@ import {
   ChevronDown,
   CheckCircle2,
 } from "lucide-react";
+import { Routes } from "@/lib/routes";
 
 // ─── FAQ Data ────────────────────────────────────────────────────────────────
 
@@ -210,7 +211,7 @@ const RESOURCE_CARDS = [
     title: "View our Stack",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAPgAWnlyy3mJZ19CYKfbEgI5GalOIIbSuzbvSE5uZTTjTC9G4XtNAA8O74k8NlBPh_i9eXgcmGwo0_ov3pmZKl9UhbXAiQcz4PMg51AYYcXt67brYYcUaGt_Yylg9ocR1X0ACmvlPJhyxcztoBrijIh-sxmgW-15n5fOr-c5J5zWBwr8PfYLXrFEajQ4H_GHM6CNzRVi17fdVvucoKGPDsUkx5udK0EJWmJu9sFCZRA_p5JgceobefnGJqakkOjdR6YcSHLi5gtnnJ",
-    href: "/services",
+    href: Routes.techStack,
   },
   {
     tag: "Infrastructure",
@@ -218,7 +219,7 @@ const RESOURCE_CARDS = [
     title: "DevOps Standards",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBkpfgMQUgMoaLBPyY8v6IAq2FR67FIjB0VO5XzBEW-9tEwFGtHy9-lmOwKFa9IU9CKIDbsLT2yV2A56_QRICsQxCrljLp3KePY_sNNietCOhWiQMxJsYRuuJZtO6SxnQfi9FMdop7pj0qBWV6__GSi93m8u_brxXV7s0balIBkDEboWsh0SAbCFOLWKpbXrRA9j40v-APrbirUJP9jAD1swx92D7hEnKwIybsooIZVcVeODxb6hofPOzLkt94mgq2ByPDKtZRzCZsa",
-    href: "/services",
+    href: Routes.services,
   },
   {
     tag: "Security",
@@ -226,7 +227,7 @@ const RESOURCE_CARDS = [
     title: "Protocol Overview",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBaHhl5hRL1GhYi9fBJs_yhESg3WNfsDjIkN1gtbdZEDfPOz4aUhUfokm6jY0m-kmCRDTzETL0dmqHEvY7i0i65DyyQNZ8AN0ubwdID-DPmk60T8mOiZLh1qLmxd1ZvI1bOQ7WD-xmNQj_WHLM6Cg3Bn39_IqMl97qp_uopcBBn01H6vLVmFofQ-ZL2YkdNqFgl7_Bs6dzM4rdcFbsv5umM4giKPOVkHpahRc_lJonv0J4rXhDUB2xwOvb3i5GuFkQaYox5rOa6eLm2",
-    href: "/services",
+    href: Routes.services,
   },
 ];
 
@@ -424,16 +425,16 @@ export default function FAQPage() {
               consultation to discuss your specific infrastructure needs.
             </p>
           </div>
-          <div className="relative z-10 flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+          <div className="relative z-10 flex flex-col gap-4 w-full md:w-auto">
             <Link
               href="/start-project"
-              className="px-8 py-4 bg-white text-background-dark font-bold rounded-lg hover:bg-slate-200 transition-all text-center"
+              className="px-6 py-3 bg-white text-background-dark font-bold rounded-lg hover:bg-slate-200 transition-all text-center text-sm"
             >
               Book a Technical Call
             </Link>
             <Link
               href="/start-project"
-              className="px-8 py-4 bg-white/5 border border-border-white-10 font-bold rounded-lg hover:bg-white/10 transition-all text-center"
+              className="px-6 py-3 bg-white/5 border border-border-white-10 font-bold rounded-lg hover:bg-white/10 transition-all text-center text-sm"
             >
               Contact Support
             </Link>
