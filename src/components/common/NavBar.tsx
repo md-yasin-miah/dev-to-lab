@@ -35,7 +35,7 @@ export function NavBar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur transition-transform duration-300 ease-in-out supports-backdrop-filter:bg-background/60 ${
+      className={`sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur transition-transform duration-600 ease-in-out supports-backdrop-filter:bg-background/60 ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
