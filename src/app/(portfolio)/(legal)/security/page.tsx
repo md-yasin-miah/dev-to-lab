@@ -10,7 +10,7 @@ import {
   Search,
   CheckCircle,
 } from "lucide-react";
-import { Aside } from "@/components/legal/Aside";
+import { Aside } from "@/components/portfolio/legal/Aside";
 
 export const metadata: Metadata = {
   title: "Security & Compliance Protocols | DevToLab",

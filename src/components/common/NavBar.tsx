@@ -12,7 +12,9 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { SITE_CONFIG, NAV_LINKS } from "@/lib/constants";
+import { SITE_CONFIG } from "@/lib/constants";
+import { MAIN_NAV_LINKS } from "@/lib/menu";
+import { Routes } from "@/lib/routes";
 
 export function NavBar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -35,9 +37,9 @@ export function NavBar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          {NAV_LINKS.map((link) => (
+          {MAIN_NAV_LINKS.map((link,index) => (
             <Link
-              key={link.href}
+              key={index}
               href={link.href}
               className="transition-colors hover:text-primary text-muted-foreground"
             >
@@ -46,7 +48,7 @@ export function NavBar() {
           ))}
           <ThemeToggle />
           <Button asChild size="sm">
-            <Link href="/contact">Book a Discovery Call</Link>
+            <Link href={Routes.startProject}>Start a Project</Link>
           </Button>
         </nav>
 
@@ -63,7 +65,7 @@ export function NavBar() {
             <SheetContent side="right">
               <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
               <div className="flex flex-col gap-4 mt-8">
-                {NAV_LINKS.map((link) => (
+                {MAIN_NAV_LINKS.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}

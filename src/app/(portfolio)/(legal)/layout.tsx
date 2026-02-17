@@ -1,5 +1,5 @@
-import { Footer } from "@/components/sections/Footer";
-import { NavBar } from "@/components/sections/NavBar";
+import { Footer } from "@/components/common/Footer";
+import { NavBar } from "@/components/common/NavBar";
 
 interface LegalLayoutProps {
   children: React.ReactNode;

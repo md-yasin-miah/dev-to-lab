@@ -6,12 +6,10 @@ import {
   Shield,
   Rocket,
   Clock,
-  MessageSquare,
   Database,
   Layout,
   Server,
   CreditCard,
-  Laptop,
 } from "lucide-react";
 
 export const SITE_CONFIG = {
@@ -21,12 +19,6 @@ export const SITE_CONFIG = {
   url: "https://devtolab.com", // Placeholder
 };
 
-export const NAV_LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "Tech Stack", href: "#stack" },
-  { label: "Case Studies", href: "#work" },
-  { label: "Contact", href: "/contact" },
-];
 
 export const METRICS = [
   { id: 1, label: "Uptime Architecture", value: "99.9%", icon: Shield },

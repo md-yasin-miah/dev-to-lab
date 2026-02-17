@@ -7,7 +7,7 @@ import {
   Gavel,
   XCircle,
 } from "lucide-react";
-import { Aside } from "@/components/legal/Aside";
+import { Aside } from "@/components/portfolio/legal/Aside";
 
 export const metadata: Metadata = {
   title: "Terms of Service - Service Agreement | DevToLab",
@@ -99,8 +99,7 @@ export default function TermsOfServicePage() {
             </span>
           </div>
           <h1 className="mb-6 text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl">
-            Terms of Service{" "}
-            <span className="text-cyber-blue">.</span>
+            Terms of Service <span className="text-cyber-blue">.</span>
           </h1>
           <p className="text-lg leading-relaxed text-slate-400">
             This Service Agreement (&quot;Agreement&quot;) governs the
@@ -205,17 +204,13 @@ export default function TermsOfServicePage() {
             </div>
             <div className="space-y-4 leading-relaxed text-slate-400">
               <p>
-                <strong className="text-slate-200">
-                  2.1 Retained Rights:
-                </strong>{" "}
+                <strong className="text-slate-200">2.1 Retained Rights:</strong>{" "}
                 DevToLab retains ownership of any pre-existing code, frameworks,
                 tools, or libraries developed prior to or independently of the
                 Agreement (&quot;Background IP&quot;).
               </p>
               <p>
-                <strong className="text-slate-200">
-                  2.2 License Grant:
-                </strong>{" "}
+                <strong className="text-slate-200">2.2 License Grant:</strong>{" "}
                 To the extent Background IP is incorporated into the Work
                 Product, Agency grants Client a non-exclusive, perpetual,
                 royalty-free license to use said IP solely as part of the Work

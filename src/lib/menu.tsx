@@ -1,20 +1,26 @@
 import { Routes } from "@/lib/routes";
 
-export const COMPANY_LINKS = [
-  { label: "About Us", href: "#" },
-  { label: "Case Studies", href: "#work" },
-  { label: "The Stack", href: "#stack" },
-  { label: "Careers", href: "#" },
+export const MAIN_NAV_LINKS = [
+  { label: "Services", href: Routes.services },
+  { label: "Tech Stack", href: Routes.techStack },
+  { label: "Case Studies", href: Routes.caseStudies }
 ];
 
-export const RESOURCE_LINKS = [
-  { label: "Blog", href: "#" },
-  { label: "Documentation", href: "#" },
+export const FOOTER_COMPANY_LINKS = [
+  { label: "About Us", href: Routes.aboutUs },
+  { label: "Case Studies", href: Routes.caseStudies },
+  { label: "The Stack", href: Routes.techStack },
+  { label: "Careers", href: Routes.careers },
+];
+
+export const FOOTER_RESOURCE_LINKS = [
+  { label: "Blog", href: Routes.blog },
+  { label: "Documentation", href: Routes.documentation },
   { label: "Security", href: Routes.security },
-  { label: "Open Source", href: "#" },
+  { label: "Open Source", href: Routes.openSource },
 ];
 
-export const FOOTER_BOTTOM_LINKS = [
+export const FOOTER_BOTTOM_MENU_LINKS = [
   { label: "Privacy Policy", href: Routes.privacyPolicy },
   { label: "Terms of Service", href: Routes.termsOfService },
   { label: "Security", href: Routes.security },

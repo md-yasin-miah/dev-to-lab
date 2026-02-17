@@ -7,7 +7,7 @@ import {
   ShieldCheck,
   Lock,
 } from "lucide-react";
-import { Aside } from "@/components/legal/Aside";
+import { Aside } from "@/components/portfolio/legal/Aside";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - Technical Detailed | DevToLab",
@@ -145,9 +145,9 @@ export default function PrivacyPolicyPage() {
                 applications, websites, and internal infrastructure.
               </p>
               <p>
-                Our approach is &quot;Privacy by Design,&quot; ensuring that data
-                protection is integrated into the system engineering process
-                rather than being an afterthought.
+                Our approach is &quot;Privacy by Design,&quot; ensuring that
+                data protection is integrated into the system engineering
+                process rather than being an afterthought.
               </p>
             </div>
           </div>
@@ -182,8 +182,8 @@ export default function PrivacyPolicyPage() {
                 Technical Log Data
               </h3>
               <p className="mb-4 text-sm leading-relaxed text-slate-400">
-                Our servers automatically record information that your browser or
-                application sends. This includes:
+                Our servers automatically record information that your browser
+                or application sends. This includes:
               </p>
               <ul className="grid grid-cols-1 gap-2 md:grid-cols-2">
                 {[
@@ -209,8 +209,8 @@ export default function PrivacyPolicyPage() {
               </h3>
               <p className="text-sm leading-relaxed text-slate-400">
                 For service delivery, we collect name, corporate email address,
-                and billing information. All sensitive identity data is encrypted
-                at rest using AES-256 and in transit via TLS 1.3.
+                and billing information. All sensitive identity data is
+                encrypted at rest using AES-256 and in transit via TLS 1.3.
               </p>
             </div>
           </div>
@@ -327,9 +327,7 @@ export default function PrivacyPolicyPage() {
                 className="glass-panel group flex cursor-default items-center gap-4 rounded-xl p-5 transition-colors hover:border-cyber-blue/50"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded border border-white/10 bg-black transition-colors group-hover:border-cyber-blue">
-                  <Database
-                    className={`h-5 w-5 ${partner.iconColor}`}
-                  />
+                  <Database className={`h-5 w-5 ${partner.iconColor}`} />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">

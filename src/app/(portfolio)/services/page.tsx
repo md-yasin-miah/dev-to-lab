@@ -8,8 +8,6 @@ import {
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
-import { NavBar } from "@/components/sections/NavBar";
-import { Footer } from "@/components/sections/Footer";
 import { Routes } from "@/lib/routes";
 
 export const metadata: Metadata = {
@@ -174,7 +172,7 @@ export default function ServicesPage() {
               Engineering Excellence
             </div>
 
-            <h1 className="text-6xl font-extrabold leading-[1.1] tracking-tighter text-white md:text-7xl">
+            <h1 className="text-6xl font-extrabold leading-[1.1] tracking-tighter dark:text-white text-black md:text-7xl">
               Build at the speed <br />
               <span className="bg-linear-to-r from-cyber-blue via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 of engineering.
@@ -352,7 +350,7 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link
-                href={Routes.contact}
+                href={Routes.startProject}
                 className="rounded-xl bg-cyber-blue px-10 py-4 font-bold text-white shadow-xl shadow-cyber-blue/20 transition-all hover:bg-cyber-blue/90"
               >
                 Schedule a Consultation
