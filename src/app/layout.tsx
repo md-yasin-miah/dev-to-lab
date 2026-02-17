@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 import { Toaster } from "@/components/ui/sonner";
-import StoreProvider from "@/app/providers";
+import StoreProvider from "@/components/provider/StoreProviders";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export default function RootLayout({
