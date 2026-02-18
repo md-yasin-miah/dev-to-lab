@@ -18,6 +18,7 @@ import {
   Database,
 } from "lucide-react";
 import { Routes } from "@/lib/routes";
+import Resource from "@/components/portfolio/sections/Resource";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -232,7 +233,9 @@ export default function TechStackPage() {
             className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter leading-[0.9]"
           >
             World-Class Stack for <br />
-            <span className="gradient-text glow-text pr-3">Global Ambitions</span>
+            <span className="gradient-text glow-text pr-3">
+              Global Ambitions
+            </span>
           </motion.h1>
 
           <motion.p
@@ -615,6 +618,13 @@ export default function TechStackPage() {
               </Link>
             </div>
           </motion.div>
+        </div>
+      </section>
+      <SectionDivider />
+      <section className="pb-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          {/* Image Gallery/Resources */}
+          <Resource />
         </div>
       </section>
     </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TechStackPage from "@/pages/portfolio/TechStackPage";
+import TechStackPage from "@/pages/portfolio/tech-stack/TechStackPage";
 
 export const metadata: Metadata = {
   title: "DevToLab Stack | Immersive Tech Ecosystem & Data Integrity",

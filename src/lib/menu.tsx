@@ -2,7 +2,7 @@ import { Routes } from "@/lib/routes";
 
 export const MAIN_NAV_LINKS = [
   { label: "Services", href: Routes.services },
-  { label: "Tech Stack", href: Routes.techStack },
+  { label: "Tech Stack", href: Routes.techStack.root },
   { label: "Case Studies", href: Routes.caseStudies },
   { label: "FAQ", href: Routes.faq }
 ];
@@ -10,7 +10,7 @@ export const MAIN_NAV_LINKS = [
 export const FOOTER_COMPANY_LINKS = [
   { label: "About Us", href: Routes.aboutUs },
   { label: "Case Studies", href: Routes.caseStudies },
-  { label: "The Stack", href: Routes.techStack },
+  { label: "The Stack", href: Routes.techStack.root },
   { label: "Careers", href: Routes.careers },
   { label: "Report Bug", href: Routes.reportBug },
 ];

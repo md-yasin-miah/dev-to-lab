@@ -29,7 +29,7 @@ import { Routes } from "@/lib/routes";
 
 const NAV_ICONS: Record<string, React.ElementType> = {
   [Routes.services]: Briefcase,
-  [Routes.techStack]: Cpu,
+  [Routes.techStack.root]: Cpu,
   [Routes.caseStudies]: Layers,
   [Routes.faq]: HelpCircle,
 };
@@ -105,9 +105,6 @@ export function NavBar() {
 
         {/* Mobile Nav */}
         <div className="flex items-center gap-2 md:hidden">
-          <Button asChild size="sm">
-            <Link href={Routes.startProject}>Start a Project</Link>
-          </Button>
           <ThemeToggle />
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -151,14 +148,14 @@ export function NavBar() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`group flex items-center gap-3 rounded-lg px-4 py-3 text-[15px] font-medium transition-all duration-200 ${
+                      className={`group flex items-center gap-3 rounded-xl px-4 py-3 text-[15px] font-medium transition-all duration-200 ${
                         isActive
                           ? "bg-linear-to-r from-blue-500/10 to-violet-600/10 dark:from-blue-500/15 dark:to-violet-600/15"
                           : "hover:bg-muted/60"
                       }`}
                     >
                       <span
-                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-md transition-colors duration-200 ${
+                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors duration-200 ${
                           isActive
                             ? "bg-linear-to-br from-blue-500 to-violet-600 text-white shadow-md shadow-blue-500/20 dark:from-blue-400 dark:to-violet-500"
                             : "bg-muted text-muted-foreground group-hover:text-foreground"
