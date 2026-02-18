@@ -27,11 +27,12 @@ import { SITE_CONFIG } from "@/lib/constants";
 import { MAIN_NAV_LINKS } from "@/lib/menu";
 import { Routes } from "@/lib/routes";
 import Logo from "./Logo";
+import { cn } from "@/lib/utils";
 
 const NAV_ICONS: Record<string, React.ElementType> = {
   [Routes.services]: Briefcase,
   [Routes.techStack.root]: Cpu,
-  [Routes.caseStudies]: Layers,
+  [Routes.caseStudies.root]: Layers,
   [Routes.faq]: HelpCircle,
 };
 
@@ -40,7 +41,11 @@ function getNavTheme(pathname: string): string | null {
   if (pathname.startsWith(Routes.techStack.securityProtocols))
     return "from-emerald-500 to-emerald-600 dark:from-emerald-400 dark:to-emerald-500";
   if (pathname.startsWith(Routes.services))
-    return "from-violet-500 to-cyan-600 dark:from-violet-400 dark:to-cyan-500";
+    return "from-cyber-blue via-blue-400 to-cyan-400";
+  if (pathname.startsWith(Routes.caseStudies.root))
+    return "from-sky-400 to-emerald-mint";
+  if (pathname.startsWith(Routes.faq))
+    return "from-[#3b82f6] to-[#8b5cf6]";
   return null;
 }
 
@@ -72,7 +77,7 @@ export function NavBar() {
         This site is under construction
       </div>
       <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-6">
-          <Logo theme={theme}/>
+        <Logo theme={theme} />
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -112,9 +117,12 @@ export function NavBar() {
                 {/* Gradient text — fades in when active (default theme) */}
                 <span
                   aria-hidden
-                  className={`absolute inset-0 whitespace-nowrap bg-linear-to-r from-blue-500 to-violet-600 bg-clip-text text-transparent transition-opacity duration-300 dark:from-blue-400 dark:to-violet-500 ${
+                  className={cn(
+                    "absolute inset-0 whitespace-nowrap bg-linear-to-r bg-clip-text text-transparent transition-opacity duration-300",
+                    theme ||
+                      "from-blue-500 to-violet-600 dark:from-blue-400 dark:to-violet-500",
                     isActive && !activeIsEmerald ? "opacity-100" : "opacity-0"
-                  }`}
+                  )}
                 >
                   {link.label}
                 </span>

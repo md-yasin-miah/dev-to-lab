@@ -248,7 +248,7 @@ export default function DevOpsPage() {
                 Start Infrastructure Audit
               </Link>
               <Link
-                href={Routes.caseStudies}
+                href={Routes.caseStudies.root}
                 className="rounded-xl border border-white/10 bg-white/5 px-8 py-4 font-bold text-white transition-all hover:bg-white/10"
               >
                 View Case Studies

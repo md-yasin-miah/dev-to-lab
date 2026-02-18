@@ -3,13 +3,13 @@ import { Routes } from "@/lib/routes";
 export const MAIN_NAV_LINKS = [
   { label: "Services", href: Routes.services },
   { label: "Tech Stack", href: Routes.techStack.root },
-  { label: "Case Studies", href: Routes.caseStudies },
+  { label: "Case Studies", href: Routes.caseStudies.root },
   { label: "FAQ", href: Routes.faq }
 ];
 
 export const FOOTER_COMPANY_LINKS = [
   { label: "About Us", href: Routes.aboutUs },
-  { label: "Case Studies", href: Routes.caseStudies },
+  { label: "Case Studies", href: Routes.caseStudies.root },
   { label: "The Stack", href: Routes.techStack.root },
   { label: "Careers", href: Routes.careers },
   { label: "Report Bug", href: Routes.reportBug },

@@ -1,3 +1,4 @@
+import { slugify } from "./utils";
 
 export const Routes = {
   // portfolio routes
@@ -5,7 +6,10 @@ export const Routes = {
   services: "/services",
   startProject: "/start-project",
   aboutUs: "/about-us",
-  caseStudies: "/case-studies",
+  caseStudies: {
+    root: "/case-studies",
+    details: (slug: string) => `/case-studies/${slugify(slug)}`,
+  },
   techStack: {
     root: "/tech-stack",
     systemArchitecture: "/tech-stack/system-architecture",

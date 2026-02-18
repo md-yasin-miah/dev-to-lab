@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 import { Toaster } from "@/components/ui/sonner";
 import StoreProvider from "@/components/provider/StoreProviders";
 import { ThemeProvider } from "@/components/theme-provider";
+import { CookieConsent } from "@/components/common/CookieConsent";
 
 export default function RootLayout({
   children,
@@ -39,6 +40,7 @@ export default function RootLayout({
         >
           <StoreProvider>
             {children}
+            <CookieConsent />
             <Toaster />
           </StoreProvider>
         </ThemeProvider>
