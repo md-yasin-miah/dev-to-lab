@@ -19,7 +19,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-1">
             <div className="mb-8">
-              <Logo size="large"/>
+              <Logo size="large" theme={null}/>
             </div>
             <p className="max-w-xs text-sm leading-relaxed text-slate-500 dark:text-slate-500">
               High-performance engineering for ambitious startups and enterprise
