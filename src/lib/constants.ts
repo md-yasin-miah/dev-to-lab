@@ -14,6 +14,8 @@ import {
 
 export const SITE_CONFIG = {
   name: "DevToLab",
+  nameSuffix: "Lab",
+  namePrefix: "DevTo",
   description:
     "DevToLab is an elite software farm specializing in high-performance Web and Mobile solutions for visionary brands.",
   url: "https://devtolab.com", // Placeholder

@@ -26,6 +26,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { SITE_CONFIG } from "@/lib/constants";
 import { MAIN_NAV_LINKS } from "@/lib/menu";
 import { Routes } from "@/lib/routes";
+import Logo from "./Logo";
 
 const NAV_ICONS: Record<string, React.ElementType> = {
   [Routes.services]: Briefcase,
@@ -34,8 +35,18 @@ const NAV_ICONS: Record<string, React.ElementType> = {
   [Routes.faq]: HelpCircle,
 };
 
+/** Page theme for header logo and active nav: emerald (Security) or default (blue/violet). */
+function getNavTheme(pathname: string): string | null {
+  if (pathname.startsWith(Routes.techStack.securityProtocols))
+    return "from-emerald-500 to-emerald-600 dark:from-emerald-400 dark:to-emerald-500";
+  if (pathname.startsWith(Routes.services))
+    return "from-violet-500 to-cyan-600 dark:from-violet-400 dark:to-cyan-500";
+  return null;
+}
+
 export function NavBar() {
   const pathname = usePathname() ?? "";
+  const theme = getNavTheme(pathname);
   const [isOpen, setIsOpen] = React.useState(false);
   const [hidden, setHidden] = React.useState(false);
   const lastScrollY = React.useRef(0);
@@ -61,14 +72,7 @@ export function NavBar() {
         This site is under construction
       </div>
       <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-6">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center gap-2 font-bold">
-            <div className="bg-linear-to-r from-blue-500 to-violet-600 dark:from-blue-400 dark:to-violet-500 px-1 rounded">
-              <Terminal className="h-6 w-6 text-white" />
-            </div>
-            <span>{SITE_CONFIG.name}</span>
-          </Link>
-        </div>
+          <Logo theme={theme}/>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -77,6 +81,7 @@ export function NavBar() {
               link.href === "/"
                 ? pathname === "/"
                 : pathname.startsWith(link.href);
+            const activeIsEmerald = theme === "emerald" && isActive;
             return (
               <Link
                 key={index}
@@ -93,11 +98,22 @@ export function NavBar() {
                 >
                   {link.label}
                 </span>
-                {/* Gradient text — fades in when active */}
+                {/* Theme color when active: emerald */}
+                <span
+                  aria-hidden
+                  className={`absolute inset-0 whitespace-nowrap transition-opacity duration-300 ${
+                    activeIsEmerald
+                      ? "opacity-100 text-emerald-500"
+                      : "opacity-0"
+                  }`}
+                >
+                  {link.label}
+                </span>
+                {/* Gradient text — fades in when active (default theme) */}
                 <span
                   aria-hidden
                   className={`absolute inset-0 whitespace-nowrap bg-linear-to-r from-blue-500 to-violet-600 bg-clip-text text-transparent transition-opacity duration-300 dark:from-blue-400 dark:to-violet-500 ${
-                    isActive ? "opacity-100" : "opacity-0"
+                    isActive && !activeIsEmerald ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   {link.label}
@@ -135,10 +151,23 @@ export function NavBar() {
                   className="flex items-center gap-2 font-bold"
                   onClick={() => setIsOpen(false)}
                 >
-                  <div className="rounded bg-linear-to-r from-blue-500 to-violet-600 px-1 dark:from-blue-400 dark:to-violet-500">
+                  <div
+                    className={`rounded px-1 ${
+                      theme === "emerald"
+                        ? "bg-emerald-500"
+                        : "bg-linear-to-r from-blue-500 to-violet-600 dark:from-blue-400 dark:to-violet-500"
+                    }`}
+                  >
                     <Terminal className="h-5 w-5 text-white" />
                   </div>
-                  <span className="text-sm">{SITE_CONFIG.name}</span>
+                  <span className="text-sm">
+                    DevTo
+                    <span
+                      className={theme === "emerald" ? "text-emerald-500" : ""}
+                    >
+                      Lab
+                    </span>
+                  </span>
                 </Link>
                 <SheetClose className="rounded-lg p-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
                   <X className="h-4 w-4" />
@@ -152,6 +181,7 @@ export function NavBar() {
                     link.href === "/"
                       ? pathname === "/"
                       : pathname.startsWith(link.href);
+                  const activeIsEmerald = theme === "emerald" && isActive;
                   const Icon = NAV_ICONS[link.href] ?? Layers;
                   return (
                     <Link
@@ -160,14 +190,18 @@ export function NavBar() {
                       onClick={() => setIsOpen(false)}
                       className={`group flex items-center gap-3 rounded-xl px-4 py-3 text-[15px] font-medium transition-all duration-200 ${
                         isActive
-                          ? "bg-linear-to-r from-blue-500/10 to-violet-600/10 dark:from-blue-500/15 dark:to-violet-600/15"
+                          ? activeIsEmerald
+                            ? "bg-emerald-500/10 dark:bg-emerald-500/15"
+                            : "bg-linear-to-r from-blue-500/10 to-violet-600/10 dark:from-blue-500/15 dark:to-violet-600/15"
                           : "hover:bg-muted/60"
                       }`}
                     >
                       <span
                         className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors duration-200 ${
                           isActive
-                            ? "bg-linear-to-br from-blue-500 to-violet-600 text-white shadow-md shadow-blue-500/20 dark:from-blue-400 dark:to-violet-500"
+                            ? activeIsEmerald
+                              ? "bg-emerald-500 text-white shadow-md shadow-emerald-500/20"
+                              : "bg-linear-to-br from-blue-500 to-violet-600 text-white shadow-md shadow-blue-500/20 dark:from-blue-400 dark:to-violet-500"
                             : "bg-muted text-muted-foreground group-hover:text-foreground"
                         }`}
                       >
@@ -185,15 +219,33 @@ export function NavBar() {
                         </span>
                         <span
                           aria-hidden
+                          className={`absolute inset-0 whitespace-nowrap transition-opacity duration-300 ${
+                            activeIsEmerald
+                              ? "opacity-100 text-emerald-500"
+                              : "opacity-0"
+                          }`}
+                        >
+                          {link.label}
+                        </span>
+                        <span
+                          aria-hidden
                           className={`absolute inset-0 whitespace-nowrap bg-linear-to-r from-blue-500 to-violet-600 bg-clip-text text-transparent transition-opacity duration-300 dark:from-blue-400 dark:to-violet-500 ${
-                            isActive ? "opacity-100" : "opacity-0"
+                            isActive && !activeIsEmerald
+                              ? "opacity-100"
+                              : "opacity-0"
                           }`}
                         >
                           {link.label}
                         </span>
                       </span>
                       {isActive && (
-                        <span className="ml-auto h-1.5 w-1.5 rounded-full bg-blue-500 shadow-[0_0_6px_rgba(59,130,246,0.6)]" />
+                        <span
+                          className={`ml-auto h-1.5 w-1.5 rounded-full ${
+                            activeIsEmerald
+                              ? "bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.6)]"
+                              : "bg-blue-500 shadow-[0_0_6px_rgba(59,130,246,0.6)]"
+                          }`}
+                        />
                       )}
                     </Link>
                   );
