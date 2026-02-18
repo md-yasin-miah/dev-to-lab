@@ -74,13 +74,21 @@ export function NavBar() {
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {MAIN_NAV_LINKS.map((link, index) => {
             const isActive =
-              link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
             return (
-              <Link key={index} href={link.href} className="group relative whitespace-nowrap font-semibold">
+              <Link
+                key={index}
+                href={link.href}
+                className="group relative whitespace-nowrap font-semibold"
+              >
                 {/* Base text — fades out when active */}
                 <span
                   className={`transition-opacity duration-300 ${
-                    isActive ? "opacity-0" : "opacity-100 text-muted-foreground group-hover:text-primary"
+                    isActive
+                      ? "opacity-0"
+                      : "opacity-100 text-muted-foreground group-hover:text-primary"
                   }`}
                 >
                   {link.label}
@@ -141,7 +149,9 @@ export function NavBar() {
               <nav className="flex-1 space-y-1 px-4 py-4">
                 {MAIN_NAV_LINKS.map((link) => {
                   const isActive =
-                    link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                    link.href === "/"
+                      ? pathname === "/"
+                      : pathname.startsWith(link.href);
                   const Icon = NAV_ICONS[link.href] ?? Layers;
                   return (
                     <Link
@@ -166,7 +176,9 @@ export function NavBar() {
                       <span className="relative whitespace-nowrap font-semibold">
                         <span
                           className={`transition-opacity duration-300 ${
-                            isActive ? "opacity-0" : "opacity-100 text-foreground"
+                            isActive
+                              ? "opacity-0"
+                              : "opacity-100 text-foreground"
                           }`}
                         >
                           {link.label}
@@ -194,7 +206,10 @@ export function NavBar() {
                   asChild
                   className="w-full gap-2 rounded-xl bg-linear-to-r from-blue-500 to-violet-600 py-5 font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:shadow-blue-500/30 dark:from-blue-400 dark:to-violet-500"
                 >
-                  <Link href={Routes.startProject} onClick={() => setIsOpen(false)}>
+                  <Link
+                    href={Routes.startProject}
+                    onClick={() => setIsOpen(false)}
+                  >
                     Start a Project
                     <ArrowRight className="h-4 w-4" />
                   </Link>
