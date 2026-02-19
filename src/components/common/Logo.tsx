@@ -33,7 +33,7 @@ const Logo = ({
       <div
         className={`px-1 rounded bg-linear-to-r transition-all duration-300 ${
           theme ||
-          "from-blue-500 to-violet-600 dark:from-blue-400 dark:to-violet-500"
+          "from-blue-500 to-violet-600"
         }`}
       >
         <Terminal className={cn(sizeClass, "w-auto text-white")} />
@@ -44,7 +44,7 @@ const Logo = ({
           className={cn(
             theme ||
             "dark:from-white dark:to-white from-black to-black",
-              // "from-blue-500 to-violet-600 dark:from-blue-400 dark:to-violet-500",
+              // "from-blue-500 to-violet-600",
             "bg-clip-text bg-linear-to-r text-transparent transition-all duration-300",
           )}
         >
